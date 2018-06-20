@@ -1,21 +1,21 @@
 {
-  "name": "copay",
+  "name": "getcoins",
   "description": "A Secure Bitcoin Wallet",
-  "author": "BitPay",
-  "version": "4.4.0",
+  "author": "GetCoins",
+  "version": "1.0.0",
   "keywords": [
     "bitcoin",
     "wallet",
     "bitpay",
-    "copay",
+    "getcoins",
     "multisignature",
     "bitcore"
   ],
   "main": "www/index.html",
-  "title": "Copay",
+  "title": "GetCoins",
   "chromium-args": "--disable-password-generation --disable-devtools",
   "window": {
-    "title": "Copay – Copay Bitcoin Wallet",
+    "title": "GetCoins – GetCoins Bitcoin Wallet",
     "icon": "www/assets/img/app/icon.png",
     "toolbar": false,
     "show": true,
@@ -37,14 +37,14 @@
   },
   "dom_storage_quota": 200,
   "id": "jid1-x7bV5evAaI1P9Q",
-  "homepage": "https://copay.io",
+  "homepage": "https://getcoins.com",
   "license": "MIT",
   "repository": {
-    "url": "git://github.com/bitpay/copay.git",
+    "url": "git://github.com/getcoins/gcwallet/gcwallet.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/bitpay/copay/issues"
+    "url": "https://github.com/getcoins/gcwallet/issues"
   },
   "scripts": {
     "postinstall": "sed -i  -e \"s/.*require(...\\/...);//g\" node_modules/asn1.js-rfc5280/index.js && run-s e2e:update env:dev prompt",
@@ -97,6 +97,7 @@
     "sign:android": "rm -f platforms/android/app/build/outputs/apk/release/android-release-signed-aligned.apk; jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore ../copay.keystore -signedjar platforms/android/app/build/outputs/apk/release/android-release-signed.apk platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk  copay_play && $ANDROID_HOME/build-tools/26.0.1/zipalign -v 4 platforms/android/app/build/outputs/apk/release/android-release-signed.apk platforms/android/app/build/outputs/apk/release/android-release-signed-aligned.apk",
     "apply:copay": "cd app-template && node apply.js copay",
     "apply:bitpay": "cd app-template && node apply.js bitpay",
+    "apply:getcoins": "cd app-template && node apply.js getcoins",
     "sign:copay-desktop": "run-s sign:copay-linux sign:copay-windows sign:copay-macos",
     "sign:copay-macos": "gpg -u 1112CFA1 --output desktop/Copay.dmg.sig --detach-sig desktop/Copay.dmg",
     "sign:copay-linux": "gpg -u 1112CFA1 --output desktop/Copay-linux.zip.sig --detach-sig desktop/Copay-linux.zip",
@@ -258,7 +259,7 @@
       "cordova-custom-config": {},
       "cordova-plugin-customurlscheme": {
         "URL_SCHEME": "bitcoin",
-        "SECOND_URL_SCHEME": "copay",
+        "SECOND_URL_SCHEME": "getcoins",
         "THIRD_URL_SCHEME": "bitcoincash",
         "ANDROID_SCHEME": " ",
         "ANDROID_HOST": " ",
