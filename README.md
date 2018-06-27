@@ -4,12 +4,23 @@
 [![Codecov](https://img.shields.io/codecov/c/github/bitpay/copay.svg)](https://codecov.io/gh/bitpay/copay/)
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/copay/localized.png)](https://crowdin.com/project/copay)
 
+# Getcoins-wallet
+
+The GetCoins wallet is a fork of the Copay Wallet (https://github.com/bitpay/copay).
+ 
+ The GetCoins wallet is a secure bitcoin wallet platform for both desktop and mobile devices. It uses BitPay Bitcore Wallet Service (BWS) for peer synchronization and network interfacing.
+ 
+ Binary versions of the GetCoins wallet are available for download at Getcoins.com.
+ 
+ For a list of frequently asked questions please visit the GetCoins Wallet FAQ.
+
+/////
 Copay is a secure bitcoin wallet platform for both desktop and mobile devices. Copay uses [Bitcore Wallet Service](https://github.com/bitpay/bitcore-wallet-service) (BWS) for peer synchronization and network interfacing.
 
 Binary versions of Copay are available for download at [Copay.io](https://copay.io/#download). Copay Binaries are signed with the key `copay@bitpay.com` – See the section [`How to Verify Copay Signatures`](https://github.com/bitpay/copay#how-to-verify-copay-signatures) for details.
 
 For a list of frequently asked questions please visit the [Copay FAQ](https://github.com/bitpay/copay/wiki/COPAY---FAQ).
-
+/////
 ## Main Features
 
 - Multiple wallet creation and management in-app
