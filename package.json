@@ -40,11 +40,11 @@
   "homepage": "https://getcoins.com",
   "license": "MIT",
   "repository": {
-    "url": "git://github.com/getcoins/gcwallet/gcwallet.git",
+    "url": "git://github.com/getcoins/wallet/wallet.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/getcoins/gcwallet/issues"
+    "url": "https://github.com/getcoins/wallet/issues"
   },
   "scripts": {
     "postinstall": "sed -i  -e \"s/.*require(...\\/...);//g\" node_modules/asn1.js-rfc5280/index.js && run-s e2e:update env:dev prompt",
@@ -53,6 +53,7 @@
     "clean": "rm -rf platforms && rm -rf plugins && rm -f config.xml",
     "prepare:copay": "run-s clean apply:copay && ionic cordova prepare",
     "prepare:bitpay": "run-s clean apply:bitpay && ionic cordova prepare",
+    "prepare:getcoins": "run-s clean apply:getcoins && ionic cordova prepare",
     "clean-all": "git clean -dfx",
     "lint": "ionic-app-scripts lint",
     "ionic:build": "ionic-app-scripts build",
