@@ -381,7 +381,7 @@ ion-alert .alert-message {
 
 .header-extend {
   background: $toolbar-background;
-  height: 180px;
+  height: 0px;//**GC edit
   position: absolute;
   top: -100px;
   width: 100%;
@@ -393,3 +393,80 @@ ion-alert .alert-message {
     top: 60%;
   }
 }
+
+/*
+OVERRIDE from our APP
+*/
+
+//**Overriding top header banner height
+.header-extend{
+  height: 0px;
+}
+//**To get rid of extra margin top which making the banner thicker
+.scroll-content .wrapper{
+  margin-top: 20px;
+}
+
+//**Overriding ion-icon's bottom navbar icons for selected state
+.tabbar{
+  .tab-button[aria-selected='true'], .tab-button:active{
+      ion-icon {
+          // custom icons
+          &[class*='tab-home']{
+          mask-image: url(../../assets/img/tab-icons/ico-home-selected.svg);
+          background-image: url(../../assets/img/tab-icons/ico-home-selected.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          }
+          &[class*='tab-receive'] {
+          mask-image: url(../../assets/img/tab-icons/ico-receive-selected.svg);
+          background-image: url(../../assets/img/tab-icons/ico-receive-selected.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          }
+          &[class*='tab-scan']{
+          mask-image: url(../../assets/img/tab-icons/ico-scan-selected.svg);
+          background-image: url(../../assets/img/tab-icons/ico-scan-selected.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 3rem !important;
+          }
+          &[class*='tab-send']{
+          mask-image: url(../../assets/img/tab-icons/ico-send-selected.svg);
+          background-image: url(../../assets/img/tab-icons/ico-send-selected.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          }
+          &[class*='tab-settings']{
+          mask-image: url(../../assets/img/tab-icons/ico-settings-selected.svg);
+          background-image: url(../../assets/img/tab-icons/ico-settings-selected.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          }
+      }
+  }
+}
+
+//**Overriding the item-md button
+.item-md{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ececec;
+}
+
+//**To get rid of the bottom border for the button lists
+.list-md .item-block .item-inner{
+  border-bottom: 0px;
+}
+//**To fix the weird secondary color coming up, which should be coming from the header, on the scroll-content
+.scroll-content{
+  background-image: linear-gradient(rgb(245, 245, 245), rgb(245, 245, 245) 50%, rgb(245, 245, 245) 50%, rgb(245, 245, 245) 50%, rgb(245, 245, 245) 50%);
+  margin-top: 0px;
+  
+}
+//**To give the header's bottom border effect by puttin the border on top of the wrapper div so that the refresher happens, it still gives the border moving down with the dark blue background
+.scroll-content .wrapper {
+  border-top: 6px solid $color-primary;
+  margin-top: 0px;
+  padding-top: 0px;
+  }

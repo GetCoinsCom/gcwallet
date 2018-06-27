@@ -1,5 +1,5 @@
 /*
- * Copay Distribution SCSS overrides
+ * GetCoins Distribution SCSS overrides
  */
 
 // Named Color Variables
@@ -10,7 +10,7 @@
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
 
-$color-primary: #8fbac0; //**GC edit
+$color-primary: #8fbac0; ///**GC edit
 $color-secondary: #10263e; //**GC edit
 $color-secondary-dark: $color-secondary;
 $icon-border-radius: 3px;
@@ -23,3 +23,5 @@ $onboarding-comment-color: rgba(255, 255, 255, 0.5);
 $onboarding-primary-color: $color-primary;
 
 $slider-bg-color: #8fbac0; //**GC edit
+
+//** GCEdit--- Actual Individual OVERRIDE will happen in src/app/app.scss
