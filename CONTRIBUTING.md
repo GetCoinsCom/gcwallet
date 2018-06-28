@@ -73,9 +73,9 @@ provide as much detail and context as possible.
 ## Support requests
 
 If you are having particular problem with your Copay instalation, please first [search older
-issues](https://github.com/bitpay/copay/issues) in order to learn if the issue is already reported. It could be fixed already.
+issues](https://github.com/getcoins/wallet/issues) in order to learn if the issue is already reported. It could be fixed already.
 
-Please also check our [FAQ](https://github.com/bitpay/copay/wiki/COPAY---FAQ).
+Please also check our [FAQ](https://github.com/getcoins/wallet/wiki/GETCOINS---FAQ).
 
 When requesting support describe the issue as much in detail as possible. Consider to
 provide the following information:
@@ -90,10 +90,10 @@ provide the following information:
 - If possible, please provide a screenshot of the error / issue.
 
 If you need to provide personal / sensitive data to solve the issue (like the Wallet Id), do not use Github Issues.
-We will provide a better channel (like an BitPay email address) so you can send the information. If possible, please
+We will provide a better channel (like an Gmail email address) so you can send the information. If possible, please
 encrypt your emails using GnuPG.
 
-To open an issue go to [Github Issues](https://github.com/bitpay/copay/issues).
+To open an issue go to [Github Issues](https://github.com/getcoins/wallet/issues).
 
 <a name="pull-requests"></a>
 

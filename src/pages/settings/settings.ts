@@ -202,7 +202,7 @@ export class SettingsPage {
   public openHelpExternalLink(): void {
     let url =
       this.appName == 'Copay'
-        ? 'https://github.com/bitpay/copay/issues'
+        ? 'https://github.com/getcoins/wallet/issues'
         : 'https://help.bitpay.com/bitpay-app';
     let optIn = true;
     let title = null;

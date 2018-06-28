@@ -512,7 +512,7 @@ export class HomePage {
   }
 
   public goToDownload(): void {
-    let url = 'https://github.com/bitpay/copay/releases/latest';
+    let url = 'https://github.com/getcoins/wallet/releases/latest';
     let optIn = true;
     let title = this.translate.instant('Update Available');
     let message = this.translate.instant(
