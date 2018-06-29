@@ -1,13 +1,16 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "copay"
+    "name": "getcoins"
   },
   "apps": [
     {
       "root": "src",
       "outDir": "dist",
-      "assets": ["assets", "favicon.ico"],
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
       "index": "index.html",
       "main": "app/main.ts",
       "polyfills": "polyfills.ts",
