@@ -27,7 +27,7 @@ export class AboutPage {
     private externalLinkProvider: ExternalLinkProvider,
     private replaceParametersProvider: ReplaceParametersProvider,
     private translate: TranslateService
-  ) {}
+  ) { }
 
   ionViewDidLoad() {
     this.logger.debug('ionViewDidLoad AboutPage');
@@ -41,7 +41,7 @@ export class AboutPage {
 
   public openExternalLink(): void {
     let url =
-      'https://github.com/bitpay/' +
+      'https://github.com/getcoins/' +
       this.appProvider.info.gitHubRepoName +
       '/tree/' +
       this.appProvider.info.commitHash +
@@ -64,7 +64,7 @@ export class AboutPage {
   }
 
   public openTermsOfUse() {
-    let url = 'https://bitpay.com/about/terms#wallet';
+    let url = 'https://getcoins.com/about/';
     let optIn = true;
     let title = null;
     let message = this.translate.instant('View Wallet Terms of Use');
