@@ -48,7 +48,7 @@
   },
   "scripts": {
     "postinstall": "sed -i  -e \"s/.*require(...\\/...);//g\" node_modules/asn1.js-rfc5280/index.js && run-s e2e:update env:dev prompt",
-    "prompt": "\n\n\n\n\n\n#\n#  Choose a distribution with:\n#\n#     $ npm run apply:copay\n#              or\n#     $ npm run apply:bitpay\n#\n",
+    "prompt": "\n\n\n\n\n\n#\n#  Choose a distribution with:\n#\n#     $ npm run apply:getcoins\n#\n",
     "start": "run-p ionic:serve e2e:serve",
     "clean": "rm -rf platforms && rm -rf plugins && rm -f config.xml",
     "prepare:copay": "run-s clean apply:copay && ionic cordova prepare",
@@ -187,7 +187,7 @@
     "zone.js": "0.8.19"
   },
   "devDependencies": {
-    "@angular/cli": "1.7.4",
+    "@angular/cli": "^6.0.7",
     "@biesbjerg/ngx-translate-extract": "2.3.4",
     "@ionic-native-mocks/android-fingerprint-auth": "2.0.7",
     "@ionic-native-mocks/fcm": "2.0.7",
