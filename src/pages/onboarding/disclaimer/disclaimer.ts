@@ -46,7 +46,7 @@ export class DisclaimerPage {
   }
 
   openDisclaimer() {
-    let url = 'https://bitpay.com/about/terms#wallet';
+    let url = 'https://getcoins.com/about/terms';
     let optIn = true;
     let title = null;
     let message = this.translate.instant('View Wallet Terms of Use');
@@ -63,7 +63,7 @@ export class DisclaimerPage {
   }
 
   openPrivacyPolicy() {
-    let url = 'https://bitpay.com/about/privacy';
+    let url = 'https://getcoins.com/about/privacy';
     let optIn = true;
     let title = null;
     let message = this.translate.instant('View Privacy Policy');
