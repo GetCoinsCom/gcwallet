@@ -395,18 +395,13 @@ ion-alert .alert-message {
 }
 
 /*
-OVERRIDE from our APP
+OVERRIDE for the new APP //GC edit
 */
 
 //**Overriding top header banner height
 .header-extend{
   height: 0px;
 }
-//**To get rid of extra margin top which making the banner thicker
-.scroll-content .wrapper{
-  margin-top: 20px;
-}
-
 //**Overriding ion-icon's bottom navbar icons for selected state
 .tabbar{
   .tab-button[aria-selected='true'], .tab-button:active{
@@ -458,15 +453,11 @@ OVERRIDE from our APP
 .list-md .item-block .item-inner{
   border-bottom: 0px;
 }
-//**To fix the weird secondary color coming up, which should be coming from the header, on the scroll-content
+//**To give the header's bottom border effect by puttin the border on top of the wrapper div so that when the refresher happens, it still gives the border moving down with the dark blue background
 .scroll-content{
-  background-image: linear-gradient(rgb(245, 245, 245), rgb(245, 245, 245) 50%, rgb(245, 245, 245) 50%, rgb(245, 245, 245) 50%, rgb(245, 245, 245) 50%);
-  margin-top: 0px;
-  
-}
-//**To give the header's bottom border effect by puttin the border on top of the wrapper div so that the refresher happens, it still gives the border moving down with the dark blue background
-.scroll-content .wrapper {
-  border-top: 6px solid $color-primary;
-  margin-top: 0px;
-  padding-top: 0px;
+  .wrapper{
+    border-top: 6px solid $color-primary;
+    margin-top: 0px;
+    padding-top: 0px;
   }
+}

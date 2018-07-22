@@ -10,9 +10,10 @@
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
 
-$color-primary: #8fbac0; ///**GC edit
+//** This file will be auto-copied/duplicated into src/theme folder upon compilation
+$color-primary: #8fbac0; //**GC edit
 $color-secondary: #10263e; //**GC edit
-$color-secondary-dark: $color-secondary;
+$color-secondary-dark: #3b536b; //**from portal lightest blue
 $icon-border-radius: 3px;
 $txp-icon-border-radius: 0.3rem;
 $toolbar-background: #10263e;  //**GC edit
@@ -24,4 +25,6 @@ $onboarding-primary-color: $color-primary;
 
 $slider-bg-color: #8fbac0; //**GC edit
 
-//** GCEdit--- Actual Individual OVERRIDE will happen in src/app/app.scss
+//** GCEdit--- 
+//** Actual Individual OVERRIDE will happen in src/app/app.scss
+//** because this part is only imported at the beginning and not the end
