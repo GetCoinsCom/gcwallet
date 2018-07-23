@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs-extra');
 const shell = require('shelljs');
 
-const configDir = process.argv[2] || 'getcoins'; //**GC edit */
+const configDir = 'getcoins'; //process.argv[2] || 'getcoins'
 const config = require(`./${configDir}/appConfig.json`);
 
 const templates = {
