@@ -201,9 +201,9 @@ export class SettingsPage {
 
   public openHelpExternalLink(): void {
     let url =
-      this.appName == 'Copay'
-        ? 'https://github.com/getcoins/wallet/issues'
-        : 'https://help.bitpay.com/bitpay-app';
+      this.appName == 'GetCoins'
+        ? 'https://getcoins.com/faq'
+        : 'https://github.com/getcoins/wallet/issues';
     let optIn = true;
     let title = null;
     let message = this.translate.instant(
