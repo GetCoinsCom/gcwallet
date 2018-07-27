@@ -5,6 +5,7 @@ import { Logger } from '../../../providers/logger/logger';
 
 // pages
 import { SessionLogPage } from './session-log/session-log';
+import { TermsOfUsePage } from './terms-of-use/terms-of-use';
 
 // providers
 import { AppProvider } from '../../../providers/app/app';
@@ -62,26 +63,30 @@ export class AboutPage {
       cancelText
     );
   }
-
-  public openTermsOfUse() {
-    let url = 'https://getcoins.com/about/';
-    let optIn = true;
-    let title = null;
-    let message = this.translate.instant('View Wallet Terms of Use');
-    let okText = this.translate.instant('Open');
-    let cancelText = this.translate.instant('Go Back');
-    this.externalLinkProvider.open(
-      url,
-      optIn,
-      title,
-      message,
-      okText,
-      cancelText
-    );
+  /* //this is for when TermsOfUse page will be opened as external link. Disabled becuase we created a page for it instead as below the next func
+    public openTermsOfUse() {
+      let url = 'https://getcoins.com/about/';
+      let optIn = true;
+      let title = null;
+      let message = this.translate.instant('View Wallet Terms of Use');
+      let okText = this.translate.instant('Open');
+      let cancelText = this.translate.instant('Go Back');
+      this.externalLinkProvider.open(
+        url,
+        optIn,
+        title,
+        message,
+        okText,
+        cancelText
+      );
+    }
+  */
+  public openTermsOfUse(): void {
+    this.navCtrl.push(TermsOfUsePage);
   }
-
+  /* //disabled due to no reason for such for this app
   public openPrivacyPolicy() {
-    let url = 'https://bitpay.com/about/privacy';
+    let url = 'https://getcoins.com/about/privacy';
     let optIn = true;
     let title = null;
     let message = this.translate.instant('View Privacy Policy');
@@ -96,7 +101,7 @@ export class AboutPage {
       cancelText
     );
   }
-
+*/
   public openSessionLog(): void {
     this.navCtrl.push(SessionLogPage);
   }

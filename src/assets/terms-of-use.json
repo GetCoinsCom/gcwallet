@@ -1,0 +1,17 @@
+{
+    "title": "Wallet Terms of Use",
+    "update": "Aug 25, 2018",
+    "company_full": "Evergreen ATM, LLC",
+    "company": "Evergreen ATM",
+    "bws_full": "BitPay, Inc.",
+    "bws": "BitPay",
+    "subcompany_full": "GetCoins, LLC",
+    "subcompany": "GetCoins",
+    "parties_stm": true,
+    "rights_obligation": true,
+    "disclaimer": true,
+    "choice_of_low": true,
+    "severability": true,
+    "binding_agreement": true,
+    "state": "Maryland"
+}
