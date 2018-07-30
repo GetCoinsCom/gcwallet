@@ -380,7 +380,7 @@ ion-alert .alert-message {
 }
 
 .header-extend {
-  background: $toolbar-background;
+  //background: $toolbar-background; //**GC
   height: 0px;//**GC edit
   position: absolute;
   top: -100px;
@@ -453,11 +453,21 @@ OVERRIDE for the new APP //GC edit
 .list-md .item-block .item-inner{
   border-bottom: 0px;
 }
+//**To give white border bottom effect on any background
+// this ion-header override has to come here before 'page-home ion-header' style override as below
+ion-header{
+  box-shadow: 0 2px 2px white;
+}
 //**To give the header's bottom border effect by puttin the border on top of the wrapper div so that when the refresher happens, it still gives the border moving down with the dark blue background
-.scroll-content{
-  .wrapper{
-    border-top: 6px solid $color-primary;
-    margin-top: 0px;
-    padding-top: 0px;
+page-home{
+  .scroll-content{
+    .wrapper{
+      border-top: 6px solid $color-primary;
+      margin-top: 0px;
+      padding-top: 0px;
+    }
+  }
+  ion-header{
+    box-shadow: 0 0px 0px;
   }
 }
