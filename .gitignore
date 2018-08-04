@@ -24,7 +24,7 @@ desktop/*
 /config.xml
 /ionic.config.json
 
-src/theme/overrides.scss
+#src/theme/overrides.scss
 src/assets/appConfig.json
 src/assets/externalServices.json
 src/assets/img/app

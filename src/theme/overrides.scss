@@ -1,0 +1,30 @@
+/*
+ * GetCoins Distribution SCSS overrides
+ */
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+//** This file will be auto-copied/duplicated into src/theme folder upon compilation
+$color-primary: #8fbac0; //**GC edit
+$color-secondary: #10263e; //**GC edit
+$color-secondary-dark: #3b536b; //**from portal lightest blue
+$icon-border-radius: 3px;
+$txp-icon-border-radius: 0.3rem;
+$toolbar-background: $color-secondary; //**GC edit
+$toolbar-scanner: rgba(16, 38, 62, 0.8); //**GC edit
+
+$onboarding-welcome-bg: none;
+$onboarding-comment-color: rgba(255, 255, 255, 0.5);
+$onboarding-primary-color: $color-primary;
+
+$slider-bg-color: #8fbac0; //**GC edit
+
+//** GCEdit---
+//** Actual Individual OVERRIDE will happen in src/app/app.scss
+//** because this part is only imported at the beginning and not the end
