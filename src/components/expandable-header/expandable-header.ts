@@ -30,7 +30,8 @@ export class ExpandableHeaderComponent {
   @ContentChild(ExpandableHeaderFooterComponent)
   footerContent: ExpandableHeaderFooterComponent;
 
-  @Input('scrollArea') scrollArea: Content;
+  @Input('scrollArea')
+  scrollArea: Content;
 
   headerHeight: number;
   setTransformTo2dTimeout: NodeJS.Timer;

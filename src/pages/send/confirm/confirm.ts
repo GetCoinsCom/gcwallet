@@ -40,7 +40,8 @@ import {
   templateUrl: 'confirm.html'
 })
 export class ConfirmPage {
-  @ViewChild('slideButton') slideButton;
+  @ViewChild('slideButton')
+  slideButton;
 
   private bitcore;
   private bitcoreCash;

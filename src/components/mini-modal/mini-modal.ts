@@ -9,7 +9,8 @@ import { MiniModalContent, ModalCancelText } from './mini-modal-content';
 export class MiniModalComponent {
   modalTitle: string;
 
-  @ViewChild(MiniModalContent) modalContent: MiniModalContent;
+  @ViewChild(MiniModalContent)
+  modalContent: MiniModalContent;
 
   constructor(private viewCtrl: ViewController, private navParams: NavParams) {
     this.modalTitle = this.navParams.get('modalTitle');
