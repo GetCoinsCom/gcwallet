@@ -25,7 +25,8 @@ import env from '../../environments';
 export class ScanPage {
   ngVersion = VERSION.full;
 
-  @ViewChild('scanner') scanner: ZXingScannerComponent;
+  @ViewChild('scanner')
+  scanner: ZXingScannerComponent;
 
   hasCameras = false;
   hasPermission: boolean;

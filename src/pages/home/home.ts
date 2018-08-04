@@ -50,7 +50,8 @@ import { WalletProvider } from '../../providers/wallet/wallet';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  @ViewChild('showCard') showCard;
+  @ViewChild('showCard')
+  showCard;
   public wallets;
   public walletsBtc;
   public walletsBch;

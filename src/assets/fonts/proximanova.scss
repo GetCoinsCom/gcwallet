@@ -52,7 +52,8 @@ $ProximaNova-font-path: $font-path !default;
   font-style: normal;
   font-weight: 800;
   src: local('ProximaNova-Extrabold'),
-    url('#{$ProximaNova-font-path}/ProximaNova-Extrabold.otf') format('opentype');
+    url('#{$ProximaNova-font-path}/ProximaNova-Extrabold.otf')
+      format('opentype');
 }
 @font-face {
   font-family: 'Proxima Nova Black';
@@ -74,28 +75,32 @@ $ProximaNova-font-path: $font-path !default;
   font-style: normal;
   font-weight: 300;
   src: local('ProximaNovaCond-Light'),
-    url('#{$ProximaNova-font-path}/ProximaNovaCond-Light.otf') format('opentype');
+    url('#{$ProximaNova-font-path}/ProximaNovaCond-Light.otf')
+      format('opentype');
 }
 @font-face {
   font-family: 'Proxima Nova Condensed';
   font-style: normal;
   font-weight: 400;
   src: local('ProximaNovaCond-Regular'),
-    url('#{$ProximaNova-font-path}/ProximaNovaCond-Regular.otf') format('opentype');
+    url('#{$ProximaNova-font-path}/ProximaNovaCond-Regular.otf')
+      format('opentype');
 }
 @font-face {
   font-family: 'Proxima Nova Condensed Medium';
   font-style: normal;
   font-weight: 500;
   src: local('ProximaNovaCond-Medium'),
-    url('#{$ProximaNova-font-path}/ProximaNovaCond-Medium.otf') format('opentype');
+    url('#{$ProximaNova-font-path}/ProximaNovaCond-Medium.otf')
+      format('opentype');
 }
 @font-face {
   font-family: 'Proxima Nova Condensed Semibold';
   font-style: normal;
   font-weight: 600;
   src: local('ProximaNovaCond-Semibold'),
-    url('#{$ProximaNova-font-path}/ProximaNovaCond-Semibold.otf') format('opentype');
+    url('#{$ProximaNova-font-path}/ProximaNovaCond-Semibold.otf')
+      format('opentype');
 }
 @font-face {
   font-family: 'Proxima Nova Condensed Bold';
@@ -109,12 +114,14 @@ $ProximaNova-font-path: $font-path !default;
   font-style: normal;
   font-weight: 800;
   src: local('ProximaNovaCond-Extrabold'),
-    url('#{$ProximaNova-font-path}/ProximaNovaCond-Extrabold.otf') format('opentype');
+    url('#{$ProximaNova-font-path}/ProximaNovaCond-Extrabold.otf')
+      format('opentype');
 }
 @font-face {
   font-family: 'Proxima Nova Condensed Black';
   font-style: normal;
   font-weight: 900;
   src: local('ProximaNovaCond-Black'),
-    url('#{$ProximaNova-font-path}/ProximaNovaCond-Black.otf') format('opentype');
+    url('#{$ProximaNova-font-path}/ProximaNovaCond-Black.otf')
+      format('opentype');
 }

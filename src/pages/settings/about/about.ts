@@ -29,7 +29,7 @@ export class AboutPage {
     private externalLinkProvider: ExternalLinkProvider,
     private replaceParametersProvider: ReplaceParametersProvider,
     private translate: TranslateService
-  ) { }
+  ) {}
 
   ionViewDidLoad() {
     this.logger.debug('ionViewDidLoad AboutPage');

@@ -16,8 +16,8 @@ $color-secondary: #10263e; //**GC edit
 $color-secondary-dark: #3b536b; //**from portal lightest blue
 $icon-border-radius: 3px;
 $txp-icon-border-radius: 0.3rem;
-$toolbar-background: $color-secondary;  //**GC edit
-$toolbar-scanner: rgba(16, 38, 62, 0.8);  //**GC edit
+$toolbar-background: $color-secondary; //**GC edit
+$toolbar-scanner: rgba(16, 38, 62, 0.8); //**GC edit
 
 $onboarding-welcome-bg: none;
 $onboarding-comment-color: rgba(255, 255, 255, 0.5);
@@ -25,6 +25,6 @@ $onboarding-primary-color: $color-primary;
 
 $slider-bg-color: #8fbac0; //**GC edit
 
-//** GCEdit--- 
+//** GCEdit---
 //** Actual Individual OVERRIDE will happen in src/app/app.scss
 //** because this part is only imported at the beginning and not the end

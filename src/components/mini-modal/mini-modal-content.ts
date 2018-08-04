@@ -19,9 +19,12 @@ export class ModalCancelText {}
   templateUrl: 'mini-modal-content.html'
 })
 export class MiniModalContent {
-  @Input() type: 'danger' | 'warning' | 'success' = 'warning';
-  @ContentChild(ModalCancelText) modalCancelText: ModalCancelText;
-  @ViewChild('imageContainer') imageContainer: ElementRef;
+  @Input()
+  type: 'danger' | 'warning' | 'success' = 'warning';
+  @ContentChild(ModalCancelText)
+  modalCancelText: ModalCancelText;
+  @ViewChild('imageContainer')
+  imageContainer: ElementRef;
 
   private actionSubject = new Subject<boolean>();
   public action = this.actionSubject.asObservable();

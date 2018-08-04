@@ -176,7 +176,8 @@ const configDefault: Config = {
     },
     getcoins: {
       ios: 'https://itunes.apple.com/app/getcoins-wallet/id',
-      android: 'https://play.google.com/store/apps/details?id=com.getcoins.wallet',
+      android:
+        'https://play.google.com/store/apps/details?id=com.getcoins.wallet',
       wp: ''
     }
   },
@@ -323,4 +324,3 @@ export class ConfigProvider {
     }
   }
 }
-

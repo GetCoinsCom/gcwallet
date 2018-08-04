@@ -30,7 +30,8 @@ import { WalletProvider } from '../../../../providers/wallet/wallet';
   templateUrl: 'sell-coinbase.html'
 })
 export class SellCoinbasePage {
-  @ViewChild('slideButton') slideButton;
+  @ViewChild('slideButton')
+  slideButton;
 
   private coin: string;
   private amount: string;

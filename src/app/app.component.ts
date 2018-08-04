@@ -58,7 +58,8 @@ import { WalletDetailsPage } from '../pages/wallet-details/wallet-details';
   providers: [TouchIdProvider]
 })
 export class CopayApp {
-  @ViewChild('appNav') nav: NavController;
+  @ViewChild('appNav')
+  nav: NavController;
 
   public rootPage:
     | typeof AmountPage
@@ -139,13 +140,13 @@ export class CopayApp {
   private onAppLoad(readySource) {
     this.logger.info(
       'Platform ready (' +
-      readySource +
-      '): ' +
-      this.appProvider.info.nameCase +
-      ' - v' +
-      this.appProvider.info.version +
-      ' #' +
-      this.appProvider.info.commitHash
+        readySource +
+        '): ' +
+        this.appProvider.info.nameCase +
+        ' - v' +
+        this.appProvider.info.version +
+        ' #' +
+        this.appProvider.info.commitHash
     );
 
     if (this.platform.is('cordova')) {
