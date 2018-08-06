@@ -161,10 +161,10 @@ export class ReceivePage {
 
   public openWikiBackupNeeded(): void {
     let url =
-      'https://support.bitpay.com/hc/en-us/articles/115002989283-Why-don-t-I-have-an-online-account-for-my-BitPay-wallet-';
+      'https://getcoins.com/faq';
     let optIn = true;
     let title = null;
-    let message = this.translate.instant('Read more in our Wiki');
+    let message = this.translate.instant('Read more in our FAQ');
     let okText = this.translate.instant('Open');
     let cancelText = this.translate.instant('Go Back');
     this.externalLinkProvider.open(
