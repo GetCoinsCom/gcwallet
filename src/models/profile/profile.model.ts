@@ -25,11 +25,11 @@ export class Profile {
 
   public fromObj(obj): Profile {
     let x = new Profile();
-
-    x.createdOn = obj.createdOn;
-    x.credentials = obj.credentials;
+    x.createdOn = obj.createdOn; // GC: return (int)
+    x.credentials = obj.credentials; // GC: return (obj) containing 'coin', 'network', xPrivKey, xPubKey, requestPrivKey,
     x.disclaimerAccepted = obj.disclaimerAccepted;
     x.onboardingCompleted = obj.onboardingCompleted;
+    // x.onboardingCompleted = false; // GC edit for testing
     x.checked = obj.checked || {};
     x.checkedUA = obj.checkedUA || {};
 
