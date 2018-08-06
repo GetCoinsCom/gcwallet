@@ -25,6 +25,9 @@ desktop/*
 /ionic.config.json
 
 #src/theme/overrides.scss
+
+# OVERRIDES
+# Bypass all the followings because they will be overriden at the time of "apply:getcoins" script
 src/assets/appConfig.json
 src/assets/externalServices.json
 src/assets/img/app
@@ -40,6 +43,7 @@ test/visual/report.html
 test/visual/report.json
 junitresults.xml
 
+# Cache
 .sourcemaps/
 .idea/
 .sass-cache/
@@ -63,10 +67,12 @@ Thumbs.db
 UserInterfaceState.xcuserstate
 
 # OSX
-
 .DS_Store
 .AppleDouble
 .LSOverride
+
+#vscode
+.vscode
 
 # Thumbnails
 ._*
