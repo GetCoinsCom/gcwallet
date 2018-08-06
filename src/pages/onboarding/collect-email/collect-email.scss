@@ -46,5 +46,8 @@ page-collect-email {
   }
   .primary-color {
     color: $onboarding-primary-color;
+    &:hover {
+      color: $onboarding-primary-color;
+    }
   }
 }
