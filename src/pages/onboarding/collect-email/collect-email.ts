@@ -45,7 +45,7 @@ export class CollectEmailPage {
     // Get more info: https://mashe.hawksey.info/2014/07/google-sheets-as-a-database-insert-with-apps-script-using-postget-methods-with-ajax-example/
     this.URL =
       this.appProvider.servicesInfo &&
-      this.appProvider.servicesInfo.emailSheetURL
+        this.appProvider.servicesInfo.emailSheetURL
         ? this.appProvider.servicesInfo.emailSheetURL
         : null;
   }
@@ -71,7 +71,7 @@ export class CollectEmailPage {
     // Confirm for notifications
     this.emailProvider.updateEmail(opts);
 
-    // Confirm to get news and updates from BitPay
+    // Confirm to get news and updates from GetCoins
     if (this.emailForm.value.accept) this.collectEmail();
 
     this.goToBackupRequestPage();
