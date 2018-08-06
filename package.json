@@ -12,10 +12,10 @@
     "bitcore"
   ],
   "main": "www/index.html",
-  "title": "GetCoinsWallet",
+  "title": "GCWallet",
   "chromium-args": "--disable-password-generation --disable-devtools",
   "window": {
-    "title": "GetCoinsWallet – GetCoins' Bitcoin Wallet",
+    "title": "GCWallet – GetCoins' Bitcoin Wallet",
     "icon": "www/assets/img/app/icon.png",
     "toolbar": false,
     "show": true,
@@ -36,7 +36,7 @@
     "plugin": false
   },
   "dom_storage_quota": 200,
-  "id": "jid1-x7bV5evAaI1P9Q",
+  "id": "",
   "homepage": "https://getcoins.com",
   "license": "MIT",
   "repository": {
