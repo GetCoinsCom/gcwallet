@@ -2,7 +2,7 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { async, TestBed } from '@angular/core/testing';
 import { IonicModule } from 'ionic-angular';
 
-import { CopayApp } from './app.component';
+import { GCApp } from './app.component';
 
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import {
@@ -14,16 +14,16 @@ import { EmailNotificationsProvider } from '../providers/email-notifications/ema
 import { ProfileProvider } from '../providers/profile/profile';
 import { ProvidersModule } from './../providers/providers.module';
 
-describe('CopayApp', () => {
+describe('GCApp', () => {
   let fixture;
   let component;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [CopayApp],
+      declarations: [GCApp],
       schemas: [NO_ERRORS_SCHEMA],
       imports: [
-        IonicModule.forRoot(CopayApp),
+        IonicModule.forRoot(GCApp),
         ProvidersModule,
         HttpClientTestingModule,
         TranslateModule.forRoot({
@@ -35,7 +35,7 @@ describe('CopayApp', () => {
   }));
 
   beforeEach(async () => {
-    fixture = TestBed.createComponent(CopayApp);
+    fixture = TestBed.createComponent(GCApp);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -46,7 +46,7 @@ describe('CopayApp', () => {
   });
 
   it('should be created', () => {
-    expect(component instanceof CopayApp).toBe(true);
+    expect(component instanceof GCApp).toBe(true);
   });
 
   describe('Methods', () => {
@@ -72,7 +72,7 @@ describe('CopayApp', () => {
         (window as any).require = () => {
           return {
             App: {
-              on: () => {},
+              on: () => { },
               argv: ['URL']
             }
           };

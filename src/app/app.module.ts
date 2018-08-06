@@ -2,6 +2,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+// import { FCM } from '@ionic-native/fcm';
 
 /* Modules */
 import { TranslatePoHttpLoader } from '@biesbjerg/ngx-translate-po-http-loader';
@@ -12,7 +13,7 @@ import { NgxQRCodeModule } from 'ngx-qrcode2';
 
 /* Copay App */
 import env from '../environments';
-import { CopayApp } from './app.component';
+import { GCApp } from './app.component';
 
 import { PAGES } from './../pages/pages';
 
@@ -44,7 +45,7 @@ export function createTranslateLoader(http: HttpClient) {
 
 @NgModule({
   declarations: [
-    CopayApp,
+    GCApp,
     ...PAGES,
     ...COMPONENTS,
     /* Directives */
@@ -62,7 +63,7 @@ export function createTranslateLoader(http: HttpClient) {
     OrderByPipe
   ],
   imports: [
-    IonicModule.forRoot(CopayApp, {
+    IonicModule.forRoot(GCApp, {
       animate: env.enableAnimations,
       tabsHideOnSubPages: true,
       tabsPlacement: 'bottom',
@@ -84,7 +85,7 @@ export function createTranslateLoader(http: HttpClient) {
     ZXingScannerModule.forRoot()
   ],
   bootstrap: [IonicApp],
-  entryComponents: [CopayApp, ...PAGES, ...COMPONENTS],
+  entryComponents: [GCApp, ...PAGES, ...COMPONENTS],
   providers: [
     {
       provide: ErrorHandler,
@@ -92,4 +93,4 @@ export function createTranslateLoader(http: HttpClient) {
     }
   ]
 })
-export class AppModule {}
+export class AppModule { }
