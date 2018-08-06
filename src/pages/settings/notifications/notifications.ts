@@ -120,7 +120,7 @@ export class NotificationsPage {
   }
 
   public openPrivacyPolicy() {
-    let url = 'https://bitpay.com/about/privacy';
+    let url = 'https://getcoins.com/privacy';
     let optIn = true;
     let title = null;
     let message = this.translate.instant('View Privacy Policy');
