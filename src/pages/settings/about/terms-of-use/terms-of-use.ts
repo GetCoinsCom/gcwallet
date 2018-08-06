@@ -1,12 +1,8 @@
 import { Component, Injectable } from '@angular/core';
-import * as toudoc from "../../../../assets/terms-of-use.json";
-// import { Observable } from 'rxjs';
-// import { ActivatedRoute } from '@angular/router';
-//import { Events, Platform } from 'ionic-angular';
+import * as toudoc from '../../../../assets/terms-of-use.json';
 
 // providers
 import { Logger } from '../../../../providers/logger/logger';
-//import { TranslateService } from '@ngx-translate/core';
 
 // import * as _ from 'lodash';
 
@@ -19,29 +15,27 @@ export class TermsOfUsePage {
   public data: object;
   public toudoc: object;
 
-  public touTitle = toudoc["title"];
-  public touUpdate = toudoc["update"];
-  public touComFull = toudoc["company_full"];
-  public touCom = toudoc["company"];
-  public touBwsFull = toudoc["bws_full"];
-  public touBws = toudoc["bws"];
-  public touSubComFull = toudoc["subcompany_full"];
-  public touSubCom = toudoc["subcompany"];
-  public touPartiesStm = toudoc["parties_stm"];
-  public touRightsObligation = toudoc["rights_obligation"];
-  public touDisclaimer = toudoc["disclaimer"];
-  public touChoiceOfLaw = toudoc["choice_of_low"];
-  public touSeverability = toudoc["severability"];
-  public touBindingArg = toudoc["binding_agreement"];
-  public touState = toudoc["state"];
+  public touTitle = toudoc['title'];
+  public touUpdate = toudoc['update'];
+  public touComFull = toudoc['company_full'];
+  public touCom = toudoc['company'];
+  public touBwsFull = toudoc['bws_full'];
+  public touBws = toudoc['bws'];
+  public touSubComFull = toudoc['subcompany_full'];
+  public touSubCom = toudoc['subcompany'];
+  public touPartiesStm = toudoc['parties_stm'];
+  public touRightsObligation = toudoc['rights_obligation'];
+  public touDisclaimer = toudoc['disclaimer'];
+  public touChoiceOfLaw = toudoc['choice_of_low'];
+  public touSeverability = toudoc['severability'];
+  public touBindingArg = toudoc['binding_agreement'];
+  public touState = toudoc['state'];
 
-  //constructor(private toudata: TermsOfUseDataProvider, private logger: Logger, private translate: TranslateService
-  constructor(private logger: Logger
-  ) {
-    console.log('TESTING!!!!!!');
+  // constructor(private toudata: TermsOfUseDataProvider, private logger: Logger, private translate: TranslateService
+  constructor(private logger: Logger) {
     this.logger.info('TermsOfUseProvider initialized.');
-    console.log(toudoc);
-    console.log(this.touTitle);
+    // console.log(toudoc);
+    // console.log(this.touTitle);
   }
   /*
     ngOnInit() {
@@ -50,10 +44,11 @@ export class TermsOfUsePage {
         toudata => this.data = toudata
       );
     }*/
-  public test() {
-    this.logger.info('TThis is inside test func.');
-
-  }
+  /*
+public test() {
+  // this.logger.info('This is inside test func.');
+}
+*/
   // public jsonfileURL: string = '';
   // public getTermsOfUse() {
   //   let jsonTOU: string = '';
