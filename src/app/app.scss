@@ -405,37 +405,37 @@ OVERRIDE for the new APP //GC edit
 //**Overriding ion-icon's bottom navbar icons for selected state
 .tabbar {
   .tab-button[aria-selected='true'],
-  .tab-button:active {
+  .tab-button:active, .tab-button:visited, .tab-button:focus  {
     ion-icon {
       // custom icons
       &[class*='tab-home'] {
-        mask-image: url(../../assets/img/tab-icons/ico-home-selected.svg);
-        background-image: url(../../assets/img/tab-icons/ico-home-selected.svg);
+        mask-image: url(../assets/img/tab-icons/ico-home-selected.svg);
+        background-image: url(../assets/img/tab-icons/ico-home-selected.svg);
         background-repeat: no-repeat;
         background-position: center;
       }
       &[class*='tab-receive'] {
-        mask-image: url(../../assets/img/tab-icons/ico-receive-selected.svg);
-        background-image: url(../../assets/img/tab-icons/ico-receive-selected.svg);
+        mask-image: url(../assets/img/tab-icons/ico-receive-selected.svg);
+        background-image: url(../assets/img/tab-icons/ico-receive-selected.svg);
         background-repeat: no-repeat;
         background-position: center;
       }
       &[class*='tab-scan'] {
-        mask-image: url(../../assets/img/tab-icons/ico-scan-selected.svg);
-        background-image: url(../../assets/img/tab-icons/ico-scan-selected.svg);
+        mask-image: url(../assets/img/tab-icons/ico-scan-selected.svg);
+        background-image: url(../assets/img/tab-icons/ico-scan-selected.svg);
         background-repeat: no-repeat;
         background-position: center;
         width: 3rem !important;
       }
       &[class*='tab-send'] {
-        mask-image: url(../../assets/img/tab-icons/ico-send-selected.svg);
-        background-image: url(../../assets/img/tab-icons/ico-send-selected.svg);
+        mask-image: url(../assets/img/tab-icons/ico-send-selected.svg);
+        background-image: url(../assets/img/tab-icons/ico-send-selected.svg);
         background-repeat: no-repeat;
         background-position: center;
       }
       &[class*='tab-settings'] {
-        mask-image: url(../../assets/img/tab-icons/ico-settings-selected.svg);
-        background-image: url(../../assets/img/tab-icons/ico-settings-selected.svg);
+        mask-image: url(../assets/img/tab-icons/ico-settings-selected.svg);
+        background-image: url(../assets/img/tab-icons/ico-settings-selected.svg);
         background-repeat: no-repeat;
         background-position: center;
       }
