@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version='0.1.0' encoding='utf-8'?>
 <widget id="com.getcoins.*BUNDLENAME*"
   version="*VERSION*"
   android-versionCode="*ANDROIDVERSION*"
@@ -14,6 +14,9 @@
     <access origin="*" />
 
     <preference name="AndroidPersistentFileLocation" value="Internal" />
+    <!--
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    -->
     <preference name="iosPersistentFileLocation" value="Library" />
     <preference name="DisallowOverscroll" value="true"/>
     <preference name="HideKeyboardFormAccessoryBar" value="true"/>
@@ -35,6 +38,7 @@
 
     <!-- Android Version: Marshmallow 6.0 (API Level 23) or higher -->
     <preference name="android-minSdkVersion" value="23" />
+    
 
     <!-- iOS 10.3 or higher -->
     <preference name="deployment-target" value="10.3" />

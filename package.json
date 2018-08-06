@@ -12,10 +12,10 @@
     "bitcore"
   ],
   "main": "www/index.html",
-  "title": "GetCoins Wallet",
+  "title": "GetCoinsWallet",
   "chromium-args": "--disable-password-generation --disable-devtools",
   "window": {
-    "title": "GetCoins – GetCoins Bitcoin Wallet",
+    "title": "GetCoinsWallet – GetCoins' Bitcoin Wallet",
     "icon": "www/assets/img/app/icon.png",
     "toolbar": false,
     "show": true,
@@ -110,7 +110,12 @@
     "sign:bitpay-macos": "gpg -u 1112CFA1 --output desktop/BitPay.dmg.sig --detach-sig desktop/BitPay.dmg",
     "sign:bitpay-linux": "gpg -u 1112CFA1 --output desktop/BitPay-linux.zip.sig --detach-sig desktop/BitPay-linux.zip",
     "sign:bitpay-windows": "gpg -u 1112CFA1 --output desktop/BitPay.exe.sig --detach-sig desktop/BitPay.exe",
-    "verify:bitpay-desktop": "gpg --verify desktop/BitPay-linux.zip.sig desktop/BitPay-linux.zip; gpg --verify desktop/BitPay.exe.sig desktop/BitPay.exe; gpg --verify desktop/BitPay.dmg.sig desktop/BitPay.dmg"
+    "verify:bitpay-desktop": "gpg --verify desktop/BitPay-linux.zip.sig desktop/BitPay-linux.zip; gpg --verify desktop/BitPay.exe.sig desktop/BitPay.exe; gpg --verify desktop/BitPay.dmg.sig desktop/BitPay.dmg",
+    "sign:getcoins-desktop": "run-s sign:getcoins-linux sign:getcoins-windows sign:getcoins-macos",
+    "sign:getcoins-macos": "gpg -u 1112CFA1 --output desktop/GetCoins.dmg.sig --detach-sig desktop/GetCoins.dmg",
+    "sign:getcoins-linux": "gpg -u 1112CFA1 --output desktop/GetCoins-linux.zip.sig --detach-sig desktop/GetCoins-linux.zip",
+    "sign:getcoins-windows": "gpg -u 1112CFA1 --output desktop/GetCoins.exe.sig --detach-sig desktop/GetCoins.exe",
+    "verify:getcoins-desktop": "gpg --verify desktop/GetCoins-linux.zip.sig desktop/GetCoins-linux.zip; gpg --verify desktop/GetCoins.exe.sig desktop/GetCoins.exe; gpg --verify desktop/GetCoins.dmg.sig desktop/GetCoins.dmg"
   },
   "dependencies": {
     "@angular/common": "5.2.10",
@@ -142,7 +147,7 @@
     "@types/papaparse": "4.1.33",
     "@zxing/ngx-scanner": "1.1.0-dev.c32019",
     "angular2-moment": "1.7.1",
-    "bitauth": "https://github.com/bitpay/bitauth.git#copay",
+    "bitauth": "git+https://git@github.com/bitpay/bitauth.git#copay",
     "bitcore-wallet-client": "6.7.5",
     "buffer-compare": "1.1.1",
     "cordova": "8.0.0",
