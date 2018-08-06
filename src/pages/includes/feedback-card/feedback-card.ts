@@ -39,8 +39,10 @@ export class FeedbackCardPage {
     this.isShowRateCard = false;
   }
 
-  public setShowRateCard(value) {
-    this.isShowRateCard = value;
+  // public setShowRateCard(value) { // *GC edit for temporary testing purpose
+  public setShowRateCard() {
+    // this.isShowRateCard = value; 
+    this.isShowRateCard = false; // *GC edit for temporary testing purpose
 
     if (this.isShowRateCard) {
       let appName = this.appProvider.info.nameCase;

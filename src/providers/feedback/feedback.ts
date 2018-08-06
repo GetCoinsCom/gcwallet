@@ -17,15 +17,17 @@ export class FeedbackProvider {
     // Get more info: https://mashe.hawksey.info/2014/07/google-sheets-as-a-database-insert-with-apps-script-using-postget-methods-with-ajax-example/
     this.URL =
       this.appProvider.servicesInfo &&
-      this.appProvider.servicesInfo.feedbackSheetURL
+        this.appProvider.servicesInfo.feedbackSheetURL
         ? this.appProvider.servicesInfo.feedbackSheetURL
         : null;
+    // this.logger.info('This is in feedback.ts');
   }
 
   public send(dataSrc): Promise<any> {
     return new Promise((resolve, reject) => {
       if (!this.URL) return resolve();
-
+      // this.logger.info('This is dataSrc: ' + dataSrc);
+      // console.log('This is dataSrc: ' + dataSrc);
       const headers = new HttpHeaders({
         'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
       });

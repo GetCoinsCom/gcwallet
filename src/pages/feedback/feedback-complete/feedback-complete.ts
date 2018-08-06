@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { NavController, NavParams, ViewController } from 'ionic-angular';
+import { AlertController, NavController, NavParams, ViewController } from 'ionic-angular';
 import { Logger } from '../../../providers/logger/logger';
 
 // native
@@ -39,6 +39,7 @@ export class FeedbackCompletePage {
     private navParams: NavParams,
     private viewCtrl: ViewController,
     private logger: Logger,
+    private alertCtrl: AlertController,
     private platformProvider: PlatformProvider,
     private persistenceProvider: PersistenceProvider,
     private socialSharing: SocialSharing,
@@ -58,9 +59,9 @@ export class FeedbackCompletePage {
     );
     let defaults = this.configProvider.getDefaults();
     this.downloadUrl =
-      this.appProvider.info.name == 'copay'
-        ? defaults.download.copay.url
-        : defaults.download.bitpay.url;
+      this.appProvider.info.name == 'getcoins'
+        ? defaults.download.getcoins.url
+        : defaults.download.getcoins.url;
   }
 
   ionViewWillLeave() {
@@ -131,27 +132,57 @@ export class FeedbackCompletePage {
   }
 
   public shareFacebook() {
-    this.socialSharing.shareVia(
-      this.shareFacebookVia,
-      null,
-      null,
-      null,
-      this.downloadUrl
-    );
+    // **GC Edit
+    if (this.facebook) {
+      this.socialSharing.shareVia(
+        this.shareFacebookVia,
+        null,
+        null,
+        null,
+        this.downloadUrl
+      );
+    } else {
+      let alert = this.alertCtrl.create({
+        title: 'Error',
+        subTitle: 'This app is not available for your device.',
+        buttons: ['Dismiss']
+      });
+      alert.present();
+    }
   }
 
   public shareTwitter() {
-    this.socialSharing.shareVia(
-      this.shareTwitterVia,
-      null,
-      null,
-      null,
-      this.downloadUrl
-    );
+    // **GC Edit
+    if (this.twitter) {
+      this.socialSharing.shareVia(
+        this.shareTwitterVia,
+        null,
+        null,
+        null,
+        this.downloadUrl
+      );
+    } else {
+      let alert = this.alertCtrl.create({
+        title: 'Error',
+        subTitle: 'This app is not available for your device.',
+        buttons: ['Dismiss']
+      });
+      alert.present();
+    }
   }
 
   public shareWhatsapp() {
-    this.socialSharing.shareViaWhatsApp(this.downloadUrl);
+    // **GC Edit
+    if (this.whatsapp) {
+      this.socialSharing.shareViaWhatsApp(this.downloadUrl);
+    } else {
+      let alert = this.alertCtrl.create({
+        title: 'Error',
+        subTitle: 'This app is not available for your device.',
+        buttons: ['Dismiss']
+      });
+      alert.present();
+    }
   }
 
   public close(): void {

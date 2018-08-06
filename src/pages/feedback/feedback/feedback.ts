@@ -96,16 +96,14 @@ export class FeedbackPage {
   public goAppStore(): void {
     let defaults = this.configProvider.getDefaults();
     let url;
-    if (this.isAndroid)
-      url =
-        this.appName == 'Copay'
-          ? defaults.rateApp.copay.android
-          : defaults.rateApp.bitpay.android;
-    if (this.isIOS)
-      url =
-        this.appName == 'Copay'
-          ? defaults.rateApp.copay.ios
-          : defaults.rateApp.bitpay.ios;
+    if (this.isAndroid) url = defaults.rateApp.getcoins.android;
+    // this.appName == 'GetCoins'
+    //   ? defaults.rateApp.getcoins.android
+    //   : defaults.rateApp.getcoins.android;
+    if (this.isIOS) url = defaults.rateApp.getcoins.ios;
+    // this.appName == 'GetCoins'
+    //   ? defaults.rateApp.getcoins.ios
+    //   : defaults.rateApp.getcoins.ios;
 
     this.externalLinkProvider.open(url);
     this.navCtrl.push(FeedbackCompletePage, {

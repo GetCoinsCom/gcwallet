@@ -11,6 +11,7 @@ import { Device } from '@ionic-native/device';
 import { AppProvider } from '../../../providers/app/app';
 import { ConfigProvider } from '../../../providers/config/config';
 import { FeedbackProvider } from '../../../providers/feedback/feedback';
+import { Logger } from '../../../providers/logger/logger';
 import { OnGoingProcessProvider } from '../../../providers/on-going-process/on-going-process';
 import { PersistenceProvider } from '../../../providers/persistence/persistence';
 import { PopupProvider } from '../../../providers/popup/popup';
@@ -24,7 +25,8 @@ import { FeedbackCompletePage } from '../feedback-complete/feedback-complete';
   templateUrl: 'send-feedback.html'
 })
 export class SendFeedbackPage {
-  @ViewChild(Navbar) navBar: Navbar;
+  @ViewChild(Navbar)
+  navBar: Navbar;
 
   public feedback: string;
   public score: number;
@@ -42,6 +44,7 @@ export class SendFeedbackPage {
     private onGoingProcessProvider: OnGoingProcessProvider,
     private feedbackProvider: FeedbackProvider,
     private formBuilder: FormBuilder,
+    private logger: Logger,
     private persistenceProvider: PersistenceProvider,
     private popupProvider: PopupProvider,
     private translate: TranslateService,
@@ -117,24 +120,33 @@ export class SendFeedbackPage {
   public sendFeedback(feedback: string, goHome: boolean): void {
     let config = this.configProvider.get();
 
+    // console.log(config);
+    // console.log(this.device.platform);
+    // this.logger.info('THis is the config: ' + config);
+    // this.logger.info('THis is the feedback: ' + feedback);
     let platform = this.device.platform || 'Unknown platform';
+    // this.logger.info('THis is the platform: ' + platform);
+    // console.log(platform);
     let version = this.device.version || 'Unknown version';
-
+    // this.logger.info('THis is the version: ' + version);
+    // console.log(version);//gc test
+    // **GCEdit the following this.score value needs to be revisited.
     let dataSrc = {
       email: _.values(config.emailFor)[0] || ' ',
       feedback: goHome ? ' ' : feedback,
-      score: this.score || ' ',
+      score: this.score > 0 ? this.score : ' ',
       appVersion: this.appProvider.info.version,
       platform,
       deviceVersion: version
     };
-
+    // this.logger.info('THis is the dataSrc: ' + dataSrc);
     if (!goHome) this.onGoingProcessProvider.set('sendingFeedback');
     this.feedbackProvider
       .send(dataSrc)
       .then(() => {
         if (goHome) return;
         this.onGoingProcessProvider.clear();
+        // console.log(this.score);
         if (!this.score) {
           let title = this.translate.instant('Thank you!');
           let message = this.translate.instant(
