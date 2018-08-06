@@ -11,7 +11,7 @@ import { Device } from '@ionic-native/device';
 import { AppProvider } from '../../../providers/app/app';
 import { ConfigProvider } from '../../../providers/config/config';
 import { FeedbackProvider } from '../../../providers/feedback/feedback';
-import { Logger } from '../../../providers/logger/logger';
+// import { Logger } from '../../../providers/logger/logger';
 import { OnGoingProcessProvider } from '../../../providers/on-going-process/on-going-process';
 import { PersistenceProvider } from '../../../providers/persistence/persistence';
 import { PopupProvider } from '../../../providers/popup/popup';
@@ -44,7 +44,7 @@ export class SendFeedbackPage {
     private onGoingProcessProvider: OnGoingProcessProvider,
     private feedbackProvider: FeedbackProvider,
     private formBuilder: FormBuilder,
-    private logger: Logger,
+    // private logger: Logger,
     private persistenceProvider: PersistenceProvider,
     private popupProvider: PopupProvider,
     private translate: TranslateService,
