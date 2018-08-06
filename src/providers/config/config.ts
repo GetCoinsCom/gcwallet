@@ -34,28 +34,12 @@ export interface Config {
   };
 
   download: {
-    bitpay: {
-      url: string;
-    };
-    copay: {
-      url: string;
-    };
     getcoins: {
       url: string;
     };
   };
 
   rateApp: {
-    bitpay: {
-      ios: string;
-      android: string;
-      wp: string;
-    };
-    copay: {
-      ios: string;
-      android: string;
-      wp: string;
-    };
     getcoins: {
       ios: string;
       android: string;
@@ -150,30 +134,12 @@ const configDefault: Config = {
   },
 
   download: {
-    bitpay: {
-      url: 'https://bitpay.com/wallet'
-    },
-    copay: {
-      url: 'https://copay.io/#download'
-    },
     getcoins: {
       url: 'https://getcoins.com/#wallet'
     }
   },
 
   rateApp: {
-    bitpay: {
-      ios:
-        'https://itunes.apple.com/app/bitpay-secure-bitcoin-wallet/id1149581638',
-      android:
-        'https://play.google.com/store/apps/details?id=com.bitpay.wallet',
-      wp: ''
-    },
-    copay: {
-      ios: 'https://itunes.apple.com/app/copay-bitcoin-wallet/id951330296',
-      android: 'https://play.google.com/store/apps/details?id=com.bitpay.copay',
-      wp: ''
-    },
     getcoins: {
       ios: 'https://itunes.apple.com/app/getcoins-wallet/id',
       android:
