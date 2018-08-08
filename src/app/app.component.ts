@@ -12,20 +12,20 @@ import {
 import { Subscription } from 'rxjs';
 
 // providers
-import { AmazonProvider } from '../providers/amazon/amazon';
+// import { AmazonProvider } from '../providers/amazon/amazon';  // **GCedit
 import { AppProvider } from '../providers/app/app';
-import { BitPayCardProvider } from '../providers/bitpay-card/bitpay-card';
-import { CoinbaseProvider } from '../providers/coinbase/coinbase';
+// import { BitPayCardProvider } from '../providers/bitpay-card/bitpay-card';  // **GCedit
+// import { CoinbaseProvider } from '../providers/coinbase/coinbase';  // **GCedit
 import { ConfigProvider } from '../providers/config/config';
 import { EmailNotificationsProvider } from '../providers/email-notifications/email-notifications';
-import { GlideraProvider } from '../providers/glidera/glidera';
+// import { GlideraProvider } from '../providers/glidera/glidera';
 import { IncomingDataProvider } from '../providers/incoming-data/incoming-data';
 import { Logger } from '../providers/logger/logger';
-import { MercadoLibreProvider } from '../providers/mercado-libre/mercado-libre';
+// import { MercadoLibreProvider } from '../providers/mercado-libre/mercado-libre';  // **GCedit
 import { PopupProvider } from '../providers/popup/popup';
 import { ProfileProvider } from '../providers/profile/profile';
 import { PushNotificationsProvider } from '../providers/push-notifications/push-notifications';
-import { ShapeshiftProvider } from '../providers/shapeshift/shapeshift';
+// import { ShapeshiftProvider } from '../providers/shapeshift/shapeshift';  // **GCedit
 import { TouchIdProvider } from '../providers/touchid/touchid';
 
 // pages
@@ -34,8 +34,8 @@ import { ImportWalletPage } from '../pages/add/import-wallet/import-wallet';
 import { JoinWalletPage } from '../pages/add/join-wallet/join-wallet';
 import { FingerprintModalPage } from '../pages/fingerprint/fingerprint';
 import { BitPayCardIntroPage } from '../pages/integrations/bitpay-card/bitpay-card-intro/bitpay-card-intro';
-import { CoinbasePage } from '../pages/integrations/coinbase/coinbase';
-import { GlideraPage } from '../pages/integrations/glidera/glidera';
+// import { CoinbasePage } from '../pages/integrations/coinbase/coinbase';  // **GCedit
+// import { GlideraPage } from '../pages/integrations/glidera/glidera'; // **GCedit
 import { DisclaimerPage } from '../pages/onboarding/disclaimer/disclaimer';
 import { OnboardingPage } from '../pages/onboarding/onboarding';
 import { PaperWalletPage } from '../pages/paper-wallet/paper-wallet';
@@ -73,10 +73,10 @@ export class GCApp {
     AddressbookAddPage,
     AmountPage,
     BitPayCardIntroPage,
-    CoinbasePage,
+    // CoinbasePage,
     ConfirmPage,
     CopayersPage,
-    GlideraPage,
+    // GlideraPage,
     ImportWalletPage,
     JoinWalletPage,
     PaperWalletPage,
@@ -93,12 +93,13 @@ export class GCApp {
     private profile: ProfileProvider,
     private configProvider: ConfigProvider,
     private modalCtrl: ModalController,
-    private glideraProvider: GlideraProvider,
-    private coinbaseProvider: CoinbaseProvider,
-    private amazonProvider: AmazonProvider,
-    private bitPayCardProvider: BitPayCardProvider,
-    private mercadoLibreProvider: MercadoLibreProvider,
-    private shapeshiftProvider: ShapeshiftProvider,
+    // **GCedit
+    // private glideraProvider: GlideraProvider,
+    // private coinbaseProvider: CoinbaseProvider,
+    // private amazonProvider: AmazonProvider,
+    // private bitPayCardProvider: BitPayCardProvider,
+    // private mercadoLibreProvider: MercadoLibreProvider,
+    // private shapeshiftProvider: ShapeshiftProvider,
     private emailNotificationsProvider: EmailNotificationsProvider,
     private screenOrientation: ScreenOrientation,
     private popupProvider: PopupProvider,
@@ -174,7 +175,7 @@ export class GCApp {
       this.openLockModal();
     }
 
-    this.registerIntegrations();
+    // this.registerIntegrations(); // **GCedit
     this.incomingDataRedirEvent();
     // Check Profile
     this.profile
@@ -251,36 +252,37 @@ export class GCApp {
       this.isModalOpen = false;
     });
   }
-
-  private registerIntegrations(): void {
-    // Mercado Libre
-    if (this.appProvider.info._enabledExtensions.mercadolibre)
-      this.mercadoLibreProvider.register();
-
-    // Amazon Gift Cards
-    if (this.appProvider.info._enabledExtensions.amazon)
-      this.amazonProvider.register();
-
-    // ShapeShift
-    if (this.appProvider.info._enabledExtensions.shapeshift)
-      this.shapeshiftProvider.register();
-
-    // Glidera
-    if (this.appProvider.info._enabledExtensions.glidera) {
-      this.glideraProvider.setCredentials();
-      this.glideraProvider.register();
+  /*  // **GCedit
+    private registerIntegrations(): void {
+      // Mercado Libre
+      if (this.appProvider.info._enabledExtensions.mercadolibre)
+        this.mercadoLibreProvider.register();
+  
+      // Amazon Gift Cards
+      if (this.appProvider.info._enabledExtensions.amazon)
+        this.amazonProvider.register();
+  
+      // ShapeShift
+      if (this.appProvider.info._enabledExtensions.shapeshift)
+        this.shapeshiftProvider.register();
+  
+      // Glidera
+      if (this.appProvider.info._enabledExtensions.glidera) {
+        this.glideraProvider.setCredentials();
+        this.glideraProvider.register();
+      }
+  
+      // Coinbase
+      if (this.appProvider.info._enabledExtensions.coinbase) {
+        this.coinbaseProvider.setCredentials();
+        this.coinbaseProvider.register();
+      }
+  
+      // BitPay Card
+      if (this.appProvider.info._enabledExtensions.debitcard)
+        this.bitPayCardProvider.register();
     }
-
-    // Coinbase
-    if (this.appProvider.info._enabledExtensions.coinbase) {
-      this.coinbaseProvider.setCredentials();
-      this.coinbaseProvider.register();
-    }
-
-    // BitPay Card
-    if (this.appProvider.info._enabledExtensions.debitcard)
-      this.bitPayCardProvider.register();
-  }
+    */
 
   private incomingDataRedirEvent(): void {
     this.events.subscribe('IncomingDataRedir', nextView => {
