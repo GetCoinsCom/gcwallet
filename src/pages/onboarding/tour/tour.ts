@@ -9,8 +9,8 @@ import {
 import { Logger } from '../../../providers/logger/logger';
 
 // pages
-// import { CollectEmailPage } from '../collect-email/collect-email'; // **GCEdit: disabling it till next ver
-import { BackupRequestPage } from '../backup-request/backup-request';
+import { CollectEmailPage } from '../collect-email/collect-email'; // **GCEdit: disabling it till next ver
+// import { BackupRequestPage } from '../backup-request/backup-request';
 
 // providers
 import { OnGoingProcessProvider } from '../../../providers/on-going-process/on-going-process';
@@ -91,13 +91,13 @@ export class TourPage {
       .then(wallet => {
         this.onGoingProcessProvider.clear();
         this.persistenceProvider.setOnboardingCompleted();
-        // this.navCtrl.push(CollectEmailPage, { walletId: wallet.id });
-        this.navCtrl.push(BackupRequestPage, { walletId: wallet.Id });
+        this.navCtrl.push(CollectEmailPage, { walletId: wallet.id });
+        // this.navCtrl.push(BackupRequestPage, { walletId: wallet.Id });
       })
       .catch(err => {
         setTimeout(() => {
           this.logger.warn(
-            'Retrying to create default wallet.....:' + ++this.retryCount
+            'Retrying to create default wallet.....:' + this.retryCount
           );
           if (this.retryCount > 3) {
             this.onGoingProcessProvider.clear();
