@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavParams, ViewController } from 'ionic-angular';
 import { MiniModalContent, ModalCancelText } from './mini-modal-content';
+// import { Logger } from '../../providers/logger/logger';
 
 @Component({
   selector: 'mini-modal',
@@ -12,7 +13,11 @@ export class MiniModalComponent {
   @ViewChild(MiniModalContent)
   modalContent: MiniModalContent;
 
-  constructor(private viewCtrl: ViewController, private navParams: NavParams) {
+  constructor(
+    private viewCtrl: ViewController,
+    private navParams: NavParams,
+    // private logger: Logger
+  ) {
     this.modalTitle = this.navParams.get('modalTitle');
   }
 

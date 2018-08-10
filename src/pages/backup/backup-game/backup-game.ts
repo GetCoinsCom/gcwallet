@@ -55,7 +55,8 @@ export class BackupGamePage {
   ) {
     this.walletId = this.navParams.get('walletId');
     this.fromOnboarding = this.navParams.get('fromOnboarding');
-    this.wallet = this.profileProvider.getWallet(this.walletId);
+    // **GCEdit: Added conditions to it so it will help to see when something went wrong.
+    this.wallet = this.profileProvider.getWallet(this.walletId) ? this.profileProvider.getWallet(this.walletId) : { Error: 'someting went wrong. there is not wallet data.' };
     this.credentialsEncrypted = this.wallet.isPrivKeyEncrypted();
   }
 

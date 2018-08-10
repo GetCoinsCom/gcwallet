@@ -4,6 +4,8 @@ import { AlertController, NavController, NavParams } from 'ionic-angular';
 // pages
 import { BackupGamePage } from '../backup-game/backup-game';
 
+// Providers
+import { Logger } from '../../../providers/logger/logger';
 import { PopupProvider } from '../../../providers/popup/popup';
 
 @Component({
@@ -16,9 +18,10 @@ export class BackupWarningPage {
   private fromOnboarding: boolean;
 
   constructor(
+    public alertCtrl: AlertController,
+    private logger: Logger,
     public navCtrl: NavController,
     public navParams: NavParams,
-    public alertCtrl: AlertController,
     public popupProvider: PopupProvider
   ) {
     this.walletId = this.navParams.get('walletId');
@@ -36,6 +39,10 @@ export class BackupWarningPage {
           walletId: this.walletId,
           fromOnboarding: this.fromOnboarding
         });
+      }
+      // **GCEdit: Added No-backup log for debugging
+      else {
+        this.logger.info('No backup at the onboarding phase');
       }
     });
   }

@@ -9,8 +9,8 @@ import {
 import { Logger } from '../../../providers/logger/logger';
 
 // pages
-import { CollectEmailPage } from '../collect-email/collect-email'; // **GCEdit: disabling it till next ver
-// import { BackupRequestPage } from '../backup-request/backup-request';
+import { BackupRequestPage } from '../backup-request/backup-request';
+// import { CollectEmailPage } from '../collect-email/collect-email'; // **GCEdit: disabling it till next ver
 
 // providers
 import { OnGoingProcessProvider } from '../../../providers/on-going-process/on-going-process';
@@ -91,8 +91,8 @@ export class TourPage {
       .then(wallet => {
         this.onGoingProcessProvider.clear();
         this.persistenceProvider.setOnboardingCompleted();
-        this.navCtrl.push(CollectEmailPage, { walletId: wallet.id });
-        // this.navCtrl.push(BackupRequestPage, { walletId: wallet.Id });
+        // this.navCtrl.push(CollectEmailPage, { walletId: wallet.id }); // **GCEdit: For ver 1.0, disabling it because we dont direct to CollectEmailPage
+        this.navCtrl.push(BackupRequestPage, { walletId: wallet.id }); // **GCEdit: this walletId's value we are passing to BackupRequestPage was the error causing not to be able to get to the backup page because the id value was unidentified. MAKE SURE TO USE 'wallet.id' with LOWER "i"d. In the object data, there will be also 'walletId' key, but this can be only accessed as in "credentials.walletId" as it is in nexted object.
       })
       .catch(err => {
         setTimeout(() => {
