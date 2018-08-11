@@ -44,7 +44,7 @@
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/getcoins/getcoins-wallet/issues"
+    "url": "https://github.com/getcoinscom/getcoins-wallet/issues"
   },
   "scripts": {
     "postinstall": "node patch.js && sed -i  -e \"s/.*require(...\\/...);//g\" node_modules/asn1.js-rfc5280/index.js && run-s e2e:update env:dev prompt",
