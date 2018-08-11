@@ -21,14 +21,14 @@
         Push notifications for {{appName}} are currently disabled. Enable them in the Settings app.
       </span>
     </ion-item-divider>
-
+    <!-- // **GCEdit: Disabling for ver1.0
     <div *ngIf="usePushNotifications && pushNotifications">
       <ion-item>
         <ion-label>{{ 'Notify me when transactions are confirmed' | translate }}</ion-label>
         <ion-toggle [(ngModel)]="confirmedTxsNotifications" (ionChange)="confirmedTxsNotificationsChange()"></ion-toggle>
       </ion-item>
     </div>
-
+    -->
     <!-- // **GCEdit: Disabling for ver1.0
     <ion-item>
       <ion-label>{{ 'Enable email notifications' | translate }}</ion-label>
