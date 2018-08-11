@@ -143,9 +143,9 @@ export class FeedbackCompletePage {
       );
     } else {
       let alert = this.alertCtrl.create({
-        title: 'Error',
+        title: 'Oops, Not Found',
         subTitle: 'This app is not available for your device.',
-        buttons: ['Dismiss']
+        buttons: ['Okay']
       });
       alert.present();
     }
@@ -163,9 +163,9 @@ export class FeedbackCompletePage {
       );
     } else {
       let alert = this.alertCtrl.create({
-        title: 'Error',
+        title: 'Oops, Not Found',
         subTitle: 'This app is not available for your device.',
-        buttons: ['Dismiss']
+        buttons: ['Okay']
       });
       alert.present();
     }
@@ -177,9 +177,9 @@ export class FeedbackCompletePage {
       this.socialSharing.shareViaWhatsApp(this.downloadUrl);
     } else {
       let alert = this.alertCtrl.create({
-        title: 'Error',
+        title: 'Oops, Not Found',
         subTitle: 'This app is not available for your device.',
-        buttons: ['Dismiss']
+        buttons: ['Okay']
       });
       alert.present();
     }
