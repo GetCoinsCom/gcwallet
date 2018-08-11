@@ -33,7 +33,7 @@ export class TermsOfUsePage {
 
   // constructor(private toudata: TermsOfUseDataProvider, private logger: Logger, private translate: TranslateService
   constructor(private logger: Logger) {
-    this.logger.info('TermsOfUseProvider initialized.');
+    this.logger.info('TermsOfUse viewed.');
     // console.log(toudoc);
     // console.log(this.touTitle);
   }
