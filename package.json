@@ -2,7 +2,7 @@
   "name": "getcoins",
   "description": "A Secure Bitcoin Wallet",
   "author": "GetCoins",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "keywords": [
     "bitcoin",
     "wallet",
@@ -40,14 +40,13 @@
   "homepage": "https://getcoins.com",
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/getcoins/wallet/wallet.git",
+    "url": "https://github.com/getcoinscom/getcoins-wallet.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/getcoins/wallet/issues"
+    "url": "https://github.com/getcoins/getcoins-wallet/issues"
   },
   "scripts": {
-    "testmimi": "node patch.js",
     "postinstall": "node patch.js && sed -i  -e \"s/.*require(...\\/...);//g\" node_modules/asn1.js-rfc5280/index.js && run-s e2e:update env:dev prompt",
     "prompt": "\n\n\n\n\n\n#\n#  Choose a distribution with:\n#\n#     $ npm run apply:getcoins\n#\n",
     "start": "run-p ionic:serve e2e:serve",
