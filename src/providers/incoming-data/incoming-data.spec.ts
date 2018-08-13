@@ -19,12 +19,12 @@ describe('Provider: Incoming Data Provider', () => {
   class AppProviderMock {
     public info = {};
     constructor() {
-      this.info = { name: 'bitpay', _enabledExtensions: { debitcard: true } };
+      this.info = { name: 'getcoins', _enabledExtensions: { debitcard: true } };
     }
   }
 
   class PopupProviderMock {
-    constructor() {}
+    constructor() { }
     ionicConfirm() {
       return Promise.resolve(true);
     }
@@ -71,8 +71,8 @@ describe('Provider: Incoming Data Provider', () => {
           Promise.reject(true)
         );
         let data = [
-          'http://bitpay.com/', // non-SSL URL Handling
-          'https://bitpay.com/' // SSL URL Handling
+          'http://getcoins.com/', // non-SSL URL Handling
+          'https://getcoins.com/' // SSL URL Handling
         ];
         data.forEach(element => {
           expect(incomingDataProvider.redir(element, 'ScanPage')).toBe(true);
