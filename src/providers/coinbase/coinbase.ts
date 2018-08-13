@@ -199,7 +199,7 @@ export class CoinbaseProvider {
     this._getNetAmount(amount, (err, reducedAmount) => {
       if (err) return cb(err);
 
-      // Check if transaction has enough funds to transfer bitcoin from Coinbase to Copay
+      // Check if transaction has enough funds to transfer bitcoin from Coinbase to GetCoins
       if (reducedAmount < 0) {
         return cb('Not enough funds for fee');
       }
@@ -267,9 +267,9 @@ export class CoinbaseProvider {
       data => {
         this.logger.error(
           'Coinbase: GET Access Token: ERROR ' +
-            data.status +
-            '. ' +
-            this.getErrorsAsString(data.error)
+          data.status +
+          '. ' +
+          this.getErrorsAsString(data.error)
         );
         return cb(data.error);
       }
@@ -298,9 +298,9 @@ export class CoinbaseProvider {
       data => {
         this.logger.error(
           'Coinbase: Refresh Access Token ERROR ' +
-            data.status +
-            '. ' +
-            this.getErrorsAsString(data.error)
+          data.status +
+          '. ' +
+          this.getErrorsAsString(data.error)
         );
         return cb(data.error);
       }
@@ -347,9 +347,9 @@ export class CoinbaseProvider {
       data => {
         this.logger.error(
           'Coinbase: Get Accounts ERROR ' +
-            data.status +
-            '. ' +
-            this.getErrorsAsString(data.error)
+          data.status +
+          '. ' +
+          this.getErrorsAsString(data.error)
         );
         return cb(data.error);
       }
@@ -447,9 +447,9 @@ export class CoinbaseProvider {
       data => {
         this.logger.error(
           'Coinbase: Get Account ERROR ' +
-            data.status +
-            '. ' +
-            this.getErrorsAsString(data.error)
+          data.status +
+          '. ' +
+          this.getErrorsAsString(data.error)
         );
         return cb(data.error);
       }
@@ -473,9 +473,9 @@ export class CoinbaseProvider {
       data => {
         this.logger.error(
           'Coinbase: Authorization Information ERROR ' +
-            data.status +
-            '. ' +
-            this.getErrorsAsString(data.error)
+          data.status +
+          '. ' +
+          this.getErrorsAsString(data.error)
         );
         return cb(data.error);
       }
@@ -500,9 +500,9 @@ export class CoinbaseProvider {
       data => {
         this.logger.error(
           'Coinbase: Get Current User ERROR ' +
-            data.status +
-            '. ' +
-            this.getErrorsAsString(data.error)
+          data.status +
+          '. ' +
+          this.getErrorsAsString(data.error)
         );
         return cb(data.error);
       }
@@ -528,9 +528,9 @@ export class CoinbaseProvider {
       data => {
         this.logger.error(
           'Coinbase: Buy Info ERROR ' +
-            data.status +
-            '. ' +
-            this.getErrorsAsString(data.error)
+          data.status +
+          '. ' +
+          this.getErrorsAsString(data.error)
         );
         return cb(data.error);
       }
@@ -559,9 +559,9 @@ export class CoinbaseProvider {
       data => {
         this.logger.error(
           'Coinbase: Transaction ERROR ' +
-            data.status +
-            '. ' +
-            this.getErrorsAsString(data.error)
+          data.status +
+          '. ' +
+          this.getErrorsAsString(data.error)
         );
         return cb(data.error);
       }
@@ -593,9 +593,9 @@ export class CoinbaseProvider {
       data => {
         this.logger.error(
           'Coinbase: Address Transactions ERROR ' +
-            data.status +
-            '. ' +
-            this.getErrorsAsString(data.error)
+          data.status +
+          '. ' +
+          this.getErrorsAsString(data.error)
         );
         return cb(data.error);
       }
@@ -621,9 +621,9 @@ export class CoinbaseProvider {
       data => {
         this.logger.error(
           'Coinbase: Transactions ERROR ' +
-            data.status +
-            '. ' +
-            this.getErrorsAsString(data.error)
+          data.status +
+          '. ' +
+          this.getErrorsAsString(data.error)
         );
         return cb(data.error);
       }
@@ -649,9 +649,9 @@ export class CoinbaseProvider {
       data => {
         this.logger.error(
           'Coinbase: Pagination Transactions ERROR ' +
-            data.status +
-            '. ' +
-            this.getErrorsAsString(data.error)
+          data.status +
+          '. ' +
+          this.getErrorsAsString(data.error)
         );
         return cb(data.error);
       }
@@ -675,9 +675,9 @@ export class CoinbaseProvider {
       data => {
         this.logger.error(
           'Coinbase: Sell Price ERROR ' +
-            data.status +
-            '. ' +
-            this.getErrorsAsString(data.error)
+          data.status +
+          '. ' +
+          this.getErrorsAsString(data.error)
         );
         return cb(data.error);
       }
@@ -700,9 +700,9 @@ export class CoinbaseProvider {
       data => {
         this.logger.error(
           'Coinbase: Buy Price ERROR ' +
-            data.status +
-            '. ' +
-            this.getErrorsAsString(data.error)
+          data.status +
+          '. ' +
+          this.getErrorsAsString(data.error)
         );
         return cb(data.error);
       }
@@ -725,9 +725,9 @@ export class CoinbaseProvider {
       data => {
         this.logger.error(
           'Coinbase: Get Payment Methods ERROR ' +
-            data.status +
-            '. ' +
-            this.getErrorsAsString(data.error)
+          data.status +
+          '. ' +
+          this.getErrorsAsString(data.error)
         );
         return cb(data.error);
       }
@@ -751,9 +751,9 @@ export class CoinbaseProvider {
       data => {
         this.logger.error(
           'Coinbase: Get Payment Method ERROR ' +
-            data.status +
-            '. ' +
-            this.getErrorsAsString(data.error)
+          data.status +
+          '. ' +
+          this.getErrorsAsString(data.error)
         );
         return cb(data.error);
       }
@@ -784,9 +784,9 @@ export class CoinbaseProvider {
       data => {
         this.logger.error(
           'Coinbase: Sell Request ERROR ' +
-            data.status +
-            '. ' +
-            this.getErrorsAsString(data.error)
+          data.status +
+          '. ' +
+          this.getErrorsAsString(data.error)
         );
         return cb(data.error);
       }
@@ -816,9 +816,9 @@ export class CoinbaseProvider {
       data => {
         this.logger.error(
           'Coinbase: Sell Commit ERROR ' +
-            data.status +
-            '. ' +
-            this.getErrorsAsString(data.error)
+          data.status +
+          '. ' +
+          this.getErrorsAsString(data.error)
         );
         return cb(data.error);
       }
@@ -849,9 +849,9 @@ export class CoinbaseProvider {
       data => {
         this.logger.error(
           'Coinbase: Buy Request ERROR ' +
-            data.status +
-            '. ' +
-            this.getErrorsAsString(data.error)
+          data.status +
+          '. ' +
+          this.getErrorsAsString(data.error)
         );
         return cb(data.error);
       }
@@ -881,9 +881,9 @@ export class CoinbaseProvider {
       data => {
         this.logger.error(
           'Coinbase: Buy Commit ERROR ' +
-            data.status +
-            '. ' +
-            this.getErrorsAsString(data.error)
+          data.status +
+          '. ' +
+          this.getErrorsAsString(data.error)
         );
         return cb(data.error);
       }
@@ -910,9 +910,9 @@ export class CoinbaseProvider {
       data => {
         this.logger.error(
           'Coinbase: Create Address ERROR ' +
-            data.status +
-            '. ' +
-            this.getErrorsAsString(data.error)
+          data.status +
+          '. ' +
+          this.getErrorsAsString(data.error)
         );
         return cb(data.error);
       }
@@ -944,9 +944,9 @@ export class CoinbaseProvider {
       data => {
         this.logger.error(
           'Coinbase: Create Address ERROR ' +
-            data.status +
-            '. ' +
-            this.getErrorsAsString(data.error)
+          data.status +
+          '. ' +
+          this.getErrorsAsString(data.error)
         );
         return cb(data.error);
       }
@@ -1057,7 +1057,7 @@ export class CoinbaseProvider {
                       var variance = Math.abs(
                         ((newSellPrice - dataFromStorage.sell_price_amount) /
                           dataFromStorage.sell_price_amount) *
-                          100
+                        100
                       );
                       if (variance < dataFromStorage.price_sensitivity.value) {
                         this._sellPending(
@@ -1293,7 +1293,7 @@ export class CoinbaseProvider {
                     status: 'error',
                     error: err
                   },
-                  function(err) {
+                  function (err) {
                     if (err) this.logger.error(err);
                     this._updateTxs(coinbasePendingTransactions);
                   }

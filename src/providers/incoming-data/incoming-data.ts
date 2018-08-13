@@ -284,7 +284,7 @@ export class IncomingDataProvider {
       return true;
 
       // Join
-    } else if (data && data.match(/^copay:[0-9A-HJ-NP-Za-km-z]{70,80}$/)) {
+    } else if (data && data.match(/^getcoins:[0-9A-HJ-NP-Za-km-z]{70,80}$/)) {
       this.logger.debug('Handling Join Wallet');
 
       let stateParams = { url: data, fromScan: true };
@@ -353,7 +353,7 @@ export class IncomingDataProvider {
     let value = match[0].replace(',', '.');
     let newUri = data.replace(regex, value);
 
-    // mobile devices, uris like copay://glidera
+    // mobile devices, uris like getcoins://glidera
     newUri.replace('://', ':');
 
     return newUri;

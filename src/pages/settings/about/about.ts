@@ -44,7 +44,7 @@ export class AboutPage {
 
   public openExternalLink(): void {
     let url =
-      'https://github.com/getcoins/' +
+      'https://github.com/getcoinscom/' +
       this.appProvider.info.gitHubRepoName +
       '/tree/' +
       this.appProvider.info.commitHash +

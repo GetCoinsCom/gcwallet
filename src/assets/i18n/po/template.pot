@@ -418,7 +418,7 @@ msgstr ""
 msgid "Contribute translations"
 msgstr ""
 
-msgid "Copay only supports Bitcoin Cash using new version numbers addresses"
+msgid "GetCoins only supports Bitcoin Cash using new version numbers addresses"
 msgstr ""
 
 msgid "Copayer already in this wallet"
@@ -969,7 +969,7 @@ msgid "I'm sure"
 msgstr ""
 
 msgid ""
-"If enabled, Bitcoin Cash addresses will be shown using Copay style address, "
+"If enabled, Bitcoin Cash addresses will be shown using GetCoins style address, "
 "and not the new cashaddr format."
 msgstr ""
 
@@ -1458,7 +1458,7 @@ msgstr ""
 msgid "Please tap each word in the correct order."
 msgstr ""
 
-msgid "Please upgrade Copay to perform this action"
+msgid "Please upgrade GetCoins to perform this action"
 msgstr ""
 
 msgid "Please wait..."
@@ -2157,7 +2157,7 @@ msgstr ""
 msgid "Urgent"
 msgstr ""
 
-msgid "Use Bitcoin Cash Copay Style Addresses"
+msgid "Use Bitcoin Cash GetCoins Style Addresses"
 msgstr ""
 
 msgid "Use Unconfirmed Funds"

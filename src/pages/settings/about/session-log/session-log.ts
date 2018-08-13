@@ -74,7 +74,7 @@ export class SessionLogPage {
 
   public prepareLogs() {
     let log =
-      'Copay Session Logs\n Be careful, this could contain sensitive private data\n\n';
+      'GetCoins Session Logs\n Be careful, this could contain sensitive private data\n\n';
     log += '\n\n';
     log += this.logger
       .get()
@@ -105,7 +105,7 @@ export class SessionLogPage {
 
     this.socialSharing.shareViaEmail(
       body,
-      'Copay Logs',
+      'GetCoins Logs',
       null, // TO: must be null or an array
       null, // CC: must be null or an array
       null, // BCC: must be null or an array

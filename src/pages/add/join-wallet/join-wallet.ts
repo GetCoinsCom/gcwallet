@@ -90,7 +90,7 @@ export class JoinWalletPage {
   ionViewWillEnter() {
     if (this.navParams.data.url) {
       let data: string = this.navParams.data.url;
-      data = data.replace('copay:', '');
+      data = data.replace('getcoins:', '');
       this.onQrCodeScannedJoin(data);
     }
   }

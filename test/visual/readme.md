@@ -1,4 +1,4 @@
-# Copay/BitPay Visual Regression Testing
+# GetCoins Visual Regression Testing
 
 As part of our continuous testing, we compare screenshots taken during our e2e testing with screenshots that have been previously reviewed by a contributor. Since we're able to comprehensively review all UI changes, we can quickly and confidently iterate on the app design.
 

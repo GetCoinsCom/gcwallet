@@ -1,4 +1,4 @@
-# Contributing to Copay
+# Contributing to GetCoins
 
 Please take a moment to review this document in order to make the contribution
 process easy and effective for everyone involved.
@@ -72,20 +72,20 @@ provide as much detail and context as possible.
 
 ## Support requests
 
-If you are having particular problem with your Copay instalation, please first [search older
-issues](https://github.com/getcoins/wallet/issues) in order to learn if the issue is already reported. It could be fixed already.
+If you are having particular problem with your GetCoins instalation, please first [search older
+issues](https://github.com/getcoinscom/gcwallet/issues) in order to learn if the issue is already reported. It could be fixed already.
 
-Please also check our [FAQ](https://github.com/getcoins/wallet/wiki/GETCOINS---FAQ).
+Please also check our [FAQ](https://github.com/getcoinscom/gcwallet/wiki/GETCOINS---FAQ).
 
 When requesting support describe the issue as much in detail as possible. Consider to
 provide the following information:
 
 - Which platform are you using? (Which device and operating system)
-- Which version of Copay are you using? (Check Copay version on the side menu)
+- Which version of GetCoins are you using? (Check GetCoins version on the side menu)
 - Please import your wallet on a different platform. Does the problem persist?
 - What type of wallet are you using? (multisig or singlesig)
 - When the wallet was created? On which device / operating system
-- Please check Copay logs (General Settings -> About Copay -> Session Logs). Look for
+- Please check GetCoins logs (General Settings -> About GetCoins -> Session Logs). Look for
   any errors reported there (errors are shown in red)
 - If possible, please provide a screenshot of the error / issue.
 
@@ -93,7 +93,7 @@ If you need to provide personal / sensitive data to solve the issue (like the Wa
 We will provide a better channel (like an Gmail email address) so you can send the information. If possible, please
 encrypt your emails using GnuPG.
 
-To open an issue go to [Github Issues](https://github.com/getcoins/wallet/issues).
+To open an issue go to [Github Issues](https://github.com/getcoinscom/gcwallet/issues).
 
 <a name="pull-requests"></a>
 
@@ -108,7 +108,7 @@ implementing features, refactoring code, porting to a different language),
 otherwise you risk spending a lot of time working on something that the
 project's developers might not want to merge into the project.
 
-Please adhere to the coding conventions used throughout Copay (indentation, tests, etc.)
+Please adhere to the coding conventions used throughout GetCoins (indentation, tests, etc.)
 
 **IMPORTANT**: By submitting a patch, you agree to allow the project owner to
 license your work under the same license as that used by the project.

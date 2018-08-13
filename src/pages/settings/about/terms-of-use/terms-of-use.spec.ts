@@ -128,7 +128,7 @@ describe('TermsOfUsePage', () => {
         const log = instance.prepareLogs();
 
         expect(log).toEqual(
-          'Copay Session Logs\n Be careful, this could contain sensitive private data\n\n\n\n[01/07/2008][1]msg'
+          'GetCoins Session Logs\n Be careful, this could contain sensitive private data\n\n\n\n[01/07/2008][1]msg'
         );
       });
     });
@@ -141,7 +141,7 @@ describe('TermsOfUsePage', () => {
 
         expect(instance.socialSharing.shareViaEmail).toHaveBeenCalledWith(
           'logs',
-          'Copay Logs',
+          'GetCoins Logs',
           null,
           null,
           null,

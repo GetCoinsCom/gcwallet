@@ -3,7 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 
 @Injectable()
 export class BwcErrorProvider {
-  constructor(private translate: TranslateService) {}
+  constructor(private translate: TranslateService) { }
 
   public msg(err, prefix?: string): string {
     if (!err) return 'Unknown error';
@@ -112,7 +112,7 @@ export class BwcErrorProvider {
           break;
         case 'UPGRADE_NEEDED':
           body = this.translate.instant(
-            'Please upgrade Copay to perform this action'
+            'Please upgrade GetCoins to perform this action'
           );
           break;
         case 'BAD_SIGNATURES':

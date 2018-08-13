@@ -326,10 +326,10 @@ export class GCApp {
   private handleDeepLinksNW() {
     var gui = (window as any).require('nw.gui');
 
-    // This event is sent to an existent instance of Copay (only for standalone apps)
+    // This event is sent to an existent instance of GetCoins (only for standalone apps)
     gui.App.on('open', this.onOpenNW.bind(this));
 
-    // Used at the startup of Copay
+    // Used at the startup of GetCoins
     var argv = gui.App.argv;
     if (argv && argv[0] && !(window as any)._urlHandled) {
       (window as any)._urlHandled = true;

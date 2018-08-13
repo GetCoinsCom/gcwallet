@@ -87,7 +87,7 @@ describe('Provider: Incoming Data Provider', () => {
     );
     it('Should handle Join Wallet', () => {
       let data =
-        'copay:RTpopkn5KBnkxuT7x4ummDKx3Lu1LvbntddBC4ssDgaqP7DkojT8ccxaFQEXY4f3huFyMewhHZLbtc';
+        'getcoins:RTpopkn5KBnkxuT7x4ummDKx3Lu1LvbntddBC4ssDgaqP7DkojT8ccxaFQEXY4f3huFyMewhHZLbtc';
       let stateParams = { url: data, fromScan: true };
       let nextView = {
         name: 'JoinWalletPage',
@@ -297,7 +297,7 @@ describe('Provider: Incoming Data Provider', () => {
       });
     });
     it('Should handle Glidera URI', () => {
-      let data = ['bitpay://glidera', 'copay://glidera'];
+      let data = ['bitpay://glidera', 'getcoins://glidera'];
       data.forEach(element => {
         let stateParams = { code: null };
         let nextView = {
@@ -310,7 +310,7 @@ describe('Provider: Incoming Data Provider', () => {
       });
     });
     it('Should handle Coinbase URI', () => {
-      let data = ['bitpay://coinbase', 'copay://coinbase'];
+      let data = ['bitpay://coinbase', 'getcoins://coinbase'];
       data.forEach(element => {
         let stateParams = { code: null };
         let nextView = {
