@@ -63,14 +63,14 @@
         #{{account}}
       </ion-note>
     </ion-item>
-    <ion-item-divider *ngIf="copayers">Copayers</ion-item-divider>
+    <ion-item-divider *ngIf="copayers" class="gcwallet_sm-font">Copayers</ion-item-divider>
     <ion-item *ngFor="let copayer of copayers">
       <span>{{copayer.name}}</span>
       <ion-note *ngIf="copayer.id == copayerId" item-end>
         ({{'Me' | translate}})
       </ion-note>
     </ion-item>
-    <ion-item-divider>{{'Extended Public Keys' | translate}}</ion-item-divider>
+    <ion-item-divider class="gcwallet_sm-font">{{'Extended Public Keys' | translate}}</ion-item-divider>
     <ion-item *ngFor="let pk of pubKeys; let i=index" copy-to-clipboard="{{pk}}">
       <span>Copayer {{i}}</span>
       <div padding-top>

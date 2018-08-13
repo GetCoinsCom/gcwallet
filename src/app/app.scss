@@ -474,23 +474,67 @@ page-home {
   }
 }
 
+// **GCEdit: IMPORTANT!! To change reorder's icon (only) to "move" icon when reorder function is called since that seems more understandable
 .ion-ios-reorder:before {
   content: "\f331";
 }
-
 .ion-ios-reorder-outline:before {
   content: "\f331";
 }
 .ion-md-reorder:before {
   content: "\f331";
 }
+
+// **To change the whole default font family for this app
 ion-app.ios , ion-app.md, ion-app.wp{
   font-family: "Proxima Nova", "Helvetica Neue", sans-serif;
 }
-.item-divider .input-wrapper .label-md, .ios .item-divider .input-wrapper .label-md, .md .item-divider .input-wrapper .label-md, .wp .item-divider .input-wrapper .label-md{
-  margin: 18px 8px 5px 0;
+
+// **to give more space on the top and less space on the bottom for page-settings's label
+.item-divider .input-wrapper .label-md,
+ion-app.ios page-settings .item-divider .label,
+ion-app.md page-settings .item-divider .input-wrapper .label-md, 
+ion-app.wp page-settings .item-divider .input-wrapper .label-md
+{
+  margin: 25px 8px 8px 0;
+  font-size: 14px;
 }
-.item-md, .ios .item-md, .md .item-md, .wp .item-md{
-  padding-top: 10px;
-  padding-bottom: 10px;
+// **But, not for the first line of label
+.item-divider:first-child .input-wrapper .label-md,
+ion-app.ios page-settings .item-divider:first-child .label,
+ion-app.md page-settings .item-divider:first-child .input-wrapper .label, 
+ion-app.wp page-settings .item-divider:first-child .input-wrapper .label
+{
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+// **Some places use ion-item tag directly to make list/label effect. For this, we give padding to it
+ion-item,
+ion-app.ios ion-item,
+ion-app.md ion-item,
+ion-app.wp ion-item,
+ion-app.ios button[ion-item],
+ion-app.md button[ion-item],
+ion-app.wp button[ion-item],
+.item-md,
+ion-app.ios page-settings button.item,
+ion-app.md page-settings button.item,
+ion-app.wp page-settings button.item
+{
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+// **Top toolbar font size to be a bit bigger
+.toolbar-title-md,
+ion-app.ios .toolbar-title,
+.md .toolbar-title-md,
+.wp .toolbar-title-md{
+  font-size: 2rem;
+}
+
+// **GCEdit: CUSTOME style for small font
+.gcwallet_sm-font{
+  font-size: 14px;
 }
