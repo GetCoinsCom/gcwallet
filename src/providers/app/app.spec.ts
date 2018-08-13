@@ -17,7 +17,7 @@ import { PersistenceProvider } from '../../providers/persistence/persistence';
 import { PlatformProvider } from '../platform/platform';
 import { AppProvider } from './app';
 
-import * as appTemplate from './../../../app-template/bitpay/appConfig.json';
+import * as appTemplate from './../../../app-template/getcoins/appConfig.json';
 
 describe('AppProvider', () => {
   let injector: TestBed;

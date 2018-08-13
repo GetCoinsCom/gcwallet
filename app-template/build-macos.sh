@@ -73,7 +73,7 @@ if [ $SHOULD_SIGN ]
 then
   echo "Signing ${APP_NAME} DMG"
 
-  export IDENTITY="iPhone Distribution: BitPay, Inc. (884JRH5R93)"
+  export IDENTITY="iPhone Distribution: GetCoins"
 
   # not need for 'out of app store' distribution (?)
 #  export PARENT_PLIST=parent.plist

@@ -82,7 +82,7 @@ import { SatToUnitPipe } from './pipes/satToUnit';
 import { Logger } from './providers';
 import { ProvidersModule } from './providers/providers.module';
 
-import * as appTemplate from './../app-template/bitpay/appConfig.json';
+import * as appTemplate from './../app-template/getcoins/appConfig.json';
 
 declare const require: any;
 

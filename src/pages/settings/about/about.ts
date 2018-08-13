@@ -29,7 +29,7 @@ export class AboutPage {
     private externalLinkProvider: ExternalLinkProvider,
     private replaceParametersProvider: ReplaceParametersProvider,
     private translate: TranslateService
-  ) {}
+  ) { }
 
   ionViewDidLoad() {
     this.logger.debug('ionViewDidLoad AboutPage');
@@ -110,7 +110,7 @@ export class AboutPage {
     this.navCtrl.push(TermsOfUsePage);
   }
   public openPrivacyPolicy() {
-    let url = 'https://bitpay.com/about/privacy';
+    let url = 'https://getcoins.com/about/';
     let optIn = true;
     let title = null;
     let message = this.translate.instant('View Privacy Policy');

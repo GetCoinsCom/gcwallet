@@ -12,7 +12,7 @@
 
       <zxing-scanner #scanner class="test-class" start="true" [device]="selectedDevice" (scanSuccess)="handleQrCodeResult($event)"></zxing-scanner>
       <div class="guides">
-        <img class="svg qr-scan-guides" src="assets/img/bitpay-wallet-qr-scan-guides.svg">
+        <img class="svg qr-scan-guides" src="assets/img/getcoins-wallet-qr-scan-guides.svg">
       </div>
 
     </div>
@@ -74,7 +74,7 @@
   <div class="page-scan-loading-camera" *ngIf="currentState == scannerStates.loading"></div>
   <div class="page-scan-camera-ready" *ngIf="currentState == scannerStates.visible">
     <div class="guides">
-      <img class="svg qr-scan-guides" src="assets/img/bitpay-wallet-qr-scan-guides.svg">
+      <img class="svg qr-scan-guides" src="assets/img/getcoins-wallet-qr-scan-guides.svg">
     </div>
     <div class="scanner-controls">
       <span *ngIf="canEnableLight" class="icon-flash" [ngClass]="{'active': lightActive}" (click)="toggleLight()"></span>

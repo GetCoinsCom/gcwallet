@@ -91,7 +91,7 @@ export class TxDetailsPage {
 
   public readMore(): void {
     let url =
-      'https://support.bitpay.com/hc/en-us/articles/115004497783-What-does-the-BitPay-wallet-s-warning-amount-too-low-to-spend-mean-';
+      'https://getcoins.com/faq';
     let optIn = true;
     let title = null;
     let message = this.translate.instant('Read more in our support page');

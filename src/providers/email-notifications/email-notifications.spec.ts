@@ -14,7 +14,7 @@ describe('Provider: Wallet Provider', () => {
 
   let opts = {
     enabled: true,
-    email: 'test@bitpay.com'
+    email: 'mimi@evergreenatm.io'
   };
 
   beforeEach(() => {

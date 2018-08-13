@@ -43,7 +43,7 @@ export class WalletSettingsPage {
     private navParams: NavParams,
     private touchIdProvider: TouchIdProvider,
     private translate: TranslateService
-  ) {}
+  ) { }
 
   ionViewDidLoad() {
     this.logger.info('ionViewDidLoad WalletSettingsPage');
@@ -113,9 +113,10 @@ export class WalletSettingsPage {
     }
   }
 
+  // **GCEdit: disabled on html yet for 1.0
   public openSupportSpendingPassword(): void {
     let url =
-      'https://support.bitpay.com/hc/en-us/articles/360000244506-What-Does-a-Spending-Password-Do-';
+      'https://getcoins.com/faq';
     let optIn = true;
     let title = null;
     let message = this.translate.instant('Read more in our support page');

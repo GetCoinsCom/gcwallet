@@ -121,7 +121,7 @@ export class ConfirmPage {
       networkName = new B.Address(this.navParams.data.toAddress).network.name;
     } catch (e) {
       var message = this.translate.instant(
-        'Copay only supports Bitcoin Cash using new version numbers addresses'
+        'GetCoins only supports Bitcoin Cash using new version numbers addresses'
       );
       var backText = this.translate.instant('Go back');
       var learnText = this.translate.instant('Learn more');
@@ -130,7 +130,7 @@ export class ConfirmPage {
         .then(back => {
           if (!back) {
             var url =
-              'https://support.bitpay.com/hc/en-us/articles/115004671663';
+              'https://getcoins.com/faq';
             this.externalLinkProvider.open(url);
           }
           this.navCtrl.pop();
@@ -395,9 +395,9 @@ export class ConfirmPage {
             let maxAllowedFee = feeRate * 2;
             this.logger.info(
               'Using Merchant Fee:' +
-                tx.feeRate +
-                ' vs. referent level:' +
-                maxAllowedFee
+              tx.feeRate +
+              ' vs. referent level:' +
+              maxAllowedFee
             );
             if (tx.network != 'testnet' && tx.feeRate > maxAllowedFee) {
               this.onGoingProcessProvider.set('calculatingFee');
