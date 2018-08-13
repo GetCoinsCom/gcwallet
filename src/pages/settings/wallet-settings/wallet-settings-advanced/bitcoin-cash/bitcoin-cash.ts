@@ -216,7 +216,7 @@ export class BitcoinCashPage {
     let optIn = true;
     let title = null;
     let message = this.translate.instant(
-      'Help and support information might be available at the website'
+      'Help and support information may be available at the website'
     );
     let okText = this.translate.instant('Open');
     let cancelText = this.translate.instant('Go Back');
