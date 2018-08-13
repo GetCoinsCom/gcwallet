@@ -16,6 +16,7 @@
 
 body {
   line-height: 22px;
+  font-family: 'Proxima Nova'; /* **GCEdit: test*/
 }
 
 // Alert position
@@ -471,4 +472,25 @@ page-home {
   ion-header {
     box-shadow: 0 0px 0px;
   }
+}
+
+.ion-ios-reorder:before {
+  content: "\f331";
+}
+
+.ion-ios-reorder-outline:before {
+  content: "\f331";
+}
+.ion-md-reorder:before {
+  content: "\f331";
+}
+ion-app.ios , ion-app.md, ion-app.wp{
+  font-family: "Proxima Nova", "Helvetica Neue", sans-serif;
+}
+.item-divider .input-wrapper .label-md, .ios .item-divider .input-wrapper .label-md, .md .item-divider .input-wrapper .label-md, .wp .item-divider .input-wrapper .label-md{
+  margin: 18px 8px 5px 0;
+}
+.item-md, .ios .item-md, .md .item-md, .wp .item-md{
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

@@ -150,6 +150,141 @@ $button-md-text-transform: none;
 
 @import 'roboto';
 @import 'noto-sans';
+// @import 'proximanova';
+
+// **GCEdit: Direct import of Proxima Nova fonts
+@font-face {
+  font-family: 'Proxima Nova Thin';
+  font-style: normal;
+  font-weight: 200;
+  src: local('ProximaNova-Thin'),
+    url('../assets/fonts/ProximaNova-Thin.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Proxima Nova Light';
+  font-style: normal;
+  font-weight: 300;
+  src: local('ProximaNova-Light'),
+    url('../assets/fonts/ProximaNova-Light.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  src: local('ProximaNova-Regular'),
+    url('../assets/fonts/ProximaNova-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Proxima Nova Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: local('ProximaNova-Medium'),
+    url('../assets/fonts/ProximaNova-Medium.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Proxima Nova Seminold';
+  font-style: normal;
+  font-weight: 600;
+  src: local('ProximaNova-Seminold'),
+    url('../assets/fonts/ProximaNova-Seminold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('ProximaNova-Bold'),
+    url('../assets/fonts/ProximaNova-Bold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Proxima Nova Extrabold';
+  font-style: normal;
+  font-weight: 800;
+  src: local('ProximaNova-Extrabold'),
+    url('../assets/fonts/ProximaNova-Extrabold.otf')
+      format('opentype');
+}
+@font-face {
+  font-family: 'Proxima Nova Black';
+  font-style: normal;
+  font-weight: 900;
+  src: local('ProximaNova-Black'),
+    url('../assets/fonts/ProximaNova-Black.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Proxima Nova Condensed Thin';
+  font-style: normal;
+  font-weight: 200;
+  src: local('ProximaNovaCond-Thin'),
+    url('../assets/fonts/ProximaNovaCond-Thin.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Proxima Nova Condensed Light';
+  font-style: normal;
+  font-weight: 300;
+  src: local('ProximaNovaCond-Light'),
+    url('../assets/fonts/ProximaNovaCond-Light.otf')
+      format('opentype');
+}
+@font-face {
+  font-family: 'Proxima Nova Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local('ProximaNovaCond-Regular'),
+    url('../assets/fonts/ProximaNovaCond-Regular.otf')
+      format('opentype');
+}
+@font-face {
+  font-family: 'Proxima Nova Condensed Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: local('ProximaNovaCond-Medium'),
+    url('../assets/fonts/ProximaNovaCond-Medium.otf')
+      format('opentype');
+}
+@font-face {
+  font-family: 'Proxima Nova Condensed Semibold';
+  font-style: normal;
+  font-weight: 600;
+  src: local('ProximaNovaCond-Semibold'),
+    url('../assets/fonts/ProximaNovaCond-Semibold.otf')
+      format('opentype');
+}
+@font-face {
+  font-family: 'Proxima Nova Condensed Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('ProximaNovaCond-Bold'),
+    url('../assets/fonts/ProximaNovaCond-Bold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Proxima Nova Condensed Extrabold';
+  font-style: normal;
+  font-weight: 800;
+  src: local('ProximaNovaCond-Extrabold'),
+    url('../assets/fonts/ProximaNovaCond-Extrabold.otf')
+      format('opentype');
+}
+@font-face {
+  font-family: 'Proxima Nova Condensed Black';
+  font-style: normal;
+  font-weight: 900;
+  src: local('ProximaNovaCond-Black'),
+    url('../assets/fonts/ProximaNovaCond-Black.otf')
+      format('opentype');
+}
+
+
+// **GCEdit: Direct import of Nexa Bold fonts
+@font-face {
+  font-family: 'Nexa Bold';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PNexa_Free_Bold'),
+    url('../assets/fonts/Nexa_Free_Bold.otf')
+      format('opentype');
+}
+
 
 /* Ionic Overrides and Workarounds */
 // Please include a description of the problem solved by the workaround.
@@ -189,6 +324,7 @@ ion-footer {
 
 // Titles centered on all headers for material design
 .toolbar {
+  // font-family: "Nexa Bold";
   &.toolbar-md {
     // material design only
     position: relative;
@@ -208,4 +344,7 @@ ion-footer {
       }
     }
   }
+}
+.tab-button-text{
+  font-family: "Nexa Bold";
 }
