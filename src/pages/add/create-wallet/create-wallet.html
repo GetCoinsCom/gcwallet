@@ -69,6 +69,7 @@
         <ion-input type="text" formControlName="recoveryPhrase"></ion-input>
       </ion-item>
 
+      <!-- // **GCEdit: Disable yet for ver 1.0
       <ion-item *ngIf="createForm.value.selectedSeed == 'new'">
         <ion-label>Testnet</ion-label>
         <ion-toggle formControlName="testnetEnabled" (ionChange)="setDerivationPath()"></ion-toggle>
@@ -80,7 +81,7 @@
           <span translate>WARNING: The testnet is an alternative Bitcoin block chain, to be used for testing. Testnet coins are separate and distinct from actual bitcoins, and do not have any value. This allows application developers or bitcoin testers to experiment, without having to use real bitcoins.</span>
         </div>
       </ion-item>
-
+      -->
       <ion-item *ngIf="createForm.value.selectedSeed == 'set'">
         <ion-label stacked>{{'Derivation path' | translate}}</ion-label>
         <ion-input type="text" formControlName="derivationPath"></ion-input>
