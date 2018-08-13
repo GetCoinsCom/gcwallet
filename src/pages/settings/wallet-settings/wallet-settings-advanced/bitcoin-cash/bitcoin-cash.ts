@@ -212,11 +212,11 @@ export class BitcoinCashPage {
 
   public openHelpExternalLink(): void {
     let url =
-      'https://support.bitpay.com/hc/en-us/articles/115005019583-How-Can-I-Recover-Bitcoin-Cash-BCH-from-My-Wallet-';
+      'https://getcoins.com/faq';
     let optIn = true;
     let title = null;
     let message = this.translate.instant(
-      'Help and support information is available at the website'
+      'Help and support information might be available at the website'
     );
     let okText = this.translate.instant('Open');
     let cancelText = this.translate.instant('Go Back');
