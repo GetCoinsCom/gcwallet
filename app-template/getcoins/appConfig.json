@@ -5,7 +5,7 @@
   "themeColor": "#10263e",
   "userVisibleName": "GCWallet",
   "purposeLine": "GetCoins' Bitcoin Wallet",
-  "bundleName": "getcoins",
+  "bundleName": "gcwallet",
   "appUri": "getcoins",
   "name": "getcoins",
   "nameNoSpace": "getcoins",
