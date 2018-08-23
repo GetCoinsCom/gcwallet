@@ -22,7 +22,7 @@ The GetCoins Wallet is a secure bitcoin wallet platform for mobile devices. It u
 - Push notifications (only available for ios and android versions)
 - Customizable wallet naming and background colors
 - Multiple languages supported
-- Available for [iOS](https://itunes.apple.com/us/app/gcwallet/id), [Linux](https://github.com/getcoinscom/gcwallet/releases/latest), [Windows](https://github.com/getcoinscom/gcwallet/releases/latest) and [OS X](https://github.com/getcoinscom/gcwallet/releases/latest) devices
+- Available for [iOS](https://itunes.apple.com/us/app/getcoins-wallet/id1426011288), [Android](https://play.google.com/store/apps/details?id=com.getcoins.gcwallet), [Linux](https://github.com/getcoinscom/gcwallet/releases/latest), [Windows](https://github.com/getcoinscom/gcwallet/releases/latest) and [OS X](https://github.com/getcoinscom/gcwallet/releases/latest) devices
 
 ## Testing in a Browser
 
