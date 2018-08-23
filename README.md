@@ -205,4 +205,4 @@ Please see [Support requests](CONTRIBUTING.md#support)
 
 ## License
 
-GetCoins is released under the MIT License. Please refer to the [LICENSE](https://github.com/getcoinscom/gcwallet/blob/master/LICENSE) file that accompanies this project for more information including complete terms and conditions.
+GetCoins Wallet is released under the MIT License. Please refer to the [LICENSE](https://github.com/getcoinscom/gcwallet/blob/master/LICENSE) file that accompanies this project for more information including complete terms and conditions.
