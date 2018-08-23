@@ -3,11 +3,7 @@
 
 The GetCoins Wallet is a fork of the Copay Wallet (https://github.com/getcoinscom/gcwallet).
 
-The GetCoins Wallet is a secure bitcoin wallet platform for both desktop and mobile devices. It uses BitPay Bitcore Wallet Service (BWS) for peer synchronization and network interfacing.
-
-Binary versions of the GetCoins Wallet are available for download at Getcoins.com.
-
-For a list of frequently asked questions please visit the GetCoins Wallet FAQ.
+The GetCoins Wallet is a secure bitcoin wallet platform for mobile devices. It uses BitPay Bitcore Wallet Service (BWS) for peer synchronization and network interfacing.
 
 ## Main Features
 
