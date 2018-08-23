@@ -134,7 +134,7 @@ To enable external services, set the `GETCOINS_EXTERNAL_SERVICES_CONFIG_LOCATION
 GETCOINS_EXTERNAL_SERVICES_CONFIG_LOCATION="~/.getcoins/externalServices.json" npm run apply:getcoins
 ```
 
-## About GetCoins
+## About GetCoins Wallet
 
 ### General
 
