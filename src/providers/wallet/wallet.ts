@@ -466,7 +466,9 @@ export class WalletProvider {
             return reject(this.bwcErrorProvider.msg('WALLET_NOT_COMPLETE'));
 
           if (wallet.needsBackup) {
-            return reject(this.bwcErrorProvider.msg('WALLET_NEEDS_BACKUP'));
+            if (wallet.needsBackupUrgent)
+              return reject(this.bwcErrorProvider.msg('WALLET_NEEDS_BACKUP'));
+            // return reject(this.bwcErrorProvider.msg('WALLET_NEEDS_BACKUP'));
           }
 
           this.createAddress(wallet)
