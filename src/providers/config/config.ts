@@ -113,7 +113,7 @@ const configDefault: Config = {
     useLegacyAddress: false,
     requiredCopayers: 2,
     totalCopayers: 3,
-    spendUnconfirmed: false,
+    spendUnconfirmed: true,
     reconnectDelay: 5000,
     idleDurationMin: 4,
     settings: {
