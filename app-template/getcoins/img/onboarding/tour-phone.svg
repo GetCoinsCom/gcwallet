@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 375 247" style="enable-background:new 0 0 375 247;" xml:space="preserve">
 <style type="text/css">
 	.st0{display:none;opacity:0.15;}
 	.st1{display:inline;}
 	.st2{fill:none;stroke:#FFFFFF;stroke-width:2;}
-	.st3{opacity:0.5;fill:#8FBAC0;enable-background:new    ;}
+	.st3{opacity:0.5;fill:#F79420;enable-background:new    ;}
 	.st4{fill:#10263E;}
 	.st5{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:square;}
-	.st6{opacity:0.85;fill:#F89B4F;}
+	.st6{fill:#ECB807;}
 </style>
 <g transform="translate(0.000000, 54.000000)" class="st0">
 	<g class="st1">
@@ -67,15 +67,15 @@
 		<path id="Shape_37_" class="st2" d="M311.2,109.2h10.2"/>
 	</g>
 </g>
+<path class="st3" d="M141,215.9c-4.4,0-8-3.6-8-8V40c0-4.4,3.6-8,8-8h83.8c4.4,0,8,3.6,8,8v167.9c0,4.4-3.6,8-8,8H141 M187.5,0
+	C119.3,0,64,55.3,64,123.5S119.3,247,187.5,247S311,191.7,311,123.5S255.7,0,187.5,0"/>
+<path class="st4" d="M224.8,32H141c-4.4,0-8,3.6-8,8v167.9c0,4.4,3.6,8,8,8h83.8c4.4,0,8-3.6,8-8V40C232.8,35.6,229.2,32,224.8,32"
+	/>
+<path class="st2" d="M141,32h83.8c4.4,0,8,3.6,8,8v167.9c0,4.4-3.6,8-8,8H141c-4.4,0-8-3.6-8-8V40C133,35.6,136.6,32,141,32z"/>
+<line class="st5" x1="133.5" y1="188" x2="232.3" y2="188"/>
+<line class="st5" x1="175.1" y1="202.3" x2="193.8" y2="202.3"/>
 <g>
-	<path class="st3" d="M141,215.9c-4.4,0-8-3.6-8-8V40c0-4.4,3.6-8,8-8h83.8c4.4,0,8,3.6,8,8v167.9c0,4.4-3.6,8-8,8H141 M187.5,0
-		C119.3,0,64,55.3,64,123.5S119.3,247,187.5,247S311,191.7,311,123.5S255.7,0,187.5,0"/>
-	<path class="st4" d="M224.8,32H141c-4.4,0-8,3.6-8,8v167.9c0,4.4,3.6,8,8,8h83.8c4.4,0,8-3.6,8-8V40C232.8,35.6,229.2,32,224.8,32"
-		/>
-	<path class="st2" d="M141,32h83.8c4.4,0,8,3.6,8,8v167.9c0,4.4-3.6,8-8,8H141c-4.4,0-8-3.6-8-8V40C133,35.6,136.6,32,141,32z"/>
-	<line class="st5" x1="133.5" y1="188" x2="232.3" y2="188"/>
-	<line class="st5" x1="175.1" y1="202.3" x2="193.8" y2="202.3"/>
-	<path class="st6" d="M197.8,66H166v31.8h31.8V66z M193.8,93.3h-23.2V70.5h23.2V93.3z"/>
+	<path class="st6" d="M197.8,66H166v31.8h31.8V66z M193.3,93.3h-22.7V70.5h22.7V93.3z"/>
 	<polygon class="st6" points="231.9,156.9 227.4,156.9 227.4,166 266,166 266,161.5 231.9,161.5 	"/>
 	<rect x="175.1" y="75.1" class="st6" width="13.6" height="13.6"/>
 	<path class="st6" d="M166,166h31.8v-31.8H166V166z M170.5,138.7h22.7v22.7h-22.7V138.7z"/>
