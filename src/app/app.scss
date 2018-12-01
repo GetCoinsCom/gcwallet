@@ -406,7 +406,9 @@ OVERRIDE for the new APP //GC edit
 //**Overriding ion-icon's bottom navbar icons for selected state
 .tabbar {
   .tab-button[aria-selected='true'],
-  .tab-button:active, .tab-button:visited, .tab-button:focus  {
+  .tab-button:active,
+  .tab-button:visited,
+  .tab-button:focus {
     ion-icon {
       // custom icons
       &[class*='tab-home'] {
@@ -464,7 +466,7 @@ ion-header {
 page-home {
   .scroll-content {
     .wrapper {
-      border-top: 6px solid $color-primary;
+      border-top: 6px solid $white;
       margin-top: 0px;
       padding-top: 0px;
     }
@@ -476,35 +478,35 @@ page-home {
 
 // **GCEdit: IMPORTANT!! To change reorder's icon (only) to "move" icon when reorder function is called since that seems more understandable
 .ion-ios-reorder:before {
-  content: "\f331";
+  content: '\f331';
 }
 .ion-ios-reorder-outline:before {
-  content: "\f331";
+  content: '\f331';
 }
 .ion-md-reorder:before {
-  content: "\f331";
+  content: '\f331';
 }
 
 // **To change the whole default font family for this app
-ion-app.ios , ion-app.md, ion-app.wp{
-  font-family: "Proxima Nova", "Helvetica Neue", sans-serif;
+ion-app.ios,
+ion-app.md,
+ion-app.wp {
+  font-family: 'Proxima Nova', 'Helvetica Neue', sans-serif;
 }
 
 // **to give more space on the top and less space on the bottom for page-settings's label
 .item-divider .input-wrapper .label-md,
 ion-app.ios page-settings .item-divider .label,
-ion-app.md page-settings .item-divider .input-wrapper .label-md, 
-ion-app.wp page-settings .item-divider .input-wrapper .label-md
-{
+ion-app.md page-settings .item-divider .input-wrapper .label-md,
+ion-app.wp page-settings .item-divider .input-wrapper .label-md {
   margin: 25px 8px 8px 0;
   font-size: 14px;
 }
 // **But, not for the first line of label
 .item-divider:first-child .input-wrapper .label-md,
 ion-app.ios page-settings .item-divider:first-child .label,
-ion-app.md page-settings .item-divider:first-child .input-wrapper .label, 
-ion-app.wp page-settings .item-divider:first-child .input-wrapper .label
-{
+ion-app.md page-settings .item-divider:first-child .input-wrapper .label,
+ion-app.wp page-settings .item-divider:first-child .input-wrapper .label {
   margin-top: 8px;
   margin-bottom: 8px;
 }
@@ -520,8 +522,7 @@ ion-app.wp button[ion-item],
 .item-md,
 ion-app.ios page-settings button.item,
 ion-app.md page-settings button.item,
-ion-app.wp page-settings button.item
-{
+ion-app.wp page-settings button.item {
   padding-top: 8px;
   padding-bottom: 8px;
 }
@@ -530,11 +531,11 @@ ion-app.wp page-settings button.item
 .toolbar-title-md,
 ion-app.ios .toolbar-title,
 .md .toolbar-title-md,
-.wp .toolbar-title-md{
+.wp .toolbar-title-md {
   font-size: 2rem;
 }
 
 // **GCEdit: CUSTOME style for small font
-.gcwallet_sm-font{
+.gcwallet_sm-font {
   font-size: 14px;
 }
