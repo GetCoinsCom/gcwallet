@@ -5,15 +5,15 @@ import { TestUtils } from '../../../../test';
 
 import { ModalMock } from 'ionic-mocks';
 import { PopupProvider } from '../../../../providers/popup/popup';
-import { TermsOfUsePage } from './terms-of-use';
+import { TermsAndConditionsPage } from './terms-and-conditions';
 
-describe('TermsOfUsePage', () => {
-  let fixture: ComponentFixture<TermsOfUsePage>;
+describe('TermsAndConditionsPage', () => {
+  let fixture: ComponentFixture<TermsAndConditionsPage>;
   let instance;
   let testBed: typeof TestBed;
 
   beforeEach(async(() => {
-    TestUtils.configurePageTestingModule([TermsOfUsePage]).then(testEnv => {
+    TestUtils.configurePageTestingModule([TermsAndConditionsPage]).then(testEnv => {
       fixture = testEnv.fixture;
       instance = testEnv.instance;
       testBed = testEnv.testBed;
@@ -79,7 +79,7 @@ describe('TermsOfUsePage', () => {
         spyOn(instance.logger, 'info');
         instance.ionViewDidLoad();
         expect(instance.logger.info).toHaveBeenCalledWith(
-          'ionViewDidLoad TermsOfUsePage'
+          'ionViewDidLoad TermsAndConditionsPage'
         );
       });
     });

@@ -5,7 +5,7 @@ import { Logger } from '../../../providers/logger/logger';
 
 // pages
 import { SessionLogPage } from './session-log/session-log';
-import { TermsOfUsePage } from './terms-of-use/terms-of-use';
+import { TermsAndConditionsPage } from './terms-and-conditions/terms-and-conditions';
 
 // providers
 import { AppProvider } from '../../../providers/app/app';
@@ -29,7 +29,7 @@ export class AboutPage {
     private externalLinkProvider: ExternalLinkProvider,
     private replaceParametersProvider: ReplaceParametersProvider,
     private translate: TranslateService
-  ) { }
+  ) {}
 
   ionViewDidLoad() {
     this.logger.debug('ionViewDidLoad AboutPage');
@@ -107,7 +107,7 @@ export class AboutPage {
     }
   */
   public openTermsOfUse(): void {
-    this.navCtrl.push(TermsOfUsePage);
+    this.navCtrl.push(TermsAndConditionsPage);
   }
   public openPrivacyPolicy() {
     let url = 'https://getcoins.com/about/';

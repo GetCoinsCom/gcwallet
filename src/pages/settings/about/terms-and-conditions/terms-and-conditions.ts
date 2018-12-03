@@ -1,5 +1,5 @@
 import { Component, Injectable } from '@angular/core';
-import * as toudoc from '../../../../assets/terms-of-use.json';
+import * as toudoc from '../../../../assets/terms-and-conditions.json';
 
 // providers
 import { Logger } from '../../../../providers/logger/logger';
@@ -7,11 +7,11 @@ import { Logger } from '../../../../providers/logger/logger';
 // import * as _ from 'lodash';
 
 @Component({
-  selector: 'page-terms-of-use',
-  templateUrl: 'terms-of-use.html'
+  selector: 'page-terms-and-conditions',
+  templateUrl: 'terms-and-conditions.html'
 })
 @Injectable()
-export class TermsOfUsePage {
+export class TermsAndConditionsPage {
   public data: object;
   public toudoc: object;
 

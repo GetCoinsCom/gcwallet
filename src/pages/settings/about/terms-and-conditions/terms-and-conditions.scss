@@ -1,4 +1,4 @@
-page-terms-of-use {
+page-terms-and-conditions {
   .tou {
     padding: 5px 16px;
     &_content {
@@ -9,6 +9,10 @@ page-terms-of-use {
     }
     &_h2 {
       font-size: 2.3rem;
+      margin-left: 0;
+    }
+    &_h3 {
+      font-size: 2rem;
       margin-left: 0;
     }
   }

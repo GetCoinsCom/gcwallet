@@ -1,43 +1,50 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>{{title}}</ion-title>
+    <ion-title>{{ title }}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item-divider>{{'Release information'| translate}}</ion-item-divider>
+    <ion-item-divider>{{ 'Release information' | translate }}</ion-item-divider>
     <ion-item>
-      <ion-icon class="custom-icon" name="ios-download-outline" item-start></ion-icon>
-      {{'Version' | translate}}
-      <ion-note item-end>
-        v{{version}}
-      </ion-note>
+      <ion-icon
+        class="custom-icon"
+        name="ios-download-outline"
+        item-start
+      ></ion-icon>
+      {{ 'Version' | translate }}
+      <ion-note item-end> v{{ version }} </ion-note>
     </ion-item>
     <ion-item class="commit-hash" (click)="openExternalLink()">
       <ion-icon class="custom-icon" name="logo-github" item-start></ion-icon>
       Commit hash
-      <ion-note item-end>
-        #{{commitHash}}
-      </ion-note>
+      <ion-note item-end> #{{ commitHash }} </ion-note>
     </ion-item>
-    <ion-item-divider>{{'GetCoins Wallet is a fork of Copay made by Bitpay'| translate}}</ion-item-divider>
+    <ion-item-divider>{{
+      'GetCoins Wallet is a fork of Copay made by Bitpay' | translate
+    }}</ion-item-divider>
     <ion-item class="commit-hash" (click)="openCopayLink()">
       <ion-icon class="custom-icon" name="logo-github" item-start></ion-icon>
       See the original project
-      <ion-note item-end>
-        #{{commitHashOrigin}}
-      </ion-note>
+      <ion-note item-end> #{{ commitHashOrigin }} </ion-note>
     </ion-item>
     <ion-item-divider></ion-item-divider>
     <button ion-item (click)="openTermsOfUse()">
-      <ion-icon class="custom-icon" name="ios-list-box-outline" item-start></ion-icon>
-      {{'Terms of Use' | translate }}
+      <ion-icon
+        class="custom-icon"
+        name="ios-list-box-outline"
+        item-start
+      ></ion-icon>
+      {{ 'Terms and Conditions' | translate }}
     </button>
     <button ion-item (click)="openSessionLog()">
-      <ion-icon class="custom-icon" name="ios-copy-outline" item-start></ion-icon>
+      <ion-icon
+        class="custom-icon"
+        name="ios-copy-outline"
+        item-start
+      ></ion-icon>
       {{ 'Session log' | translate }}
     </button>
   </ion-list>
-
 </ion-content>
