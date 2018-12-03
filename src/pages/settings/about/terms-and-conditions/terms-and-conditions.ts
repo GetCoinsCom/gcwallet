@@ -33,7 +33,7 @@ export class TermsAndConditionsPage {
 
   // constructor(private toudata: TermsOfUseDataProvider, private logger: Logger, private translate: TranslateService
   constructor(private logger: Logger) {
-    this.logger.info('TermsOfUse viewed.');
+    this.logger.info('ionViewDIdLoad TermsAndConditionsPage.');
     // console.log(toudoc);
     // console.log(this.touTitle);
   }

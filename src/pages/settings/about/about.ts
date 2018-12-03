@@ -32,7 +32,7 @@ export class AboutPage {
   ) {}
 
   ionViewDidLoad() {
-    this.logger.debug('ionViewDidLoad AboutPage');
+    this.logger.info('ionViewDidLoad AboutPage');
     this.commitHash = this.appProvider.info.commitHash;
     this.version = this.appProvider.info.version;
     this.commitHashOrigin = this.appProvider.info.commitHashOrigin;
