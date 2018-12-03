@@ -103,7 +103,7 @@ export class ReceivePage {
     this.wallet.needsBackupUrgent = false; // ** ATTN! Adding new property to add one more layer to filter backup necesecity since v1.2
     this.loading =
       newAddr || _.isEmpty(this.address) || changingWallet ? true : false;
-    console.log(this.wallet);
+    // console.log(this.wallet);
     this.walletProvider
       .getAddress(this.wallet, newAddr)
       .then(addr => {
