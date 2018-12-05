@@ -78,7 +78,7 @@
     "start:ios": "run-s build:ios open:ios",
     "start:android": "run-s run:android",
     "start:desktop": "run-s build:desktop && nw .",
-    "build:ios": "run-s env:dev && ionic cordova build ios --debug",
+    "build:ios": "run-s env:dev && ionic cordova build ios -- --buildFlag='-UseModernBuildSystem=0'",
     "build:android": "run-s env:dev && ionic cordova build android --debug",
     "build:desktop": "run-s env:dev && run-s ionic:build",
     "build:ios-release": "run-s env:prod && ionic cordova build ios --release --aot true --environment prod --output-hashing all --sourcemaps false --extract-css true --named-chunks false --build-optimizer true",
