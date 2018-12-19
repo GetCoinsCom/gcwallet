@@ -540,7 +540,9 @@ ion-app.ios .toolbar-title,
   font-size: 14px;
 }
 
-// **GC v2 Edit:
+// **GC v2 Edit: Header color (hook into all toolbar-background and not the outer tags otherwise it wont get affected)
+.toolbar-background,
+.toolbar-background-ios,
 .toolbar-background-md {
   background: $color-primary;
 }
