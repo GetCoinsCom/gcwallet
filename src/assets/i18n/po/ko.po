@@ -899,7 +899,7 @@ msgstr "마음에 안듭니다"
 msgid "I give explicit consent to BitPay to use my email address to send me email notifications about payments (and, if selected, email updates and news about the wallet)."
 msgstr ""
 
-msgid "I have read, understood, and agree to the Terms of Use"
+msgid "I have read, understood, and agree to the Terms and Conditions"
 msgstr ""
 
 msgid "I have written it down"
@@ -1802,7 +1802,7 @@ msgstr ""
 msgid "Tap and hold to show"
 msgstr "표시하시려면 길게 탭하세요"
 
-msgid "Terms of Use"
+msgid "Terms and Conditions"
 msgstr "이용 약관"
 
 msgid "Text"
@@ -2069,7 +2069,7 @@ msgstr "Insight에서 거래 보기"
 msgid "View Update"
 msgstr "업데이트 보기"
 
-msgid "View Wallet Terms of Use"
+msgid "View Wallet Terms and Conditions"
 msgstr ""
 
 msgid "View all addresses"

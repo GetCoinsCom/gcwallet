@@ -940,7 +940,7 @@ msgid ""
 "about the wallet)."
 msgstr ""
 
-msgid "I have read, understood, and agree to the Terms of Use"
+msgid "I have read, understood, and agree to the Terms and Conditions"
 msgstr ""
 
 msgid "I have written it down"
@@ -1882,7 +1882,7 @@ msgstr ""
 msgid "Tap and hold to show"
 msgstr ""
 
-msgid "Terms of Use"
+msgid "Terms and Conditions"
 msgstr ""
 
 msgid "Text"
@@ -2190,7 +2190,7 @@ msgstr ""
 msgid "View Update"
 msgstr ""
 
-msgid "View Wallet Terms of Use"
+msgid "View Wallet Terms and Conditions"
 msgstr ""
 
 msgid "View all addresses"

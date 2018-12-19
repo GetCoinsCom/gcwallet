@@ -1002,8 +1002,8 @@ msgstr ""
 "notifications about payments (and, if selected, email updates and news about "
 "the wallet)."
 
-msgid "I have read, understood, and agree to the Terms of Use"
-msgstr "I have read, understood, and agree to the Terms of Use"
+msgid "I have read, understood, and agree to the Terms and Conditions"
+msgstr "I have read, understood, and agree to the Terms and Conditions"
 
 msgid "I have written it down"
 msgstr "I have written it down"
@@ -1987,8 +1987,8 @@ msgstr "Take control of your money, get started with bitcoin."
 msgid "Tap and hold to show"
 msgstr "Tap and hold to show"
 
-msgid "Terms of Use"
-msgstr "Terms of Use"
+msgid "Terms and Conditions"
+msgstr "Terms and Conditions"
 
 msgid "Text"
 msgstr "Text"
@@ -2341,8 +2341,8 @@ msgstr "View Transaction on Insight"
 msgid "View Update"
 msgstr "View Update"
 
-msgid "View Wallet Terms of Use"
-msgstr "View Wallet Terms of Use"
+msgid "View Wallet Terms and Conditions"
+msgstr "View Wallet Terms and Conditions"
 
 msgid "View all addresses"
 msgstr "View all addresses"

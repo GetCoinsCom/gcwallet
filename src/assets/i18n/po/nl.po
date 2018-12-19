@@ -899,7 +899,7 @@ msgstr "Ik vind hem niet goed"
 msgid "I give explicit consent to BitPay to use my email address to send me email notifications about payments (and, if selected, email updates and news about the wallet)."
 msgstr ""
 
-msgid "I have read, understood, and agree to the Terms of Use"
+msgid "I have read, understood, and agree to the Terms and Conditions"
 msgstr ""
 
 msgid "I have written it down"
@@ -1802,7 +1802,7 @@ msgstr ""
 msgid "Tap and hold to show"
 msgstr "Tik en houd vast om te tonen"
 
-msgid "Terms of Use"
+msgid "Terms and Conditions"
 msgstr "Gebruikersvoorwaarden"
 
 msgid "Text"
@@ -2069,7 +2069,7 @@ msgstr "Bekijk Transactie op Insight"
 msgid "View Update"
 msgstr "Update Bekijken"
 
-msgid "View Wallet Terms of Use"
+msgid "View Wallet Terms and Conditions"
 msgstr ""
 
 msgid "View all addresses"

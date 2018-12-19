@@ -899,7 +899,7 @@ msgstr "Das gefällt mir nicht"
 msgid "I give explicit consent to BitPay to use my email address to send me email notifications about payments (and, if selected, email updates and news about the wallet)."
 msgstr ""
 
-msgid "I have read, understood, and agree to the Terms of Use"
+msgid "I have read, understood, and agree to the Terms and Conditions"
 msgstr "Ich habe die Nutzungsbedingungen gelesen und stimme ihnen zu"
 
 msgid "I have written it down"
@@ -1802,7 +1802,7 @@ msgstr "Übernehmen Sie die Kontrolle über Ihr Geld, legen Sie mit Bitcoin los.
 msgid "Tap and hold to show"
 msgstr "Anzeigen durch tippen und halten"
 
-msgid "Terms of Use"
+msgid "Terms and Conditions"
 msgstr "Nutzungsbedingungen"
 
 msgid "Text"
@@ -2069,7 +2069,7 @@ msgstr "Transaktionen auf Insight anzeigen"
 msgid "View Update"
 msgstr "Aktualisierungen anzeigen"
 
-msgid "View Wallet Terms of Use"
+msgid "View Wallet Terms and Conditions"
 msgstr ""
 
 msgid "View all addresses"

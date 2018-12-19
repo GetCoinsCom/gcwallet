@@ -49,7 +49,7 @@ export class DisclaimerPage {
     let url = 'https://getcoins.com/about/terms';
     let optIn = true;
     let title = null;
-    let message = this.translate.instant('View Wallet Terms of Use');
+    let message = this.translate.instant('View Wallet Terms and Conditions');
     let okText = this.translate.instant('Open');
     let cancelText = this.translate.instant('Go Back');
     this.externalLinkProvider.open(

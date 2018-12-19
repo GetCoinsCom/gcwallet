@@ -901,7 +901,7 @@ msgstr "好きではない"
 msgid "I give explicit consent to BitPay to use my email address to send me email notifications about payments (and, if selected, email updates and news about the wallet)."
 msgstr ""
 
-msgid "I have read, understood, and agree to the Terms of Use"
+msgid "I have read, understood, and agree to the Terms and Conditions"
 msgstr ""
 
 msgid "I have written it down"
@@ -1806,7 +1806,7 @@ msgstr ""
 msgid "Tap and hold to show"
 msgstr "長押しで表示"
 
-msgid "Terms of Use"
+msgid "Terms and Conditions"
 msgstr "利用規約"
 
 msgid "Text"
@@ -2073,7 +2073,7 @@ msgstr "Insightにて取引を表示"
 msgid "View Update"
 msgstr "更新情報を表示"
 
-msgid "View Wallet Terms of Use"
+msgid "View Wallet Terms and Conditions"
 msgstr ""
 
 msgid "View all addresses"
