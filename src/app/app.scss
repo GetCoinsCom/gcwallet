@@ -466,7 +466,7 @@ ion-header {
 page-home {
   .scroll-content {
     .wrapper {
-      border-top: 6px solid $color-secondary;
+      border-top: 6px solid rgb(245, 245, 245); // **GC v2 Edit; got rid of the borderbottom attached to scroll-content
       margin-top: 0px;
       padding-top: 0px;
     }
@@ -549,4 +549,9 @@ ion-app.ios .toolbar-title,
 
 #ion-diagnostics-toast {
   background: $color-primary;
+}
+
+.toolbar,
+.toolbar-md {
+  border-bottom: 6px solid $color-secondary;
 }
