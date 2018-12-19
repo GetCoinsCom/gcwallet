@@ -26,6 +26,11 @@ $onboarding-primary-color: $color-primary;
 
 $slider-bg-color: $color-primary; //**GC edit
 $white: #ffffff;
-//** GCEdit---
-//** Actual Individual OVERRIDE will happen in src/app/app.scss
-//** because this part is only imported at the beginning and not the end
+
+$toolbar-md-height: 50px;
+$toolbar-ios-height: 50px;
+
+// ** GCEdit---
+// ** Actual Individual OVERRIDE will happen in src/app/app.scss
+// ** because this part is only imported at the beginning and not the end
+// ** ant therefore, you need to run apply:getcoins whenver you made any changes on this file
