@@ -106,7 +106,7 @@
         <div item-end>
           <button ion-button clear icon-only color="grey">
             <ion-badge *ngIf="notificationsN > 3" color="danger">{{
-              notificationsN
+              notifications
             }}</ion-badge>
             <ion-icon ios="ios-arrow-dropright"></ion-icon>
           </button>
@@ -160,7 +160,7 @@
       </ion-item-divider>
 
       <ion-list
-        reorder="{{showReorderBtc}}"
+        reorder="{{ showReorderBtc }}"
         (ionItemReorder)="reorderWalletsBtc($event)"
       >
         <button
@@ -272,7 +272,7 @@
       </ion-item-divider>
 
       <ion-list
-        reorder="{{showReorderBch}}"
+        reorder="{{ showReorderBch }}"
         (ionItemReorder)="reorderWalletsBch($event)"
       >
         <button
@@ -342,6 +342,33 @@
           </div>
         </button>
       </ion-list>
+    </div>
+
+    <div class="card support">
+      <ion-item-divider>
+        <div class="title support-title" item-start>
+          <img
+            src="assets/img/icon-contact-support_18.svg"
+            alt="Support icon"
+            width="18"
+          />
+          <span translate>Need help? Contact Support 24/7</span>
+        </div>
+      </ion-item-divider>
+      <ion-card-content class="support-content">
+        <ion-list no-lines class="" (click)="callCustomerSupport()">
+          <ion-item>
+            <ion-icon name="call" item-start></ion-icon>
+            Call +1-860-800-2646
+          </ion-item>
+        </ion-list>
+        <ion-list no-lines class="" (click)="openGCSiteLink()">
+          <ion-item>
+            <ion-icon name="open" item-start></ion-icon>
+            Visit www.getcoins.com
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
     </div>
 
     <div
@@ -426,7 +453,7 @@
           (click)="goTo(service.page)"
         >
           <ion-icon class="item-img" item-start>
-            <img src="{{service.icon}}" class="icon-services" />
+            <img src="{{ service.icon }}" class="icon-services" />
           </ion-icon>
           <span class="item-title">{{ service.title || service.name }}</span>
         </button>

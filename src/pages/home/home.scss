@@ -32,6 +32,9 @@ page-home {
       vertical-align: sub;
       margin-right: 5px;
     }
+    &.-title {
+      margin-top: 15px;
+    }
   }
   .error {
     color: color($colors, danger);
@@ -122,5 +125,45 @@ page-home {
       $background-color 50%,
       $background-color 50%
     );
+  }
+  .card.support {
+    // .item-ios [item-left],
+    // .item-ios [item-start] {
+    //   // &-title {
+    //   margin-top: 15px;
+    // }
+    // .item-divider{
+    //   margin
+    // }
+    ion-item-divider {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid $gray-200;
+      &.item-md {
+        padding-top: 13px;
+        padding-bottom: 10px;
+      }
+    }
+    ion-card-content {
+      ion-list {
+        // padding: 8px;
+        margin-bottom: 5px;
+        ion-item {
+          padding: 0 0 0 8px;
+          .item-inner {
+            margin-left: 5px;
+          }
+        }
+        ion-icon {
+          margin: 0px 16px 4px 0;
+        }
+      }
+      // .input-wrapper {
+      //   padding-bottom: 0;
+      // }
+      // .item-block {
+      //   padding: 0px;
+      // }
+    }
   }
 }

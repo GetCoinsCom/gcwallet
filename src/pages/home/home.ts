@@ -24,6 +24,7 @@ import { TxpDetailsPage } from '../txp-details/txp-details';
 import { WalletDetailsPage } from '../wallet-details/wallet-details';
 import { ActivityPage } from './activity/activity';
 import { ProposalsPage } from './proposals/proposals';
+// import { SupportCardPage } from '../includes/support-card/support-card';
 
 // Providers
 import { AddressBookProvider } from '../../providers/address-book/address-book';
@@ -571,5 +572,40 @@ export class HomePage {
     setTimeout(() => {
       refresher.complete();
     }, 2000);
+  }
+
+  public callCustomerSupport(): void {
+    let url = 'tel:+1-860-800-2646';
+    let optIn = true;
+    let title = null;
+    let message = this.translate.instant('You can call us now at 860-800-2646');
+    let okText = this.translate.instant('Call');
+    let cancelText = this.translate.instant('Go Back');
+    this.externalLinkProvider.open(
+      url,
+      optIn,
+      title,
+      message,
+      okText,
+      cancelText
+    );
+  }
+  public openGCSiteLink(): void {
+    let url = 'https://www.getcoins.com';
+    let optIn = true;
+    let title = null;
+    let message = this.translate.instant(
+      'Go visit our site at www.getcoins.com'
+    );
+    let okText = this.translate.instant('Open');
+    let cancelText = this.translate.instant('Go Back');
+    this.externalLinkProvider.open(
+      url,
+      optIn,
+      title,
+      message,
+      okText,
+      cancelText
+    );
   }
 }
