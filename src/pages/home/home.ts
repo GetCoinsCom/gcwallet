@@ -471,6 +471,29 @@ export class HomePage {
     });
   }
 
+  public goToLocationDetails(loc_id, data): void {
+    if (data == null || this.localJson == null || (!data || !this.localJson)) {
+      return this.showATMLocationsError();
+    }
+    this.navCtrl.push(AtmLocationsPage, {
+      locationId: loc_id,
+      dataSet: data,
+      // title: data.title,
+      // name: data.name,
+      // lat: data.lat,
+      // lng: data.lng,
+      // zipcode: data.zipcode,
+      // street: data.street,
+      // city: data.city,
+      // state: data.state,
+      // country: data.country,
+      // hours: data.hours,
+      // img: data.img,
+      serverJson: this.locations,
+      localJson: this.localJson
+    });
+    console.log(data);
+  }
   public showATMLocationsError(): void {
     const alert = this.alertCtrl.create({
       title: 'Some connection errors Occured',

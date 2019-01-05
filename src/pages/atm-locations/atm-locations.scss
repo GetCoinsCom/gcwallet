@@ -1,0 +1,17 @@
+page-atm-locations {
+  .store_map {
+    padding: 0;
+    border: 5px solid $white;
+    height: 220px;
+    &_div {
+      height: 100%;
+    }
+  }
+  .store_img {
+    padding: 5px;
+    img {
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+<!--
+  Generated template for the AtmLocationsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>@ {{ data.name }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="buttons-components-page">
+  <ion-card>
+    <ion-card-content class="store_map">
+      <div class="store_map_div">
+        <iframe
+          width="100%"
+          height="100%"
+          frameborder="0"
+          style="border:0"
+          [src]="googleUrl | safe"
+        ></iframe>
+      </div>
+    </ion-card-content>
+    <!-- <ion-card-content class="store_img">
+      <img [src]="data.img" />
+    </ion-card-content> -->
+
+    <ion-item>
+      <button ion-button clear item-start>Like</button>
+      <button ion-button clear item-end>Get Direction</button>
+    </ion-item>
+  </ion-card>
+
+  <ion-list>
+    <ion-item>
+      Inner Button <button ion-button item-end outline>Outline</button>
+    </ion-item>
+
+    <ion-item>
+      Left Icon Button
+      <button ion-button item-end outline icon-start>
+        <ion-icon name="star"></ion-icon>
+        Left Icon
+      </button>
+    </ion-item>
+
+    <ion-item>
+      Right Icon Button
+      <button ion-button item-end outline icon-end>
+        Right Icon
+        <ion-icon name="star"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
+</ion-content>

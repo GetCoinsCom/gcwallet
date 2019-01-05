@@ -126,6 +126,9 @@ import { ConfirmPage } from '../pages/send/confirm/confirm';
 /* Receive */
 import { CustomAmountPage } from '../pages/receive/custom-amount/custom-amount';
 
+/* New ATM Locations */
+import { AtmLocationsPage } from '../pages/atm-locations/atm-locations';
+
 export const PAGES = [
   ActivityPage,
   AddPage,
@@ -140,6 +143,7 @@ export const PAGES = [
   AdvancedPage,
   AllAddressesPage,
   AltCurrencyPage,
+  AtmLocationsPage,
   BackupRequestPage,
   BitcoinCashPage,
   BitPayCardIntroPage,
