@@ -23,6 +23,7 @@ import { KeysPipe } from '../pipes/keys';
 import { OrderByPipe } from '../pipes/order-by';
 import { SatToFiatPipe } from '../pipes/satToFiat';
 import { SatToUnitPipe } from '../pipes/satToUnit';
+import { SafeUrlPipe } from '../pipes/safeUrl';
 
 /* Directives */
 import { Animate } from '../directives/animate/animate';
@@ -37,6 +38,7 @@ import { COMPONENTS } from './../components/components';
 
 /* Providers */
 import { ProvidersModule } from './../providers/providers.module';
+import { AtmLocationProvider } from '../providers/atm-location/atm-location';
 
 /* Read translation files */
 export function createTranslateLoader(http: HttpClient) {
@@ -60,6 +62,7 @@ export function createTranslateLoader(http: HttpClient) {
     SatToFiatPipe,
     FiatToUnitPipe,
     KeysPipe,
+    SafeUrlPipe,
     OrderByPipe
   ],
   imports: [
@@ -90,7 +93,8 @@ export function createTranslateLoader(http: HttpClient) {
     {
       provide: ErrorHandler,
       useClass: IonicErrorHandler
-    }
+    },
+    AtmLocationProvider
   ]
 })
-export class AppModule { }
+export class AppModule {}

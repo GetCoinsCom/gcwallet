@@ -346,7 +346,7 @@
 
     <div class="card locations">
       <ion-item-divider>
-        <div class="title support-title" item-start>
+        <div class="title locations-title" item-start>
           <img
             src="assets/img/icon-bitcoin-bag.svg"
             alt="Nearest GC ATM locations"
@@ -355,17 +355,22 @@
           <span translate>Closest GetCoins ATMs</span>
         </div>
       </ion-item-divider>
-      <ion-card-content class="support-content">
-        <ion-list no-lines class="">
-          <ion-item>Line</ion-item>
-          <!-- <ion-item
-            *ngFor="let data of locations"
-            (click)="retrieveAClosestLocation(data)"
+      <ion-card-content class="locations-content" *ngIf="locations">
+        <ion-list>
+          <button
+            ion-item
+            *ngFor="let data of (locations | slice: 0:10); let i = index"
+            (click)="goToLocationDetails(data.id, data)"
           >
-            <h2>{{ data.name }}</h2>
-            3
-            <p>{{ data.street }}</p>
-          </ion-item> -->
+            <ion-avatar item-start>
+              <img [src]="data.img" /> <span>2 mil</span>
+            </ion-avatar>
+            <h3>{{ data.title }}</h3>
+            <p>
+              {{ data.street }} {{ data.city }}, {{ data.state }}
+              {{ data.zipcode }}
+            </p>
+          </button>
         </ion-list>
       </ion-card-content>
     </div>

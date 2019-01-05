@@ -4,10 +4,12 @@ import {
   Events,
   ModalController,
   NavController,
-  Platform
+  Platform,
+  AlertController
 } from 'ionic-angular';
 import * as _ from 'lodash';
 import * as moment from 'moment';
+import * as localJsonFile from '../../assets/locations.json';
 
 // Pages
 import { AddPage } from '../add/add';
@@ -24,6 +26,7 @@ import { TxpDetailsPage } from '../txp-details/txp-details';
 import { WalletDetailsPage } from '../wallet-details/wallet-details';
 import { ActivityPage } from './activity/activity';
 import { ProposalsPage } from './proposals/proposals';
+import { AtmLocationsPage } from '../atm-locations/atm-locations';
 // import { SupportCardPage } from '../includes/support-card/support-card';
 
 // Providers
@@ -45,6 +48,7 @@ import { ProfileProvider } from '../../providers/profile/profile';
 import { ReleaseProvider } from '../../providers/release/release';
 import { ReplaceParametersProvider } from '../../providers/replace-parameters/replace-parameters';
 import { WalletProvider } from '../../providers/wallet/wallet';
+import { AtmLocationProvider } from '../../providers/atm-location/atm-location';
 
 @Component({
   selector: 'page-home',
@@ -80,6 +84,9 @@ export class HomePage {
   private updatingWalletId: object;
   private zone;
 
+  private locations: any;
+  public localJson: any;
+
   constructor(
     private plt: Platform,
     private navCtrl: NavController,
@@ -103,7 +110,9 @@ export class HomePage {
     private bitPayCardProvider: BitPayCardProvider,
     private translate: TranslateService,
     private emailProvider: EmailNotificationsProvider,
-    private replaceParametersProvider: ReplaceParametersProvider
+    private replaceParametersProvider: ReplaceParametersProvider,
+    private atmLocationProvider: AtmLocationProvider,
+    public alertCtrl: AlertController
   ) {
     this.updatingWalletId = {};
     this.addressbook = {};
@@ -112,6 +121,7 @@ export class HomePage {
     this.showReorderBtc = false;
     this.showReorderBch = false;
     this.zone = new NgZone({ enableLongStackTrace: false });
+    this.localJson = localJsonFile['locations'];
   }
 
   ionViewWillEnter() {
@@ -131,6 +141,11 @@ export class HomePage {
 
     // Update Tx Notifications
     this.getNotifications();
+
+    this.atmLocationProvider.getLocations().subscribe(data => {
+      console.log(data['locations']);
+      this.locations = data['locations'];
+    });
   }
 
   ionViewDidEnter() {
@@ -454,6 +469,15 @@ export class HomePage {
     this.navCtrl.push(WalletDetailsPage, {
       walletId: wallet.credentials.walletId
     });
+  }
+
+  public showATMLocationsError(): void {
+    const alert = this.alertCtrl.create({
+      title: 'Some connection errors Occured',
+      subTitle: 'Sorry, please come back later and refresh the app!',
+      buttons: ['OK']
+    });
+    alert.present();
   }
 
   public openNotificationModal(n) {
