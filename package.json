@@ -117,6 +117,7 @@
     "@ionic-native/device": "4.5.3",
     "@ionic-native/fcm": "4.5.2",
     "@ionic-native/file": "4.5.2",
+    "@ionic-native/in-app-browser": "^4.0.0",
     "@ionic-native/qr-scanner": "4.5.2",
     "@ionic-native/screen-orientation": "4.6.0",
     "@ionic-native/social-sharing": "4.5.2",
