@@ -6,7 +6,9 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>@ {{ data.name }}</ion-title>
+    <ion-title
+      ><h1>@ {{ data.name }}</h1></ion-title
+    >
   </ion-navbar>
 </ion-header>
 
@@ -28,30 +30,39 @@
     </ion-card-content> -->
 
     <ion-item>
-      <button ion-button clear item-start>Like</button>
-      <button ion-button clear item-end>Get Direction</button>
+      <!-- <button ion-button clear item-start>Like</button> -->
+      <button
+        ion-button
+        clear
+        class="atm-location_button_dir"
+        (click)="openDirectionLink()"
+      >
+        Get Direction
+      </button>
+      <button
+        ion-button
+        clear
+        class="atm-location_button_call"
+        (click)="callCustomerSupport()"
+      >
+        Call us for questions
+      </button>
     </ion-item>
+    <ion-card-content class="store_info">
+      <div>
+        <div>
+          <h2>Address</h2>
+          <p>{{ data.street }}</p>
+          <p>{{ data.city }}, {{ data.state }} {{ data.zipcode }}</p>
+          <p>{{ data.country }}</p>
+        </div>
+        <div></div>
+      </div>
+    </ion-card-content>
+    <!-- <ion-list>
+      <ion-item> {{ address }} </ion-item>
+
+      <ion-item> {{ hours }} </ion-item>
+    </ion-list> -->
   </ion-card>
-
-  <ion-list>
-    <ion-item>
-      Inner Button <button ion-button item-end outline>Outline</button>
-    </ion-item>
-
-    <ion-item>
-      Left Icon Button
-      <button ion-button item-end outline icon-start>
-        <ion-icon name="star"></ion-icon>
-        Left Icon
-      </button>
-    </ion-item>
-
-    <ion-item>
-      Right Icon Button
-      <button ion-button item-end outline icon-end>
-        Right Icon
-        <ion-icon name="star"></ion-icon>
-      </button>
-    </ion-item>
-  </ion-list>
 </ion-content>

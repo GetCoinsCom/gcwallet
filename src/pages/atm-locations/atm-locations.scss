@@ -14,4 +14,43 @@ page-atm-locations {
       margin: 0 auto;
     }
   }
+  .item-md {
+    // background: purple;
+    .item-button.atm-location_button_dir,
+    .atm-location_button_call {
+      height: 30px;
+    }
+  }
+  .atm-location_button_dir {
+    width: 100%;
+    background: $color-secondary;
+    color: $white;
+    font-weight: 600;
+  }
+  .atm-location_button_call {
+    width: 100%;
+    background: $gray-300;
+    color: $color-secondary;
+    font-weight: 600;
+  }
+  ion-card.card {
+    width: 100%;
+  }
+  ion-content {
+    ion-item {
+      .item-md .item-button {
+        height: 3.6rem;
+        font-size: 1.4rem;
+        padding: inherit;
+      }
+      button {
+        // .button-inner {
+        //   border: 1px solid green;
+        //   background: pink;
+        // }
+        border: 1px solid green;
+        background: pink;
+      }
+    }
+  }
 }
