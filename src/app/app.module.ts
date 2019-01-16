@@ -10,6 +10,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
 import { MomentModule } from 'angular2-moment';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 /* GetCoins App */
 import env from '../environments';
@@ -94,7 +95,8 @@ export function createTranslateLoader(http: HttpClient) {
       provide: ErrorHandler,
       useClass: IonicErrorHandler
     },
-    AtmLocationProvider
+    AtmLocationProvider,
+    InAppBrowser
   ]
 })
 export class AppModule {}

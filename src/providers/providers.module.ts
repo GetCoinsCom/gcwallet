@@ -61,6 +61,7 @@ import {
   Vibration,
   WalletProvider
 } from './index';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 @NgModule({
   providers: [
@@ -87,6 +88,7 @@ import {
     HomeIntegrationsProvider,
     FeeProvider,
     // GlideraProvider,
+    InAppBrowser,
     IncomingDataProvider,
     LanguageProvider,
     Logger,
@@ -124,4 +126,4 @@ import {
     File
   ]
 })
-export class ProvidersModule { }
+export class ProvidersModule {}
