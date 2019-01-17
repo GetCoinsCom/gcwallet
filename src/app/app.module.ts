@@ -3,6 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 // import { FCM } from '@ionic-native/fcm';
+import { Geolocation } from '@ionic-native/geolocation';
 
 /* Modules */
 import { TranslatePoHttpLoader } from '@biesbjerg/ngx-translate-po-http-loader';
@@ -96,7 +97,8 @@ export function createTranslateLoader(http: HttpClient) {
       useClass: IonicErrorHandler
     },
     AtmLocationProvider,
-    InAppBrowser
+    InAppBrowser,
+    Geolocation
   ]
 })
 export class AppModule {}
