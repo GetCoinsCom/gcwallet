@@ -42,6 +42,7 @@ import { COMPONENTS } from './../components/components';
 /* Providers */
 import { ProvidersModule } from './../providers/providers.module';
 import { AtmLocationProvider } from '../providers/atm-location/atm-location';
+import { LocationTrackerProvider } from '../providers/location-tracker/location-tracker';
 
 /* Read translation files */
 export function createTranslateLoader(http: HttpClient) {
@@ -100,7 +101,8 @@ export function createTranslateLoader(http: HttpClient) {
     AtmLocationProvider,
     InAppBrowser,
     Geolocation,
-    BackgroundGeolocation
+    BackgroundGeolocation,
+    LocationTrackerProvider
   ]
 })
 export class AppModule {}
