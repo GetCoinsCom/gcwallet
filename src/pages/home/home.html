@@ -363,7 +363,14 @@
             (click)="goToLocationDetails(data.id, data)"
           >
             <ion-avatar item-start>
-              <img [src]="data.img" /> <span>2 mil</span>
+              <img [src]="data.img" />
+              <span
+                ><span>{{
+                  getDistance({ lat: data.lat, lng: data.lng }, myLocation)
+                    | number: '1.0-0'
+                }}</span>
+                mil</span
+              >
             </ion-avatar>
             <h3>{{ data.title }}</h3>
             <p>

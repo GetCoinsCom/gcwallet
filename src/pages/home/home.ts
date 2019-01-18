@@ -49,6 +49,7 @@ import { ReleaseProvider } from '../../providers/release/release';
 import { ReplaceParametersProvider } from '../../providers/replace-parameters/replace-parameters';
 import { WalletProvider } from '../../providers/wallet/wallet';
 import { AtmLocationProvider } from '../../providers/atm-location/atm-location';
+import { Geolocation } from '@ionic-native/geolocation';
 
 @Component({
   selector: 'page-home',
@@ -86,6 +87,8 @@ export class HomePage {
 
   private locations: any;
   public localJson: any;
+  public myLocation: any; //**GCEdit: DO NOT CHANGE THE TYPE HERE TO OBJECT (unless you change the scheme of the variable) */
+  public locationsLatLng: any;
 
   constructor(
     private plt: Platform,
@@ -112,7 +115,8 @@ export class HomePage {
     private emailProvider: EmailNotificationsProvider,
     private replaceParametersProvider: ReplaceParametersProvider,
     private atmLocationProvider: AtmLocationProvider,
-    public alertCtrl: AlertController
+    public alertCtrl: AlertController,
+    public geo: Geolocation
   ) {
     this.updatingWalletId = {};
     this.addressbook = {};
@@ -122,6 +126,31 @@ export class HomePage {
     this.showReorderBch = false;
     this.zone = new NgZone({ enableLongStackTrace: false });
     this.localJson = localJsonFile['locations'];
+    //** get and watch user's  */
+    this.geo
+      .getCurrentPosition()
+      .then(res => {
+        console.log('geolocation response!');
+        // res.coords.latitude
+        // res.coords.longitude
+        this.myLocation = {
+          lat: res.coords.latitude,
+          lng: res.coords.longitude
+          // error: null
+        };
+        console.log(res, 'is what we get');
+        console.log(this.myLocation, 'is my object');
+      })
+      .catch(error => {
+        this.myLocation = {
+          lat: 0,
+          lng: 0
+          // error: error
+        };
+        console.log('Error getting location', error);
+        console.log(this.myLocation, 'is my object');
+      });
+    console.log(this.myLocation, ' is this.myLocation');
   }
 
   ionViewWillEnter() {
@@ -141,7 +170,6 @@ export class HomePage {
 
     // Update Tx Notifications
     this.getNotifications();
-
     this.atmLocationProvider.getLocations().subscribe(data => {
       console.log(data['locations']);
       this.locations = data['locations'];
@@ -201,6 +229,18 @@ export class HomePage {
       this.updateTxps();
       this.setWallets();
     });
+
+    // let watch = this.geo.watchPosition();
+    // watch.subscribe(data => {
+    //   // data can be a set of coordinates, or an error (if an error occurred).
+    //   // data.coords.latitude
+    //   // data.coords.longitude
+    //   console.log(data);
+    //   // this.myLocation = {
+    //   //   lat: data.coords.latitude,
+    //   //   lng: data.coords.longitude
+    //   // };
+    // });
   }
 
   ionViewWillLeave() {
@@ -490,7 +530,8 @@ export class HomePage {
       // hours: data.hours,
       // img: data.img,
       serverJson: this.locations,
-      localJson: this.localJson
+      localJson: this.localJson,
+      geolocation: this.myLocation
     });
     console.log(data);
   }
@@ -654,5 +695,49 @@ export class HomePage {
       okText,
       cancelText
     );
+  }
+
+  // **GCEdit: THIS getDistance func should be moved to provider. Plan to make it happen, then fremove from here.
+  //** calculates distance between two points in km's */
+  // public function calcDistance(p1, p2) {
+  //   return (google.maps.geometry.spherical.computeDistanceBetween(p1, p2) / 1000).toFixed(2);
+  // }
+
+  //** calculate the distance btwn two points (obj that contins lat and lng) in meters
+  // NOTE: this is not the driving distance but simply dirct distance from point a to b;
+  // hence, it will differ from Google Direction distance */
+  public getDistance(p1, p2) {
+    console.log(p1, '<-this is p1');
+    console.log(p2, '<-this is p2');
+    function rad(x) {
+      return (x * Math.PI) / 180;
+    }
+    function getMiles(i) {
+      return i * 0.000621371192;
+    }
+    // function getMeters(i) {
+    //       return i*1609.344;
+    // }
+    let R: number = 6378137; // Earth’s mean radius in meter
+    //** NOT using goolge map api */
+    var dLat = rad(p2.lat - p1.lat);
+    var dLong = rad(p2.lng - p1.lng);
+    var a =
+      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(rad(p1.lat)) *
+        Math.cos(rad(p2.lat)) *
+        Math.sin(dLong / 2) *
+        Math.sin(dLong / 2);
+    //**Using google map js api */
+    // var dLat = rad(p2.lat() - p1.lat());
+    // var dLong = rad(p2.lng() - p1.lng());
+    // var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    //   Math.cos(rad(p1.lat())) * Math.cos(rad(p2.lat())) *
+    //   Math.sin(dLong / 2) * Math.sin(dLong / 2);
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    let d: number = R * c;
+    // console.log(d);
+    // console.log(getMiles(d));
+    return getMiles(d); // returns the distance in meter
   }
 }
