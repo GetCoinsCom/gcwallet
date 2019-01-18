@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TranslateService } from '@ngx-translate/core';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 // import { internals } from 'rx';
+// import { Geolocation } from '@ionic-native/geolocation';
 
 import { ExternalLinkProvider } from '../../providers/external-link/external-link';
 // import { PopupProvider } from '../../providers/popup/popup';
@@ -30,7 +31,8 @@ export class AtmLocationsPage {
   public googleDirectionUrl: string;
   public encodedDirection: string;
   public googleDirUrl: string;
-  public myLocation: object = { lat: 41.234648, lng: -82.254409 };
+  // public myLocation: object = { lat: 41.234648, lng: -82.254409 };
+  public myLocation: object;
   public encodedMyLocation: string;
   public travelMode: string = 'driving';
   public address: string;
@@ -43,11 +45,13 @@ export class AtmLocationsPage {
     private externalLinkProvider: ExternalLinkProvider,
     // private popupProvider: PopupProvider,
     private iab: InAppBrowser
-  ) {
+  ) // private geo: Geolocation
+  {
     this.id = navParams.get('locationId');
     this.data = navParams.get('dataSet');
     this.serverJson = navParams.get('serverJson');
     this.localJson = navParams.get('localJson');
+    this.myLocation = navParams.get('geolocation');
     this.encodedAddress = encodeURIComponent(
       this.gcATMName +
         ' ' +
@@ -97,6 +101,7 @@ export class AtmLocationsPage {
     console.log(this.googleDirUrl);
     console.log(this.serverJson);
     console.log(this.localJson);
+    console.log(this.myLocation);
   }
 
   // private openDirectionPage() {
@@ -116,10 +121,12 @@ export class AtmLocationsPage {
   //       }
   //     });
   // }
+  //** One way to take user to the Direction external page; by simply moving to a new browser */
   public getDirectionPage(): void {
     const browser = this.iab.create(this.googleDirUrl, '_blank');
     browser.show();
   }
+  //** Another way to take user to the Direction external page; by showing the msg to then open the browser */
   public openDirectionLink(): void {
     let url = this.googleDirUrl;
     let optIn = true;
