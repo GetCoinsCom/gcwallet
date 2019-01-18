@@ -112,6 +112,7 @@
     "@angular/tsc-wrapped": "4.4.6",
     "@biesbjerg/ngx-translate-po-http-loader": "3.0.1",
     "@ionic-native/android-fingerprint-auth": "4.5.2",
+    "@ionic-native/background-geolocation": "^4.19.0",
     "@ionic-native/clipboard": "4.5.2",
     "@ionic-native/core": "4.5.2",
     "@ionic-native/device": "4.5.3",
@@ -152,6 +153,7 @@
     "cordova-plugin-globalization": "^1.11.0",
     "cordova-plugin-inappbrowser": "^2.0.2",
     "cordova-plugin-ionic-webview": "^1.2.1",
+    "cordova-plugin-mauron85-background-geolocation": "^2.3.6",
     "cordova-plugin-network-information": "^2.0.1",
     "cordova-plugin-qrscanner": "^2.6.0",
     "cordova-plugin-screen-orientation": "^3.0.1",
@@ -268,7 +270,8 @@
       "cordova-plugin-vibration": {},
       "cordova-plugin-geolocation": {
         "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
-      }
+      },
+      "cordova-plugin-mauron85-background-geolocation": {}
     },
     "platforms": [
       "android",
