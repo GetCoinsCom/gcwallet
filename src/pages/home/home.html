@@ -366,8 +366,8 @@
             >
               <ion-avatar item-start>
                 <img [src]="data.img" />
-                <span *ngIf="myLocation.lat !== 0 && myLocation.lng !== 0">
-                  <span>{{ data.distanceMiles | number: '1.0-0' }}</span> mil
+                <span class="miles" *ngIf="myLocation.lat !== 0 && myLocation.lng !== 0">
+                  <span class="miles_num">{{ data.distanceMiles | number: '1.0-0' }}</span>mil
                 </span>
               </ion-avatar>
               <h3>{{ data.title }}</h3>

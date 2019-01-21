@@ -143,6 +143,56 @@ page-home {
     // .item-divider{
     //   margin
     // }
+    .item-md {
+      ion-avatar,
+      ion-thumbnail {
+        &[item-left],
+        &[item-start] {
+          margin: 8px 18px 8px 6px;
+        }
+      }
+      // ion-thumbnail {
+      //   &[item-left],
+      //   &[item-start] {
+      //     margin: 8px 18px 8px 6px;
+      //   }
+      // }
+      ion-avatar {
+        ion-img,
+        img {
+          margin: 0 auto 3px auto;
+        }
+        .miles {
+          padding: 5px auto;
+          font-size: 1.2rem;
+          &_num {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+    .item-block {
+      padding-left: 8px;
+    }
+    .item-ios {
+      ion-avatar {
+        &[item-left],
+        &[item-start] {
+          margin: 8px 22px 8px 2px;
+        }
+        ion-img,
+        img {
+          margin: 0 auto 3px auto;
+        }
+        .miles {
+          padding: 5px auto;
+          font-size: 1.2rem;
+          &_num {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
     .list-ios > .item-block:first-child {
       border-top: 0px; //** rid of the double lines overwrapped with the ion-item top border
     }
