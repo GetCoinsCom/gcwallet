@@ -49,7 +49,14 @@ import { ReleaseProvider } from '../../providers/release/release';
 import { ReplaceParametersProvider } from '../../providers/replace-parameters/replace-parameters';
 import { WalletProvider } from '../../providers/wallet/wallet';
 import { AtmLocationProvider } from '../../providers/atm-location/atm-location';
-import { Geolocation } from '@ionic-native/geolocation';
+import {
+  Geolocation,
+  GeolocationOptions,
+  Geoposition,
+  PositionError
+} from '@ionic-native/geolocation';
+import { LocationTrackerProvider } from '../../providers/location-tracker/location-tracker';
+import { OpenNativeSettings } from '@ionic-native/open-native-settings';
 
 @Component({
   selector: 'page-home',
@@ -89,6 +96,21 @@ export class HomePage {
   public localJson: any;
   public myLocation: any; //**GCEdit: DO NOT CHANGE THE TYPE HERE TO OBJECT (unless you change the scheme of the variable) */
   public locationsLatLng: any;
+  public tenLocations: any;
+  public allLocDistanceArr: any = [];
+  public options: GeolocationOptions;
+  public currentPos: Geoposition;
+  public watch: any;
+  public loading: boolean;
+  public newResults: any;
+  public offline: boolean;
+  public newResultsReady: boolean = false;
+  public toggledStart: boolean = false;
+  // public toggledStop: boolean = false;
+
+  public orangeColor: string = '#f79420';
+  public grayColor: string = '#495057';
+  public redWarning: string = '#ef473a';
 
   constructor(
     private plt: Platform,
@@ -116,7 +138,9 @@ export class HomePage {
     private replaceParametersProvider: ReplaceParametersProvider,
     private atmLocationProvider: AtmLocationProvider,
     public alertCtrl: AlertController,
-    public geo: Geolocation
+    public geo: Geolocation,
+    public locationTracker: LocationTrackerProvider,
+    private openNativeSettings: OpenNativeSettings
   ) {
     this.updatingWalletId = {};
     this.addressbook = {};
@@ -126,31 +150,58 @@ export class HomePage {
     this.showReorderBch = false;
     this.zone = new NgZone({ enableLongStackTrace: false });
     this.localJson = localJsonFile['locations'];
-    //** get and watch user's  */
-    this.geo
-      .getCurrentPosition()
-      .then(res => {
-        console.log('geolocation response!');
-        // res.coords.latitude
-        // res.coords.longitude
-        this.myLocation = {
-          lat: res.coords.latitude,
-          lng: res.coords.longitude
-          // error: null
-        };
-        console.log(res, 'is what we get');
-        console.log(this.myLocation, 'is my object');
-      })
-      .catch(error => {
-        this.myLocation = {
-          lat: 0,
-          lng: 0
-          // error: error
-        };
-        console.log('Error getting location', error);
-        console.log(this.myLocation, 'is my object');
-      });
-    console.log(this.myLocation, ' is this.myLocation');
+    this.loading = true;
+    this.offline = false;
+    console.log(this.loading, ' is loading');
+  }
+
+  ionViewDidLoad() {
+    this.loading = true;
+    this.logger.info('ionViewDidLoad HomePage');
+    this.getAPIdata();
+    console.log(this.loading, ' is loading');
+
+    this.checkEmailLawCompliance();
+
+    // Create, Join, Import and Delete -> Get Wallets -> Update Status for All Wallets
+    this.events.subscribe('status:updated', () => {
+      this.updateTxps();
+      this.setWallets();
+    });
+
+    this.plt.resume.subscribe(() => {
+      this.getNotifications();
+      this.updateTxps();
+      this.setWallets();
+    });
+
+    this.loadGeolocation().then(
+      res => {
+        console.log(res, ' is response from loadGeolocation func');
+        if (res.error === null) {
+          this.offline = false;
+          console.log('not error so go on grabbing closest locations');
+          this.getClosestTenLocations(res, true);
+        } else {
+          this.offline = true;
+          console.log('geolocation was null, so grabbing from false');
+          this.getClosestTenLocations(res, false);
+          this.loading = false;
+        }
+      },
+      err => {
+        console.log(err, ' is error response from loadGeolocation func');
+        console.log('now we should get the closest from the local file');
+        this.getClosestTenLocations(err, false);
+        this.loading = false;
+      }
+    );
+    console.log(this.loading, ' is loading');
+    console.log(
+      this.atmLocationProvider.results,
+      ' is the results from the provider'
+    );
+    // this.watchGeolocation();
   }
 
   ionViewWillEnter() {
@@ -170,10 +221,7 @@ export class HomePage {
 
     // Update Tx Notifications
     this.getNotifications();
-    this.atmLocationProvider.getLocations().subscribe(data => {
-      console.log(data['locations']);
-      this.locations = data['locations'];
-    });
+    console.log(this.loading, ' is loading');
   }
 
   ionViewDidEnter() {
@@ -211,40 +259,342 @@ export class HomePage {
         this.bitpayCardItems = cards;
       });
     });
-  }
-
-  ionViewDidLoad() {
-    this.logger.info('ionViewDidLoad HomePage');
-
-    this.checkEmailLawCompliance();
-
-    // Create, Join, Import and Delete -> Get Wallets -> Update Status for All Wallets
-    this.events.subscribe('status:updated', () => {
-      this.updateTxps();
-      this.setWallets();
-    });
-
-    this.plt.resume.subscribe(() => {
-      this.getNotifications();
-      this.updateTxps();
-      this.setWallets();
-    });
-
-    // let watch = this.geo.watchPosition();
-    // watch.subscribe(data => {
-    //   // data can be a set of coordinates, or an error (if an error occurred).
-    //   // data.coords.latitude
-    //   // data.coords.longitude
-    //   console.log(data);
-    //   // this.myLocation = {
-    //   //   lat: data.coords.latitude,
-    //   //   lng: data.coords.longitude
-    //   // };
-    // });
+    // if (this.locationTracker.toggleStart) {
+    //   console.log('every 5ec tracking started!');
+    //   setInterval(() => {
+    //     this.updateNewResults();
+    //     console.log('every 5ec tracking started!');
+    //   }, 5 * 1000); // 60 * 1000 milsec
+    // }
   }
 
   ionViewWillLeave() {
     this.events.unsubscribe('bwsEvent');
+  }
+
+  // let getLocFromLocal =
+  public getLocalJsonInstead() {
+    this.atmLocationProvider.getLocationsLocal().subscribe(data => {
+      this.locations = data['locations'];
+      // console.log(this.locations, ' from the first local call');
+    });
+  }
+  public getAPIdata() {
+    console.log('getAPIdata entered now');
+    // this.getLocalJsonInstead();
+    let observableAPI = this.atmLocationProvider.getLocations();
+    //** Get all ATM locations from API */
+    observableAPI.subscribe(
+      data => {
+        this.locations = data['locations'];
+      },
+      err => {
+        this.getLocalJsonInstead();
+        console.log('mmm.. not success from api but from local should work');
+        this.logger.warn('HTTP Error', err);
+      }
+    );
+  }
+
+  //** get and watch user's geolocation  */
+  public loadGeolocation(): Promise<any> {
+    this.loading = true;
+
+    this.options = {
+      enableHighAccuracy: true
+    };
+
+    let getPosition = this.geo.getCurrentPosition(this.options).then(
+      (pos: Geoposition) => {
+        console.log(
+          pos,
+          ' this is the position returned from the promise func'
+        );
+        this.myLocation = {
+          lat: pos.coords.latitude,
+          lng: pos.coords.longitude,
+          error: null
+        };
+        // let test = this.checkit(this.myLocation);
+        // console.log(test, 'is the test results');
+        // // this.newResults
+        console.log(pos, ' is the geoposition pos');
+        console.log(this.myLocation, ' is my location??');
+        // console.log(this.newResults);
+        return this.myLocation;
+      },
+      (err: PositionError) => {
+        this.myLocation = {
+          lat: 0,
+          lng: 0,
+          error: err.message
+        };
+        console.log(this.myLocation);
+        console.log('error : ' + err.message);
+        return this.myLocation;
+      }
+    );
+    return getPosition;
+    // ).then(
+    //   res => {
+    //     this.newResults = this.atmLocationProvider
+    //       .getLocationsPromise(res, true)
+    //       .then(
+    //         res => {
+    //           console.log(res, 'this res');
+    //           this.newResults = res;
+    //           console.log(this.newResults, 'this new results');
+    //           this.loading = false;
+    //         },
+    //         err => {
+    //           this.newResults = this.atmLocationProvider
+    //             .getLocationsPromise(this.myLocation, true)
+    //             .then(
+    //               res => {
+    //                 console.log(res, 'this res');
+    //                 this.newResults = res;
+    //                 console.log(this.newResults, 'this new results');
+    //               },
+    //               err => {
+    //                 console.log(err);
+    //               }
+    //             );
+    //           console.log(err);
+    //           this.loading = false;
+    //         }
+    //       );
+    //   },
+    //   msg => {
+    //     console.log(msg);
+    //   }
+    // );
+    // this.geo
+    //   .getCurrentPosition()
+    //   .then(res => {
+    //     console.log('geolocation response!');
+    //     // res.coords.latitude
+    //     // res.coords.longitude
+    //     this.myLocation = {
+    //       lat: res.coords.latitude,
+    //       lng: res.coords.longitude
+    //       // error: null
+    //     };
+    //     console.log(res, 'is what we get');
+    //     console.log(this.myLocation, 'is my object');
+    //   })
+    //   .catch(error => {
+    //     this.myLocation = {
+    //       lat: 0,
+    //       lng: 0
+    //       // error: error
+    //     };
+    //     console.log('Error getting location', error);
+    //     console.log(this.myLocation, 'is my object');
+    //   });
+  }
+  public watchGeolocation() {
+    console.log(this.myLocation, ' is this.myLocation');
+    this.watch = this.geo.watchPosition();
+    this.watch.subscribe(
+      data => {
+        // data can be a set of coordinates, or an error (if an error occurred).
+        // data.coords.latitude
+        // data.coords.longitude
+        console.log(data, ' is watched geo data');
+        this.myLocation = {
+          lat: data.coords.latitude,
+          lng: data.coords.longitude,
+          error: null
+        };
+      },
+      err => {
+        console.log(err, ' is error from watchGeolocation');
+        // this.myLocation = {
+        //   lat: this.myLocation.lat,
+        //   lng: this.myLocation.lng,
+        //   error: err
+        // };
+      }
+    );
+  }
+  //** Open device specific setting (Settings page) to enable Geolocation when users dont have it on by default */
+  public open(setting: string) {
+    this.openNativeSettings
+      .open(setting)
+      .then(res => {
+        console.log(res, ' the setting indeed opened');
+      })
+      .catch(err => {
+        console.log(JSON.stringify(err), ': there was error');
+      });
+  }
+  //** THis needs to work in conjunction with loadGeolocation func above with Promise then */
+  public getClosestTenLocations(geoObj, api) {
+    this.loading = true;
+    if (geoObj.error === null) {
+      this.newResults = this.atmLocationProvider
+        .getLocationsPromise(geoObj, api)
+        .then(
+          //** if the response is okay, meaning the api worked,
+          // then you grabbed the new results */
+          res => {
+            console.log(res, 'this res');
+            this.newResults = res;
+            console.log(this.newResults, 'this new results');
+            this.loading = false;
+            this.newResultsReady = true;
+          },
+          //** If the api didnt work, then next grab data
+          // from the local data */
+          err => {
+            this.newResults = this.atmLocationProvider
+              .getLocationsPromise(geoObj, false)
+              .then(
+                res => {
+                  console.log(res, 'this res');
+                  this.newResults = res;
+                  console.log(this.newResults, 'this new results');
+                  this.loading = false;
+                  this.newResultsReady = true;
+                },
+                err => {
+                  console.log(err);
+                }
+              );
+            console.log(err);
+            this.loading = false;
+          }
+        );
+    } else {
+      this.newResults = null;
+      console.log(this.newResults, ' must be null and not success');
+      this.logger.warn(
+        'Your geolocation is turned off. To better assist you, please eneable the geolocation.'
+      );
+    }
+  }
+
+  // public getOnlyTenLocations(): void {
+  //   var dataArr: any;
+  //   // let currLat = dataArr[0].lat;
+  //   // let currLng = dataArr[0].lng;
+
+  //   this.atmLocationProvider.getLocations().subscribe(data => {
+  //     // console.log(data['locations'], ' is the data from getOnlyTenLocations');
+  //     dataArr = data['locations'];
+  //     console.log(dataArr, ' inside atmData');
+  //     // var diffLat;
+  //     // var diffLng;
+  //     // for (let item of dataArr) {
+  //     //   diffLat = Math.abs(this.myLocation.lat - item.lat);
+  //     //   diffLng = Math.abs(this.myLocation.lng - item.lng);
+  //     //   this.allLocDistanceArr.push({
+  //     //     id: item.id,
+  //     //     lat: item.lat,
+  //     //     lng: item.lng,
+  //     //     diffLat: diffLat,
+  //     //     diffLng: diffLng
+  //     //   });
+  //     // }
+  //   });
+
+  //   // let atmData = this.atmLocationProvider.getLocations().subscribe(data => {
+  //   //   // console.log(data['locations'], ' is the data from getOnlyTenLocations');
+  //   //   dataArr = data['locations'];
+  //   //   console.log(dataArr, ' inside atmData');
+  //   //   // var diffLat;
+  //   //   // var diffLng;
+  //   //   // for (let item of dataArr) {
+  //   //   //   diffLat = Math.abs(this.myLocation.lat - item.lat);
+  //   //   //   diffLng = Math.abs(this.myLocation.lng - item.lng);
+  //   //   //   this.allLocDistanceArr.push({
+  //   //   //     id: item.id,
+  //   //   //     lat: item.lat,
+  //   //   //     lng: item.lng,
+  //   //   //     diffLat: diffLat,
+  //   //   //     diffLng: diffLng
+  //   //   //   });
+  //   //   // }
+  //   // });
+  //   console.log(dataArr, ' does this run only once? dataArr');
+  //   return dataArr;
+  //   // console.log(this.allLocDistanceArr, ' is all Lat/Lng data');
+  //   // return this.allLocDistanceArr;
+  // }
+
+  public updateNewResults(lat: number, lng: number) {
+    console.log('updateNewReslts func run!');
+    if (this.locationTracker.toggleStart) {
+      console.log(
+        'updateNewReslts func inside IF stmt; meaning myLocation was defined and not null???'
+      );
+      if (this.myLocation['lat'] !== lat && this.myLocation['lng'] !== lng) {
+        let originalMyLoc = this.myLocation;
+        this.myLocation = {
+          lat: lat,
+          lng: lng,
+          error: null
+        };
+        console.log(
+          this.myLocation,
+          ': myLocation must have been chnaged from ->',
+          originalMyLoc
+        );
+        this.getClosestTenLocations(this.myLocation, true);
+      } else {
+        //** do nothing */
+        console.log('no change in myLocation');
+      }
+    } else {
+      console.log('updateNewResults will leave not bc tracker is not on');
+    }
+  }
+  public startTrack() {
+    this.openStartTrackMsg();
+  }
+  private openStartTrackMsg() {
+    let message = this.translate.instant(
+      'Would you like to start tracking your location?'
+    );
+    let title = this.translate.instant('Start Track');
+    let okText = this.translate.instant('Start');
+    let cancelText = this.translate.instant('Go back');
+    this.popupProvider
+      .ionicConfirm(title, message, okText, cancelText)
+      .then(ok => {
+        if (ok) {
+          // Stop tracking user's location
+          this.locationTracker.startTracking(this.updateNewResults);
+          this.toggledStart = true;
+        } else {
+          // Do nothing
+          this.toggledStart = false;
+        }
+      });
+  }
+
+  public stopTrack() {
+    this.openStopTrackMsg();
+  }
+  private openStopTrackMsg() {
+    let message = this.translate.instant(
+      'Would you like to stop tracking your location?'
+    );
+    let title = this.translate.instant('Stop Track');
+    let okText = this.translate.instant('Stop');
+    let cancelText = this.translate.instant('Go back');
+    this.popupProvider
+      .ionicConfirm(title, message, okText, cancelText)
+      .then(ok => {
+        if (ok) {
+          // Stop tracking user's location
+          this.locationTracker.stopTracking();
+          this.toggledStart = false;
+        } else {
+          // Just change the setting
+          this.toggledStart = true;
+        }
+      });
   }
 
   private openEmailDisclaimer() {
@@ -695,49 +1045,5 @@ export class HomePage {
       okText,
       cancelText
     );
-  }
-
-  // **GCEdit: THIS getDistance func should be moved to provider. Plan to make it happen, then fremove from here.
-  //** calculates distance between two points in km's */
-  // public function calcDistance(p1, p2) {
-  //   return (google.maps.geometry.spherical.computeDistanceBetween(p1, p2) / 1000).toFixed(2);
-  // }
-
-  //** calculate the distance btwn two points (obj that contins lat and lng) in meters
-  // NOTE: this is not the driving distance but simply dirct distance from point a to b;
-  // hence, it will differ from Google Direction distance */
-  public getDistance(p1, p2) {
-    console.log(p1, '<-this is p1');
-    console.log(p2, '<-this is p2');
-    function rad(x) {
-      return (x * Math.PI) / 180;
-    }
-    function getMiles(i) {
-      return i * 0.000621371192;
-    }
-    // function getMeters(i) {
-    //       return i*1609.344;
-    // }
-    let R: number = 6378137; // Earth’s mean radius in meter
-    //** NOT using goolge map api */
-    var dLat = rad(p2.lat - p1.lat);
-    var dLong = rad(p2.lng - p1.lng);
-    var a =
-      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-      Math.cos(rad(p1.lat)) *
-        Math.cos(rad(p2.lat)) *
-        Math.sin(dLong / 2) *
-        Math.sin(dLong / 2);
-    //**Using google map js api */
-    // var dLat = rad(p2.lat() - p1.lat());
-    // var dLong = rad(p2.lng() - p1.lng());
-    // var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-    //   Math.cos(rad(p1.lat())) * Math.cos(rad(p2.lat())) *
-    //   Math.sin(dLong / 2) * Math.sin(dLong / 2);
-    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    let d: number = R * c;
-    // console.log(d);
-    // console.log(getMiles(d));
-    return getMiles(d); // returns the distance in meter
   }
 }

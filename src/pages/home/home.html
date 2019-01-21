@@ -355,30 +355,58 @@
           <span translate>Closest GetCoins ATMs</span>
         </div>
       </ion-item-divider>
-      <ion-card-content class="locations-content" *ngIf="locations">
-        <ion-list>
-          <button
-            ion-item
-            *ngFor="let data of (locations | slice: 0:10); let i = index"
-            (click)="goToLocationDetails(data.id, data)"
-          >
-            <ion-avatar item-start>
-              <img [src]="data.img" />
-              <span
-                ><span>{{
-                  getDistance({ lat: data.lat, lng: data.lng }, myLocation)
-                    | number: '1.0-0'
-                }}</span>
-                mil</span
-              >
-            </ion-avatar>
-            <h3>{{ data.title }}</h3>
-            <p>
-              {{ data.street }} {{ data.city }}, {{ data.state }}
-              {{ data.zipcode }}
-            </p>
-          </button>
+      <ion-card-content class="locations-content">
+        <p *ngIf="loading">Loading...</p>
+        <ion-list *ngIf="newResultsReady; else sorryMsg">
+          <div *ngIf="newResultsReady">
+            <button
+              ion-item
+              *ngFor="let data of (newResults | slice: 0:10); let i = index"
+              (click)="goToLocationDetails(data.id, data)"
+            >
+              <ion-avatar item-start>
+                <img [src]="data.img" />
+                <span *ngIf="myLocation.lat !== 0 && myLocation.lng !== 0">
+                  <span>{{ data.distanceMiles | number: '1.0-0' }}</span> mil
+                </span>
+              </ion-avatar>
+              <h3>{{ data.title }}</h3>
+              <p>
+                {{ data.street }} {{ data.city }}, {{ data.state }}
+                {{ data.zipcode }}
+              </p>
+            </button>
+            <button
+              *ngIf="!toggledStart"
+              ion-button
+              full
+              primary
+              (click)="startTrack()"
+            >
+              Start Tracking
+            </button>
+            <button
+              *ngIf="toggledStart"
+              ion-button
+              full
+              primary
+              [style.backgroundColor]="grayColor"
+              (click)="stopTrack()"
+            >
+              Stop Tracking
+            </button>
+          </div>
         </ion-list>
+        <ng-template class="locations-content" #sorryMsg>
+          <ion-list *ngIf="!loading">
+            <ion-item [style.color]="redWarning">
+              Sorry, this feature is only enabled when you turn on Geolocation.
+              <button ion-button full (click)="open('location')">
+                Open Settings
+              </button>
+            </ion-item>
+          </ion-list>
+        </ng-template>
       </ion-card-content>
     </div>
 
