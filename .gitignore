@@ -96,3 +96,6 @@ Temporary Items
 Session.vim
 .netrwhist
 *~
+
+# custom
+atm-location.*.ts
