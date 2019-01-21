@@ -126,6 +126,13 @@ page-home {
       $background-color 50%
     );
   }
+  button[full] {
+    background: $color-secondary;
+    margin: 20px 0 0 0;
+  }
+  .item-ios .item-button {
+    height: 30px;
+  }
   .card.support,
   .card.locations {
     // .item-ios [item-left],
@@ -136,6 +143,12 @@ page-home {
     // .item-divider{
     //   margin
     // }
+    .list-ios > .item-block:first-child {
+      border-top: 0px; //** rid of the double lines overwrapped with the ion-item top border
+    }
+    .item-divider {
+      margin-bottom: 0; //** rid of the extra margin that is off
+    }
     ion-item-divider {
       padding-top: 8px;
       padding-bottom: 8px;
@@ -148,7 +161,7 @@ page-home {
     ion-card-content {
       ion-list {
         // padding: 8px;
-        margin-bottom: 5px;
+        margin-bottom: 0px;
         ion-item {
           padding: 0 0 0 8px;
           .item-inner {
