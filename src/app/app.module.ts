@@ -12,7 +12,6 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
 import { MomentModule } from 'angular2-moment';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
-import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 /* GetCoins App */
 import env from '../environments';
@@ -43,6 +42,8 @@ import { COMPONENTS } from './../components/components';
 import { ProvidersModule } from './../providers/providers.module';
 import { AtmLocationProvider } from '../providers/atm-location/atm-location';
 import { LocationTrackerProvider } from '../providers/location-tracker/location-tracker';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { OpenNativeSettings } from '@ionic-native/open-native-settings';
 
 /* Read translation files */
 export function createTranslateLoader(http: HttpClient) {
@@ -102,7 +103,8 @@ export function createTranslateLoader(http: HttpClient) {
     InAppBrowser,
     Geolocation,
     BackgroundGeolocation,
-    LocationTrackerProvider
+    LocationTrackerProvider,
+    OpenNativeSettings
   ]
 })
 export class AppModule {}
