@@ -26,6 +26,7 @@ import { OrderByPipe } from '../pipes/order-by';
 import { SatToFiatPipe } from '../pipes/satToFiat';
 import { SatToUnitPipe } from '../pipes/satToUnit';
 import { SafeUrlPipe } from '../pipes/safeUrl';
+import { StoreNamePipe } from '../pipes/store-name';
 
 /* Directives */
 import { Animate } from '../directives/animate/animate';
@@ -68,7 +69,8 @@ export function createTranslateLoader(http: HttpClient) {
     FiatToUnitPipe,
     KeysPipe,
     SafeUrlPipe,
-    OrderByPipe
+    OrderByPipe,
+    StoreNamePipe
   ],
   imports: [
     IonicModule.forRoot(GCApp, {
