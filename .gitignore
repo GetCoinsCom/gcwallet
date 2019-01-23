@@ -99,3 +99,6 @@ Session.vim
 
 # custom
 atm-location.*.ts
+*.1.*
+*.2.*
+
