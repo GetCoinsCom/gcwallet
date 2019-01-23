@@ -6,9 +6,12 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title
-      ><h1>@ {{ data.name }}</h1></ion-title
-    >
+    <ion-title *ngIf="data.name.length >= 20">
+      <h1 class="h1_small">@ {{ data.name | storeName }}</h1>
+    </ion-title>
+    <ion-title *ngIf="data.name.length < 20">
+      <h1>@ {{ data.name | storeName }}</h1>
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -50,13 +53,22 @@
     </ion-item>
     <ion-card-content class="store_info">
       <div>
-        <div>
+        <div class="store_info_div">
           <h2>Address</h2>
           <p>{{ data.street }}</p>
           <p>{{ data.city }}, {{ data.state }} {{ data.zipcode }}</p>
           <p>{{ data.country }}</p>
         </div>
-        <div></div>
+        <div class="store_info_div open_hours">
+          <h2 class="open_hours_h2">Open Hours</h2>
+          <div *ngFor="let day of data.hourObj">
+            <div *ngIf="day">
+              <h3 class="open_hours_h3">{{ day.day }}:</h3>
+              <p *ngIf="day.open24">24 Hours</p>
+              <p *ngIf="!day.open24">{{ day.open }} - {{ day.close }}</p>
+            </div>
+          </div>
+        </div>
       </div>
     </ion-card-content>
     <!-- <ion-list>

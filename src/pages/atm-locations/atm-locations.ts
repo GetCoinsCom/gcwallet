@@ -44,9 +44,8 @@ export class AtmLocationsPage {
     private translate: TranslateService,
     private externalLinkProvider: ExternalLinkProvider,
     // private popupProvider: PopupProvider,
-    private iab: InAppBrowser
-  ) // private geo: Geolocation
-  {
+    private iab: InAppBrowser // private geo: Geolocation,
+  ) {
     this.id = navParams.get('locationId');
     this.data = navParams.get('dataSet');
     this.serverJson = navParams.get('serverJson');
