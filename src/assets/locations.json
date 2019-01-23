@@ -5,7 +5,7 @@
 			"lat": 39.75023231,
 			"lng": -86.13031932,
 			"title": "Fountain Square - Phillips 66",
-			"name": "Phillips 66",
+			"name": "Phillips 66 Gas Station",
 			"country": "USA",
 			"region": "Indiana",
 			"state": "Indiana",
@@ -23,6 +23,50 @@
 				[[0, 24]],
 				[[0, 24]],
 				[[0, 24]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Tuesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Wednesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Thursday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Friday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Saturday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Sunday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				}
 			]
 		},
 		{
@@ -30,7 +74,7 @@
 			"lat": 39.7874521,
 			"lng": -86.2011901,
 			"title": "16th & Lafayette - Phillips 66",
-			"name": "Phillips 66",
+			"name": "Phillips 66 Gas Station",
 			"country": "USA",
 			"region": "Indiana",
 			"state": "Indiana",
@@ -48,6 +92,50 @@
 				[[0, 24]],
 				[[0, 24]],
 				[[0, 24]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Tuesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Wednesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Thursday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Friday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Saturday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Sunday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				}
 			]
 		},
 		{
@@ -73,6 +161,50 @@
 				[[0, 24]],
 				[[0, 24]],
 				[[0, 24]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Tuesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Wednesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Thursday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Friday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Saturday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Sunday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				}
 			]
 		},
 		{
@@ -98,6 +230,50 @@
 				[[0, 24]],
 				[[0, 24]],
 				[[0, 24]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Tuesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Wednesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Thursday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Friday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Saturday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Sunday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				}
 			]
 		},
 		{
@@ -123,6 +299,50 @@
 			[[0, 24]],
 			[[0, 24]],
 			[[0, 24]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Tuesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Wednesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Thursday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Friday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Saturday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Sunday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				}
 			]
 		},
 		{
@@ -148,6 +368,50 @@
 			[[0, 24]],
 			[[0, 24]],
 			[[0, 24]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Tuesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Wednesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Thursday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Friday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Saturday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Sunday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				}
 			]
 		},
 		{
@@ -173,6 +437,50 @@
 			[[0, 24]],
 			[[0, 24]],
 			[[0, 24]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Tuesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Wednesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Thursday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Friday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Saturday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Sunday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				}
 			]
 		},
 		{
@@ -198,6 +506,50 @@
 			[[0, 24]],
 			[[0, 24]],
 			[[0, 24]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Tuesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Wednesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Thursday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Friday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Saturday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Sunday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				}
 			]
 		},
 		{
@@ -223,7 +575,51 @@
   				[[0, 24]],
   				[[0, 24]],
   				[[0, 24]]
-  			]
+  			],
+			  "hourObj":[
+				  {
+					  "day": "Monday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Tuesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Wednesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Thursday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Friday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Saturday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Sunday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  }
+			  ]
   		},
 		{
   			"id": "101307",
@@ -248,7 +644,51 @@
   				[[11, 22]],
   				[[11, 23]],
   				[[11, 23]]
-  			]
+  			],
+			  "hourObj":[
+				  {
+					  "day": "Monday",
+					  "open": "11:00 am",
+					  "close": "10:00 pm",
+					  "open24": false
+				  },
+				  {
+					  "day": "Tuesday",
+					  "open": "11:00 am",
+					  "close": "10:00 pm",
+					  "open24": false
+				  },
+				  {
+					  "day": "Wednesday",
+					  "open": "11:00 am",
+					  "close": "10:00 pm",
+					  "open24": false
+				  },
+				  {
+					  "day": "Thursday",
+					  "open": "11:00 am",
+					  "close": "10:00 pm",
+					  "open24": false
+				  },
+				  {
+					  "day": "Friday",
+					  "open": "11:00 am",
+					  "close": "11:00 pm",
+					  "open24": false
+				  },
+				  {
+					  "day": "Saturday",
+					  "open": "11:00 am",
+					  "close": "11:00 pm",
+					  "open24": false
+				  },
+				  {
+					  "day": "Sunday",
+					  "open": "12:00 pm",
+					  "close": "9:00 pm",
+					  "open24": false
+				  }
+			  ]
   		},
 		{
   			"id": "101319",
@@ -273,7 +713,51 @@
   				[[0, 24]],
   				[[0, 24]],
   				[[0, 24]]
-  			]
+  			],
+			  "hourObj":[
+				  {
+					  "day": "Monday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Tuesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Wednesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Thursday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Friday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Saturday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Sunday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  }
+			  ]
 		  },
 		{
   			"id": "101332",
@@ -298,7 +782,51 @@
   				[[0, 24]],
   				[[0, 24]],
   				[[0, 24]]
-  			]
+  			],
+			  "hourObj":[
+				  {
+					  "day": "Monday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Tuesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Wednesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Thursday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Friday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Saturday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Sunday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  }
+			  ]
 		},
 		{
   			"id": "101335",
@@ -321,9 +849,53 @@
   				[[0, 3],[9, 24]],
   				[[0, 3],[9, 24]],
   				[[0, 3],[9, 24]],
-  				[[0, 4],[9, 24]],
+  				[[0, 3],[9, 24]],
   				[[0, 4],[9, 24]]
-  			]
+  			],
+			  "hourObj":[
+				  {
+					  "day": "Monday",
+					  "open": "9:00 am",
+					  "close": "3:00 am",
+					  "open24": false
+				  },
+				  {
+					  "day": "Tuesday",
+					  "open": "9:00 am",
+					  "close": "3:00 am",
+					  "open24": false
+				  },
+				  {
+					  "day": "Wednesday",
+					  "open": "9:00 am",
+					  "close": "3:00 am",
+					  "open24": false
+				  },
+				  {
+					  "day": "Thursday",
+					  "open": "9:00 am",
+					  "close": "3:00 am",
+					  "open24": false
+				  },
+				  {
+					  "day": "Friday",
+					  "open": "9:00 am",
+					  "close": "4:00 am",
+					  "open24": false
+				  },
+				  {
+					  "day": "Saturday",
+					  "open": "9:00 am",
+					  "close": "4:00 am",
+					  "open24": false
+				  },
+				  {
+					  "day": "Sunday",
+					  "open": "10:00 am",
+					  "close": "3:00 am",
+					  "open24": false
+				  }
+			  ]
 		},
 		{
   			"id": "101312",
@@ -348,7 +920,51 @@
   				[[0, 2],[10, 24]],
   				[[0, 2],[10, 24]],
   				[[0, 4],[10, 24]]
-  			]
+  			],
+			  "hourObj":[
+				  {
+					  "day": "Monday",
+					  "open": "10:00 am",
+					  "close": "2:00 am",
+					  "open24": false
+				  },
+				  {
+					  "day": "Tuesday",
+					  "open": "10:00 am",
+					  "close": "2:00 am",
+					  "open24": false
+				  },
+				  {
+					  "day": "Wednesday",
+					  "open": "10:00 am",
+					  "close": "2:00 am",
+					  "open24": false
+				  },
+				  {
+					  "day": "Thursday",
+					  "open": "10:00 am",
+					  "close": "2:00 am",
+					  "open24": false
+				  },
+				  {
+					  "day": "Friday",
+					  "open": "10:00 am",
+					  "close": "4:00 am",
+					  "open24": false
+				  },
+				  {
+					  "day": "Saturday",
+					  "open": "10:00 am",
+					  "close": "2:00 am",
+					  "open24": false
+				  },
+				  {
+					  "day": "Sunday",
+					  "open": "11:00 am",
+					  "close": "2:00 am",
+					  "open24": false
+				  }
+			  ]
 		},
 		{
   			"id": "101313",
@@ -373,7 +989,51 @@
   				[[0, 24]],
   				[[0, 24]],
   				[[0, 24]]
-  			]
+  			],
+			  "hourObj":[
+				  {
+					  "day": "Monday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Tuesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Wednesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Thursday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Friday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Saturday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Sunday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  }
+			  ]
 		},
 		{
   			"id": "101333",
@@ -398,7 +1058,51 @@
   				[[0, 24]],
   				[[0, 24]],
   				[[0, 24]]
-  			]
+  			],
+			  "hourObj":[
+				  {
+					  "day": "Monday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Tuesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Wednesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Thursday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Friday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Saturday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Sunday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  }
+			  ]
 		},
 		{
   			"id": "101305",
@@ -423,7 +1127,51 @@
   				[[0, 24]],
   				[[0, 24]],
   				[[0, 24]]
-  			]
+  			],
+			  "hourObj":[
+				  {
+					  "day": "Monday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Tuesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Wednesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Thursday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Friday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Saturday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Sunday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  }
+			  ]
 		},
 		{
   			"id": "101310",
@@ -448,7 +1196,51 @@
   				[[0, 24]],
   				[[0, 24]],
   				[[0, 24]]
-  			]
+  			],
+			  "hourObj":[
+				  {
+					  "day": "Monday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Tuesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Wednesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Thursday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Friday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Saturday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Sunday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  }
+			  ]
 		},
 		{
   			"id": "101311",
@@ -473,7 +1265,51 @@
   				[[0, 24]],
   				[[0, 24]],
   				[[0, 24]]
-  			]
+  			],
+			  "hourObj":[
+				  {
+					  "day": "Monday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Tuesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Wednesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Thursday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Friday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Saturday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Sunday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  }
+			  ]
 		},
 		{
   			"id": "101322",
@@ -498,7 +1334,51 @@
   				[[6, 22]],
   				[[6, 22]],
   				[[6, 22]]
-  			]
+  			],
+			  "hourObj":[
+				  {
+					  "day": "Monday",
+					  "open": "6:00 am",
+					  "close": "10:00 pm",
+					  "open24": false
+				  },
+				  {
+					  "day": "Tuesday",
+					  "open": "6:00 am",
+					  "close": "10:00 pm",
+					  "open24": false
+				  },
+				  {
+					  "day": "Wednesday",
+					  "open": "6:00 am",
+					  "close": "10:00 pm",
+					  "open24": false
+				  },
+				  {
+					  "day": "Thursday",
+					  "open": "6:00 am",
+					  "close": "10:00 pm",
+					  "open24": false
+				  },
+				  {
+					  "day": "Friday",
+					  "open": "6:00 am",
+					  "close": "10:00 pm",
+					  "open24": false
+				  },
+				  {
+					  "day": "Saturday",
+					  "open": "6:00 am",
+					  "close": "10:00 pm",
+					  "open24": false
+				  },
+				  {
+					  "day": "Sunday",
+					  "open": "6:00 am",
+					  "close": "10:00 pm",
+					  "open24": false
+				  }
+			  ]
 		},
 		{
   			"id": "101306",
@@ -523,7 +1403,51 @@
   				[[0, 24]],
   				[[0, 24]],
   				[[0, 24]]
-  			]
+  			],
+			  "hourObj":[
+				  {
+					  "day": "Monday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Tuesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Wednesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Thursday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Friday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Saturday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Sunday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  }
+			  ]
 		},
 		{
   			"id": "101331",
@@ -548,7 +1472,51 @@
   				[[0, 24]],
   				[[0, 24]],
   				[[0, 24]]
-  			]
+  			],
+			  "hourObj":[
+				  {
+					  "day": "Monday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Tuesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Wednesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Thursday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Friday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Saturday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Sunday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  }
+			  ]
 		},
 		{
   			"id": "101329",
@@ -573,7 +1541,51 @@
   				[[6, 24]],
   				[[6, 24]],
   				[[6, 24]]
-  			]
+  			],
+			  "hourObj":[
+				  {
+					  "day": "Monday",
+					  "open": "6:00 am",
+					  "close": "12:00 am",
+					  "open24": false
+				  },
+				  {
+					  "day": "Tuesday",
+					  "open": "6:00 am",
+					  "close": "12:00 am",
+					  "open24": false
+				  },
+				  {
+					  "day": "Wednesday",
+					  "open": "6:00 am",
+					  "close": "12:00 am",
+					  "open24": false
+				  },
+				  {
+					  "day": "Thursday",
+					  "open": "6:00 am",
+					  "close": "12:00 am",
+					  "open24": false
+				  },
+				  {
+					  "day": "Friday",
+					  "open": "6:00 am",
+					  "close": "12:00 am",
+					  "open24": false
+				  },
+				  {
+					  "day": "Saturday",
+					  "open": "6:00 am",
+					  "close": "12:00 am",
+					  "open24": false
+				  },
+				  {
+					  "day": "Sunday",
+					  "open": "6:00 am",
+					  "close": "12:00 am",
+					  "open24": false
+				  }
+			  ]
 		},
 		{
   			"id": "101314",
@@ -598,7 +1610,51 @@
   				[[0, 24]],
   				[[0, 24]],
   				[[0, 24]]
-  			]
+  			],
+			  "hourObj":[
+				  {
+					  "day": "Monday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Tuesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Wednesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Thursday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Friday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Saturday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Sunday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  }
+			  ]
 		},
 		{
   			"id": "101299",
@@ -623,7 +1679,51 @@
   				[[0, 24]],
   				[[0, 24]],
   				[[0, 24]]
-  			]
+  			],
+			  "hourObj":[
+				  {
+					  "day": "Monday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Tuesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Wednesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Thursday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Friday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Saturday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Sunday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  }
+			  ]
 		},
 		{
   			"id": "101327",
@@ -648,7 +1748,51 @@
   				[[0, 24]],
   				[[0, 24]],
   				[[0, 24]]
-  			]
+  			],
+			  "hourObj":[
+				  {
+					  "day": "Monday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Tuesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Wednesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Thursday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Friday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Saturday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Sunday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  }
+			  ]
 		},
 		{
   			"id": "101330",
@@ -673,7 +1817,51 @@
   				[[0, 24]],
   				[[0, 24]],
   				[[0, 24]]
-  			]
+  			],
+			  "hourObj":[
+				  {
+					  "day": "Monday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Tuesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Wednesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Thursday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Friday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Saturday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Sunday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  }
+			  ]
 		},
 		{
   			"id": "101342",
@@ -698,7 +1886,51 @@
   				[[0, 24]],
   				[[0, 24]],
   				[[0, 24]]
-  			]
+  			],
+			  "hourObj":[
+				  {
+					  "day": "Monday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Tuesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Wednesday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Thursday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Friday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Saturday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  },
+				  {
+					  "day": "Sunday",
+					  "open": "0:00 am",
+					  "close": "12:00 am",
+					  "open24": true
+				  }
+			  ]
 		},
 		{
   			"id": "101338",
@@ -723,7 +1955,51 @@
   				[[6, 22]],
   				[[6, 22]],
   				[[6, 22]]
-  			]
+  			],
+			  "hourObj":[
+				  {
+					  "day": "Monday",
+					  "open": "6:00 am",
+					  "close": "10:00 pm",
+					  "open24": false
+				  },
+				  {
+					  "day": "Tuesday",
+					  "open": "6:00 am",
+					  "close": "10:00 pm",
+					  "open24": false
+				  },
+				  {
+					  "day": "Wednesday",
+					  "open": "6:00 am",
+					  "close": "10:00 pm",
+					  "open24": false
+				  },
+				  {
+					  "day": "Thursday",
+					  "open": "6:00 am",
+					  "close": "10:00 pm",
+					  "open24": false
+				  },
+				  {
+					  "day": "Friday",
+					  "open": "6:00 am",
+					  "close": "10:00 pm",
+					  "open24": false
+				  },
+				  {
+					  "day": "Saturday",
+					  "open": "6:00 am",
+					  "close": "10:00 pm",
+					  "open24": false
+				  },
+				  {
+					  "day": "Sunday",
+					  "open": "6:00 am",
+					  "close": "10:00 pm",
+					  "open24": false
+				  }
+			  ]
 		},
 		{
   			"id": "101337",
@@ -748,7 +2024,51 @@
   				[[9, 21]],
   				[[9, 21]],
   				[[9, 21]]
-  			]
+  			],
+			  "hourObj":[
+				  {
+					  "day": "Monday",
+					  "open": "9:00 am",
+					  "close": "9:00 pm",
+					  "open24": false
+				  },
+				  {
+					  "day": "Tuesday",
+					  "open": "9:00 am",
+					  "close": "9:00 pm",
+					  "open24": false
+				  },
+				  {
+					  "day": "Wednesday",
+					  "open": "9:00 am",
+					  "close": "9:00 pm",
+					  "open24": false
+				  },
+				  {
+					  "day": "Thursday",
+					  "open": "9:00 am",
+					  "close": "9:00 pm",
+					  "open24": false
+				  },
+				  {
+					  "day": "Friday",
+					  "open": "9:00 am",
+					  "close": "9:00 pm",
+					  "open24": false
+				  },
+				  {
+					  "day": "Saturday",
+					  "open": "9:00 am",
+					  "close": "9:00 pm",
+					  "open24": false
+				  },
+				  {
+					  "day": "Sunday",
+					  "open": "9:00 am",
+					  "close": "9:00 pm",
+					  "open24": false
+				  }
+			  ]
 		},
 		{
 			"id": "100929",
@@ -773,6 +2093,50 @@
 				[[0, 24]],
 				[[0, 24]],
 				[[0, 24]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Tuesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Wednesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Thursday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Friday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Saturday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Sunday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				}
 			]
 		},
 		{
@@ -798,6 +2162,50 @@
 				[[0, 24]],
 				[[0, 24]],
 				[[0, 24]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Tuesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Wednesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Thursday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Friday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Saturday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Sunday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				}
 			]
 		},
 		{
@@ -823,6 +2231,50 @@
 				[[5.5, 24]],
 				[[5.5, 24]],
 				[[0, 1],[5.5, 24]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "5:30 am",
+					"close": "12:00 am",
+					"open24": false
+				},
+				{
+					"day": "Tuesday",
+					"open": "5:30 am",
+					"close": "12:00 am",
+					"open24": false
+				},
+				{
+					"day": "Wednesday",
+					"open": "5:30 am",
+					"close": "12:00 am",
+					"open24": false
+				},
+				{
+					"day": "Thursday",
+					"open": "5:30 am",
+					"close": "12:00 am",
+					"open24": false
+				},
+				{
+					"day": "Friday",
+					"open": "5:30 am",
+					"close": "1:00 am",
+					"open24": false
+				},
+				{
+					"day": "Saturday",
+					"open": "5:30 am",
+					"close": "1:00 am",
+					"open24": false
+				},
+				{
+					"day": "Sunday",
+					"open": "5:30 am",
+					"close": "12:00 am",
+					"open24": false
+				}
 			]
 		},
 		{
@@ -848,6 +2300,50 @@
 				[[0, 24]],
 				[[0, 24]],
 				[[0, 24]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Tuesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Wednesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Thursday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Friday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Saturday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Sunday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				}
 			]
 		},
 		{
@@ -873,6 +2369,50 @@
 				[[10, 23]],
 				[[10, 24]],
 				[[0, 1],[10, 24]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "10:00 am",
+					"close": "11:00 pm",
+					"open24": false
+				},
+				{
+					"day": "Tuesday",
+					"open": "10:00 am",
+					"close": "11:00 pm",
+					"open24": false
+				},
+				{
+					"day": "Wednesday",
+					"open": "10:00 am",
+					"close": "11:00 pm",
+					"open24": false
+				},
+				{
+					"day": "Thursday",
+					"open": "10:00 am",
+					"close": "11:00 pm",
+					"open24": false
+				},
+				{
+					"day": "Friday",
+					"open": "10:00 am",
+					"close": "25:00 am",
+					"open24": false
+				},
+				{
+					"day": "Saturday",
+					"open": "10:00 am",
+					"close": "25:00 am",
+					"open24": false
+				},
+				{
+					"day": "Sunday",
+					"open": "10:00 am",
+					"close": "11:00 pm",
+					"open24": false
+				}
 			]
 		},
 		{
@@ -898,6 +2438,50 @@
 				[[0, 24]],
 				[[0, 24]],
 				[[0, 24]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Tuesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Wednesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Thursday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Friday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Saturday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Sunday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				}
 			]
 		},
 		{
@@ -923,6 +2507,50 @@
 				[[0, 24]],
 				[[0, 24]],
 				[[0, 24]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Tuesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Wednesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Thursday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Friday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Saturday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Sunday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				}
 			]
 		},
 		{
@@ -948,6 +2576,50 @@
 				[[0, 24]],
 				[[0, 24]],
 				[[0, 24]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Tuesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Wednesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Thursday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Friday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Saturday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Sunday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				}
 			]
 		},
 		{
@@ -973,6 +2645,50 @@
 				[[0, 24]],
 				[[0, 24]],
 				[[0, 24]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Tuesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Wednesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Thursday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Friday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Saturday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Sunday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				}
 			]
 		},
 		{
@@ -980,7 +2696,7 @@
 			"lat": 41.66426400,
 			"lng": -83.56960200,
 			"title": "Monroe St - Sunoco Gas Station",
-			"name": "SunocoGas Station",
+			"name": "Sunoco Gas Station",
 			"country": "USA",
 			"region": "Ohio",
 			"state": "Ohio",
@@ -998,6 +2714,50 @@
 				[[0, 24]],
 				[[0, 24]],
 				[[0, 24]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Tuesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Wednesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Thursday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Friday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Saturday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Sunday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				}
 			]
 		},
 		{
@@ -1023,6 +2783,50 @@
 				[[0, 24]],
 				[[0, 24]],
 				[[0, 24]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Tuesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Wednesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Thursday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Friday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Saturday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Sunday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				}
 			]
 		},
 		{
@@ -1048,6 +2852,50 @@
 				[[0, 24]],
 				[[0, 24]],
 				[[0, 24]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Tuesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Wednesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Thursday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Friday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Saturday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Sunday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				}
 			]
 		},
 		{
@@ -1073,6 +2921,50 @@
 				[[5, 23]],
 				[[5, 23]],
 				[[5, 23]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "5:00 am",
+					"close": "11:00 pm",
+					"open24": false
+				},
+				{
+					"day": "Tuesday",
+					"open": "5:00 am",
+					"close": "11:00 pm",
+					"open24": false
+				},
+				{
+					"day": "Wednesday",
+					"open": "5:00 am",
+					"close": "11:00 pm",
+					"open24": false
+				},
+				{
+					"day": "Thursday",
+					"open": "9:00 am",
+					"close": "5:30 pm",
+					"open24": false
+				},
+				{
+					"day": "Friday",
+					"open": "5:00 am",
+					"close": "11:00 pm",
+					"open24": false
+				},
+				{
+					"day": "Saturday",
+					"open": "5:00 am",
+					"close": "11:00 pm",
+					"open24": false
+				},
+				{
+					"day": "Sunday",
+					"open": "5:00 am",
+					"close": "11:00 pm",
+					"open24": false
+				}
 			]
 		},
 		{
@@ -1098,6 +2990,50 @@
 				[[0, 24]],
 				[[0, 24]],
 				[[0, 24]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Tuesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Wednesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Thursday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Friday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Saturday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Sunday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				}
 			]
 		},
 		{
@@ -1123,6 +3059,50 @@
 				[[0, 24]],
 				[[0, 24]],
 				[[0, 24]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Tuesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Wednesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Thursday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Friday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Saturday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Sunday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				}
 			]
 		},
 		{
@@ -1148,6 +3128,50 @@
 				[[0, 24]],
 				[[0, 24]],
 				[[0, 24]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Tuesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Wednesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Thursday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Friday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Saturday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Sunday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				}
 			]
 		},
 		{
@@ -1173,6 +3197,50 @@
 				[[9,17.5]],
 				[[9,17.5]],
 				[[9,17.5]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "9:00 am",
+					"close": "5:30 pm",
+					"open24": false
+				},
+				{
+					"day": "Tuesday",
+					"open": "9:00 am",
+					"close": "5:30 pm",
+					"open24": false
+				},
+				{
+					"day": "Wednesday",
+					"open": "9:00 am",
+					"close": "5:30 pm",
+					"open24": false
+				},
+				{
+					"day": "Thursday",
+					"open": "9:00 am",
+					"close": "5:30 pm",
+					"open24": false
+				},
+				{
+					"day": "Friday",
+					"open": "9:00 am",
+					"close": "5:30 pm",
+					"open24": false
+				},
+				{
+					"day": "Saturday",
+					"open": "9:00 am",
+					"close": "5:30 pm",
+					"open24": false
+				},
+				{
+					"day": "Sunday",
+					"open": "11:00 am",
+					"close": "4:00 pm",
+					"open24": false
+				}
 			]
 		},
 		{
@@ -1198,6 +3266,50 @@
 			  [[0, 24]],
 			  [[0, 24]],
 			  [[0, 24]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Tuesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Wednesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Thursday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Friday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Saturday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Sunday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				}
 			]
 		},
 		{
@@ -1223,6 +3335,50 @@
 			[[0, 24]],
 			[[0, 24]],
 			[[0, 24]]
+			],
+			"hourObj":[
+				{
+					"day": "Monday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Tuesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Wednesday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Thursday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Friday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Saturday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				},
+				{
+					"day": "Sunday",
+					"open": "0:00 am",
+					"close": "12:00 am",
+					"open24": true
+				}
 			]
 		}
 	]
