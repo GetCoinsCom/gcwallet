@@ -105,7 +105,7 @@
         </div>
         <div item-end>
           <button ion-button clear icon-only color="grey">
-            <ion-badge *ngIf="notificationsN > 3" color="danger">{{
+            <ion-badge *ngIf="notifications > 3" color="danger">{{
               notifications
             }}</ion-badge>
             <ion-icon ios="ios-arrow-dropright"></ion-icon>
@@ -357,8 +357,8 @@
       </ion-item-divider>
       <ion-card-content class="locations-content">
         <p *ngIf="loading">Loading...</p>
-        <ion-list *ngIf="newResultsReady; else sorryMsg">
-          <div *ngIf="newResultsReady">
+        <ion-list *ngIf="newResultsReady">
+          <div *ngIf="newResultsReady || newResults !== null">
             <button
               ion-item
               *ngFor="let data of (newResults | slice: 0:10); let i = index"
@@ -366,8 +366,14 @@
             >
               <ion-avatar item-start>
                 <img [src]="data.img" />
-                <span class="miles" *ngIf="myLocation.lat !== 0 && myLocation.lng !== 0">
-                  <span class="miles_num">{{ data.distanceMiles | number: '1.0-0' }}</span>mil
+                <span
+                  class="miles"
+                  *ngIf="myLocation.lat !== 0 && myLocation.lng !== 0"
+                >
+                  <span class="miles_num">{{
+                    data.distanceMiles | number: '1.0-0'
+                  }}</span
+                  >mil
                 </span>
               </ion-avatar>
               <h3>{{ data.title }}</h3>
@@ -376,7 +382,10 @@
                 {{ data.zipcode }}
               </p>
             </button>
-            <button
+            <button ion-button full primary (click)="searchAgain()">
+              Search Again
+            </button>
+            <!-- <button
               *ngIf="!toggledStart"
               ion-button
               full
@@ -394,19 +403,35 @@
               (click)="stopTrack()"
             >
               Stop Tracking
-            </button>
+            </button> -->
           </div>
         </ion-list>
-        <ng-template class="locations-content" #sorryMsg>
-          <ion-list *ngIf="!loading">
-            <ion-item [style.color]="redWarning">
-              Sorry, this feature is only enabled when you turn on Geolocation.
-              <button ion-button full (click)="open('location')">
-                Open Settings
-              </button>
-            </ion-item>
-          </ion-list>
-        </ng-template>
+        <ion-list *ngIf="!newResultsReady && !loading">
+          <ion-item [style.color]="redWarning">
+            Sorry, this feature is only enabled when you turn on Geolocation.
+            <p class="ask-refresh" *ngIf="warnToRefresh">
+              Please make sure to refresh the app or close the app and reopen to
+              see the effect.
+            </p>
+            <button
+              *ngIf="!warnToRefresh"
+              ion-button
+              full
+              (click)="openPhoneSettings('location')"
+            >
+              Open Settings
+            </button>
+            <button
+              *ngIf="warnToRefresh"
+              ion-button
+              full
+              primary
+              (click)="searchAgain()"
+            >
+              Search Again
+            </button>
+          </ion-item>
+        </ion-list>
       </ion-card-content>
     </div>
 

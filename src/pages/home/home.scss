@@ -130,8 +130,11 @@ page-home {
     background: $color-secondary;
     margin: 20px 0 0 0;
   }
+  .item-md .item-button {
+    height: 2.8em;
+  }
   .item-ios .item-button {
-    height: 30px;
+    height: 2.8em;
   }
   .card.support,
   .card.locations {
@@ -148,7 +151,7 @@ page-home {
       ion-thumbnail {
         &[item-left],
         &[item-start] {
-          margin: 8px 18px 8px 6px;
+          margin: 8px 20px 8px 4px;
         }
       }
       // ion-thumbnail {
@@ -206,6 +209,11 @@ page-home {
       &.item-md {
         padding-top: 13px;
         padding-bottom: 10px;
+      }
+    }
+    .locations-content {
+      .ask-refresh {
+        padding-top: 10px;
       }
     }
     ion-card-content {
