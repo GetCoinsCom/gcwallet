@@ -560,3 +560,11 @@ ion-app.ios .toolbar-title,
 .toolbar-ios {
   min-height: 46px;
 }
+.platform-windows {
+  page-home {
+    text-align: center;
+    img.home-logo {
+      margin: 0 auto;
+    }
+  }
+}
