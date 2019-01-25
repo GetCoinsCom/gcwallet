@@ -1,9 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Platform } from 'ionic-angular';
 import 'rxjs/add/operator/map'; //** THis is backward compatibility, but not necessary for this app (angular5) */
 import 'rxjs/add/operator/toPromise';
 import { Logger } from '../../providers/logger/logger';
-// import * as jsonData from '../../assets/terms-and-conditions.json'; //** a way to grab the internal json file but not used here */
+// import * as jsonData from '../../assets/locations.json'; //** a way to grab the internal json file but not used here */
 // import { Response } from '@angular/http';
 import { LocationTrackerProvider } from '../../providers/location-tracker/location-tracker';
 
@@ -18,22 +19,25 @@ export class AtmLocationProvider {
   private apiTerm: string = 'locations';
   // private jsonData: Object = jsonData;
   private locurl: string;
+  private locurlForBrowser: string;
   private apiurl;
   private apiurl_old;
   public results: Object[];
-  private geoObjFromHome: any;
+  // private geoObjFromHome: any;
   public newResults: any;
   // private offline: boolean = false;
 
   constructor(
     public http: HttpClient,
+    private platform: Platform,
     public logger: Logger,
     public locationTracker: LocationTrackerProvider
   ) {
     console.log('Hello AtmLocationProvider Provider');
     this.apiurl_old = 'https://getcoins.com/api/locations/index.php';
     this.apiurl = 'https://getcoins.com/api/v1/location/read.php';
-    this.locurl = '../../../../assets/locations.json';
+    this.locurl = 'assets/locations.json';
+    this.locurlForBrowser = '../../../../assets/locations.json';
   }
 
   //** To get the whole locations by the premature API */
@@ -54,7 +58,8 @@ export class AtmLocationProvider {
   }
   //** TO get the location data in promise to then calculate the distance and add it to be object */
   public getLocationsPromise(geoObj, api): Promise<any> {
-    this.geoObjFromHome = geoObj;
+    console.log('geoLocationsPromis from provider entered');
+    // this.geoObjFromqHome = geoObj;
     if (geoObj.lat !== 0 || geoObj.lng !== 0) {
       let chooseMethod: string;
       if (api) {
@@ -62,27 +67,131 @@ export class AtmLocationProvider {
       } else {
         chooseMethod = this.locurl;
       }
+      console.log(chooseMethod, ' is chooseMethod');
       // let geoObj =  { lat: 41.234648, lng: -82.254409 };
       let promise = new Promise((resolve, reject) => {
+        console.log('in promise now inside getLocationsPromise');
         this.http
           .get(chooseMethod)
           .toPromise()
           .then(
             res => {
+              console.log(
+                res,
+                'promise inside getLocationsPromise func in provider run'
+              );
               //** Here you grab the data as array of objects
               // and then loop through to get the distace for each location and then
               // add the new data into the array */
-              this.results = res['locations'];
-              for (let data of this.results) {
-                var distCal = this.getDistance(
-                  { lat: data['lat'], lng: data['lng'] },
-                  geoObj
-                );
-                data['distanceMiles'] = distCal;
+
+              //** res will get returned even if the data from api is missing, so here you check if the data is indeed null or not. If null then grab from local anyhow */
+              if (res === null) {
+                console.log('else function run bc api didnt work; null, no??');
+
+                if (this.platform.is('cordova')) {
+                  // make your native API calls
+                  this.http
+                    .get(this.locurl)
+                    .toPromise()
+                    .then(
+                      res => {
+                        if (res === null) {
+                          this.results = null;
+                        } else {
+                          this.results = res['locations'];
+                          console.log(
+                            this.results,
+                            ' is the results now from getLocationsPromise from provider'
+                          );
+                          for (let data of this.results) {
+                            var distCal = this.getDistance(
+                              { lat: data['lat'], lng: data['lng'] },
+                              geoObj
+                            );
+                            data['distanceMiles'] = distCal;
+                          }
+                          //** sort it through via the distanceMiles value */
+                          this.results.sort(this.compareLatLng);
+                          console.log(
+                            this.results,
+                            'this is  the results at the end from getLocationsPRomise from provider'
+                          );
+                          resolve(this.results);
+                        }
+                      },
+                      err => {
+                        this.logger.warn(
+                          err,
+                          ': Could not retrieve location data.'
+                        );
+                        this.results = null;
+                        reject(this.results);
+                      }
+                    );
+                } else {
+                  // fallback to browser APIs
+                  this.http
+                    .get(this.locurlForBrowser)
+                    .toPromise()
+                    .then(
+                      res => {
+                        if (res === null) {
+                          this.results = null;
+                        } else {
+                          this.results = res['locations'];
+                          console.log(
+                            this.results,
+                            ' is the results now from getLocationsPromise from provider'
+                          );
+                          for (let data of this.results) {
+                            var distCal = this.getDistance(
+                              { lat: data['lat'], lng: data['lng'] },
+                              geoObj
+                            );
+                            data['distanceMiles'] = distCal;
+                          }
+                          //** sort it through via the distanceMiles value */
+                          this.results.sort(this.compareLatLng);
+                          console.log(
+                            this.results,
+                            'this is  the results at the end from getLocationsPRomise from provider'
+                          );
+                          resolve(this.results);
+                        }
+                      },
+                      err => {
+                        this.logger.warn(
+                          err,
+                          ': Could not retrieve location data.'
+                        );
+                        this.results = null;
+                        reject(this.results);
+                      }
+                    );
+                }
               }
-              //** sort it through via the distanceMiles value */
-              this.results.sort(this.compareLatLng);
-              resolve(this.results);
+              //** If the response is not null and indeed was data from api as we expected */
+              else {
+                this.results = res['locations'];
+                console.log(
+                  this.results,
+                  ' is the results now from getLocationsPromise from provider'
+                );
+                for (let data of this.results) {
+                  var distCal = this.getDistance(
+                    { lat: data['lat'], lng: data['lng'] },
+                    geoObj
+                  );
+                  data['distanceMiles'] = distCal;
+                }
+                //** sort it through via the distanceMiles value */
+                this.results.sort(this.compareLatLng);
+                console.log(
+                  this.results,
+                  'this is  the results at the end from getLocationsPRomise from provider'
+                );
+                resolve(this.results);
+              }
             },
             msg => {
               this.logger.warn(msg);
@@ -91,7 +200,9 @@ export class AtmLocationProvider {
           );
       });
       return promise;
-    } else {
+    }
+    //** If there is no geolocation, then no point or way in showing "closest" location, so show the error */
+    else {
       this.logger.warn(
         'Your Geolocation is not working. Please enable geolocation to see your closest locations near you.'
       );
