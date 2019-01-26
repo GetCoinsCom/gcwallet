@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TranslateService } from '@ngx-translate/core';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
-// import { internals } from 'rx';
-// import { Geolocation } from '@ionic-native/geolocation';
-
 import { ExternalLinkProvider } from '../../providers/external-link/external-link';
+import { Logger } from '../../providers/logger/logger';
+
 // import { PopupProvider } from '../../providers/popup/popup';
+
 /**
  * Generated class for the AtmLocationsPage page.
  *
@@ -31,7 +31,7 @@ export class AtmLocationsPage {
   public googleDirectionUrl: string;
   public encodedDirection: string;
   public googleDirUrl: string;
-  // public myLocation: object = { lat: 41.234648, lng: -82.254409 };
+  // public myLocation: object = { lat: 41.234648, lng: -82.254409 }; // ** for testing purpose
   public myLocation: object;
   public encodedMyLocation: string;
   public travelMode: string = 'driving';
@@ -41,6 +41,7 @@ export class AtmLocationsPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
+    private logger: Logger,
     private translate: TranslateService,
     private externalLinkProvider: ExternalLinkProvider,
     // private popupProvider: PopupProvider,
@@ -93,39 +94,20 @@ export class AtmLocationsPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AtmLocationsPage');
-    console.log(this.id);
-    console.log(this.data);
-    console.log(this.googleUrl);
-    console.log(this.googleDirUrl);
-    console.log(this.serverJson);
-    console.log(this.localJson);
-    console.log(this.myLocation);
+    this.logger.info('ionViewDidLoad AtmLocationsPage');
   }
-
-  // private openDirectionPage() {
-  //   let message = this.translate.instant(
-  //     'Open a Google Map Direction page!'
-  //   );
-  //   let title = this.translate.instant('Get Direction');
-  //   let okText = this.translate.instant('GO!');
-  //   let cancelText = this.translate.instant('Go back');
-  //   this.popupProvider
-  //     .ionicConfirm(title, message, okText, cancelText)
-  //     .then(ok => {
-  //       if (ok) {
-
-  //       } else {
-
-  //       }
-  //     });
-  // }
-  //** One way to take user to the Direction external page; by simply moving to a new browser */
+  /**
+   * Open direction page directly without popup msg by opening a new browser, using INAppBrowser plugin
+   * (The other openDirectionLink method is used as of Jan 25, 2019)
+   */
   public getDirectionPage(): void {
     const browser = this.iab.create(this.googleDirUrl, '_blank');
     browser.show();
   }
-  //** Another way to take user to the Direction external page; by showing the msg to then open the browser */
+  /**
+   * Open direction page with popup menu
+   * Another way to take user to the DIrection external page
+   */
   public openDirectionLink(): void {
     let url = this.googleDirUrl;
     let optIn = true;
@@ -142,6 +124,9 @@ export class AtmLocationsPage {
       cancelText
     );
   }
+  /**
+   * Open customer support call popup msg
+   */
   public callCustomerSupport(): void {
     let url = 'tel:+1-860-800-2646';
     let optIn = true;
