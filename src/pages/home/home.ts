@@ -158,17 +158,12 @@ export class HomePage {
     this.localJson = localJsonFile['locations'];
     this.loading = true;
     this.offline = false;
-    console.log(this.loading, ' is loading in contructor');
-    console.log(
-      this.locationTracker.toggleStart,
-      ' is locationTracker.toggleStart value'
-    );
   }
 
   ionViewDidLoad() {
     this.loading = true;
     this.logger.info('ionViewDidLoad HomePage');
-    // this.getAPIdata();
+    // this.getAPIdata(); // ** No need to grab this; it will be done with loadGeolocation at the end */
     console.log(this.loading, ' is loading');
 
     this.checkEmailLawCompliance();
@@ -188,18 +183,14 @@ export class HomePage {
     // **call loadGeolocation Promise and then call getClosestTenLocations func
     this.loadGeolocation().then(
       res => {
-        // console.log(res, ' is response from loadGeolocation func');
         if (res.error === null) {
-          // console.log('not error so go on grabbing closest locations');
           this.getClosestTenLocations(res, true);
         } else {
-          // console.log('geolocation was null, so grabbing from local');
           this.getClosestTenLocations(res, false);
           this.loading = false;
         }
       },
       err => {
-        // console.log(err, ' is error response from loadGeolocation func');
         let errorObj = {
           lat: 0,
           lng: 0,
@@ -270,7 +261,11 @@ export class HomePage {
   ionViewWillLeave() {
     this.events.unsubscribe('bwsEvent');
   }
-
+  /**
+   * ==============================================================
+   * =============== Closest Locatio Features (v2.0) ==============
+   * ==============================================================
+   */
   /**
    * Just to grab the location data from local json
    * (Not used as of Jan 25, 2019)
@@ -285,8 +280,7 @@ export class HomePage {
    * (Not used as of Jan 25, 2019)
    */
   public getAPIdata() {
-    console.log('getAPIdata entered now');
-    // this.getLocalJsonInstead();
+    // console.log('getAPIdata entered now');
     let observableAPI = this.atmLocationProvider.getLocations();
     //** Get all ATM locations from API */
     observableAPI.subscribe(
@@ -295,7 +289,7 @@ export class HomePage {
       },
       err => {
         this.getLocalJsonInstead();
-        console.log('mmm.. not success from api but from local should work');
+        // console.log('mmm.. not success from api but from local should work');
         this.logger.warn('HTTP Error', err);
       }
     );
@@ -315,21 +309,11 @@ export class HomePage {
     // and then, pass it to your variable to then return the valueto be able to work with the custome  */
     let getPosition = this.geo.getCurrentPosition(this.options).then(
       (pos: Geoposition) => {
-        // console.log(
-        //   pos,
-        //   ' this is the position returned from the promise func'
-        // );
         this.myLocation = {
           lat: pos.coords.latitude,
           lng: pos.coords.longitude,
           error: null
         };
-        // let test = this.checkit(this.myLocation);
-        // console.log(test, 'is the test results');
-        // // this.newResults
-        // console.log(pos, ' is the geoposition pos');
-        // this.logger.info(this.myLocation, ' is my location??');
-        // this.logger.info(this.newResults);
         return this.myLocation;
       },
       (err: PositionError) => {
@@ -338,72 +322,10 @@ export class HomePage {
           lng: 0,
           error: err.message
         };
-        // this.logger.info(
-        //   this.myLocation,
-        //   ' is the myLocatin from error, right?'
-        // );
-        // this.logger.info('error : ' + err.message);
         return this.myLocation;
       }
     );
-    // console.log(getPosition, 'right before returning');
     return getPosition;
-    // ).then(
-    //   res => {
-    //     this.newResults = this.atmLocationProvider
-    //       .getLocationsPromise(res, true)
-    //       .then(
-    //         res => {
-    //           console.log(res, 'this res');
-    //           this.newResults = res;
-    //           console.log(this.newResults, 'this new results');
-    //           this.loading = false;
-    //         },
-    //         err => {
-    //           this.newResults = this.atmLocationProvider
-    //             .getLocationsPromise(this.myLocation, true)
-    //             .then(
-    //               res => {
-    //                 console.log(res, 'this res');
-    //                 this.newResults = res;
-    //                 console.log(this.newResults, 'this new results');
-    //               },
-    //               err => {
-    //                 console.log(err);
-    //               }
-    //             );
-    //           console.log(err);
-    //           this.loading = false;
-    //         }
-    //       );
-    //   },
-    //   msg => {
-    //     console.log(msg);
-    //   }
-    // );
-    // this.geo
-    //   .getCurrentPosition()
-    //   .then(res => {
-    //     console.log('geolocation response!');
-    //     // res.coords.latitude
-    //     // res.coords.longitude
-    //     this.myLocation = {
-    //       lat: res.coords.latitude,
-    //       lng: res.coords.longitude
-    //       // error: null
-    //     };
-    //     console.log(res, 'is what we get');
-    //     console.log(this.myLocation, 'is my object');
-    //   })
-    //   .catch(error => {
-    //     this.myLocation = {
-    //       lat: 0,
-    //       lng: 0
-    //       // error: error
-    //     };
-    //     console.log('Error getting location', error);
-    //     console.log(this.myLocation, 'is my object');
-    //   });
   }
   // /**
   //  * Watch Geolocation if Location is enabled via diagnostic plugin
@@ -477,14 +399,11 @@ export class HomePage {
         if (ok) {
           this.openNativeSettings.open(setting).then(res => {
             this.logger.info(res, ' the settings was indeed opened');
-            // Just warn the user to refresh the wallet to see the effect
+            // ** Just warn the user to refresh the wallet to see the effect
             this.warnToRefresh = true;
           });
-          // .catch(err => {
-          //   // console.log(JSON.stringify(err), ': there was error');
-          // });
         } else {
-          // Just warn the user to refresh the wallet to see the effect
+          // ** Just warn the user to refresh the wallet to see the effect
           this.warnToRefresh = false;
         }
       });
@@ -499,10 +418,6 @@ export class HomePage {
     this.newResults = [];
     this.iteratedNum++;
     this.loading = true;
-    // this.logger.info(this.iteratedNum, ': getClosestTenLocation func run');
-    // this.logger.info('getClosestTenLocations func entered');
-    // console.log(geoObj, ' is the latlng obj');
-    // console.log(geoObj.error, ' is the error from geoObj');
 
     /** If geoObj.error is null (meaning it was set to null upon loadGeolocation),
      * then run first to see api works. If it didnt, then grab data from local json file.
@@ -514,15 +429,7 @@ export class HomePage {
           // ** if the response is okay, meaning the api worked,
           // then you grabbed the new results */
           res => {
-            // this.logger.info(
-            //   res,
-            //   ': this res from success: ' + this.iteratedNum
-            // );
             this.newResults = res;
-            // this.logger.info(
-            //   this.newResults,
-            //   ' this new results' + this.iteratedNum
-            // );
             this.loading = false;
             this.newResultsReady = true;
           },
@@ -533,9 +440,7 @@ export class HomePage {
               .getLocationsPromise(geoObj, false)
               .then(
                 res => {
-                  // this.logger.info(res, 'this res from error');
                   this.newResults = res;
-                  // this.logger.info(this.newResults, 'this new results');
                   this.loading = false;
                   this.newResultsReady = true;
                 },
@@ -555,9 +460,7 @@ export class HomePage {
         .getLocationsPromise(geoObj, false)
         .then(
           res => {
-            // this.logger.info(res, 'this res from error');
             this.newResults = res;
-            // this.logger.info(this.newResults, 'this new results');
             this.loading = false;
             this.newResultsReady = true;
           },
@@ -566,11 +469,6 @@ export class HomePage {
             this.loading = false;
           }
         );
-      // this.logger.info(this.newResults, ' must be null and not success');
-      // this.logger.info(
-      //   this.newResults,
-      //   ' must not be null? created from local?'
-      // );
       this.logger.warn(
         'Your geolocation is turned off. To better assist you, please eneable the geolocation.'
       );
@@ -581,101 +479,32 @@ export class HomePage {
    * upon clicking on the Search Again button
    */
   public searchAgain() {
-    // this.logger.info('searchAgain entered');
-
+    // ** Check if the platform is ready first
     this.plt.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
+      // ** The platform is ready here now and our plugins are available.
+      // ** Here you can do any higher level native things you might need.
       this.newResultsReady = false;
       this.newResults = [];
-      // let newLatLng = this.loadGeolocation().then(
+      // let newLatLng = this.loadGeolocation().then( // ** took this out to avoid ts error for not using newLatLng variable
       this.loadGeolocation().then(
         res => {
-          // console.log(res, ' is response from loadGeolocation func');
           if (res.error === null) {
             this.offline = false;
-            // console.log('not error so go on grabbing closest locations');
             this.getClosestTenLocations(res, true);
           } else {
             this.offline = true;
-            // console.log('geolocation was null, so grabbing from local');
             this.getClosestTenLocations(res, false);
             this.loading = false;
           }
         },
         err => {
-          // console.log(err, ' is error response from loadGeolocation func');
-          // console.log('now we should get the closest from the local file');
           this.getClosestTenLocations(err, false);
           this.loading = false;
         }
       );
-
-      // this.diagnostic
-      //   .isLocationEnabled()
-      //   .then(isAvailable => {
-      //     this.logger.info('Is available? from searchAgain ' + isAvailable);
-      //     alert('Is available? from searchAgain ' + isAvailable);
-      //     this.getClosestTenLocations(newLatLng, true);
-      //   })
-      //   .catch(err => {
-      //     this.logger.info(err);
-      //     alert(JSON.stringify(err));
-      //     this.logger.info(err, ' is error from searchAgain diagnostic');
-      //     this.getClosestTenLocations(newLatLng, false);
-      //   });
     });
-    // this.loadGeolocation().then(
-    //   res => {
-    //     this.logger.info(
-    //       res,
-    //       ' is response from loadGeolocation func second time from searchAgain'
-    //     );
-    //     if (res.error === null) {
-    //       this.offline = false;
-    //       console.log(res, ' this is res from searchAgain success');
-    //       console.log('not error so go on grabbing closest locations');
-    //       this.getClosestTenLocations(res, true);
-    //       this.newResultsReady = true;
-    //     } else {
-    //       this.offline = true;
-    //       console.log(
-    //         ' this is res from searchAgain success else if api didnt work'
-    //       );
-    //       console.log('geolocation was null, so grabbing from local');
-    //       this.getClosestTenLocations(res, false);
-    //       this.loading = false;
-    //       this.newResultsReady = true;
-    //     }
-    //   },
-    //   err => {
-    //     console.log(err, ' is error response from loadGeolocation func');
-    //     console.log('now we should get the closest from the local file');
-    //     this.getClosestTenLocations(err, false);
-    //     this.loading = false;
-    //   }
-    // );
-
-    // let options = {
-    //   frequency: 3000,
-    //   enableHighAccuracy: true
-    // };
-
-    // this.watch = this.geo
-    //   .watchPosition(options)
-    //   .filter((p: any) => p.code === undefined)
-    //   .subscribe((position: Geoposition) => {
-    //     console.log(position);
-
-    //     // Run update inside of Angular's zone
-    //     this.zone.run(() => {
-    //       this.lat = position.coords.latitude;
-    //       this.lng = position.coords.longitude;
-    //       this.updateNewResults(this.lat, this.lng);
-    //     });
-    //   });
   }
-  // // **GCEdit: We wont be traking methods, so took out.
+  // // **GCEdit: We wont be traking methods, so just for record
   // /**
   //  * Initiate the tracking by opening the confirmation message
   //  */
@@ -780,6 +609,12 @@ export class HomePage {
   //     // console.log('updateNewResults will leave now bc tracker is not on');
   //   }
   // }
+
+  /**
+   * /////////////////////////////////////////////////////////////////
+   * ///////////// END OF Closest Locatio Features ///////////////////
+   * /////////////////////////////////////////////////////////////////
+   */
 
   private openEmailDisclaimer() {
     let message = this.translate.instant(
