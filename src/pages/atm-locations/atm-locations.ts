@@ -14,7 +14,6 @@ import { Logger } from '../../providers/logger/logger';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-atm-locations',
   templateUrl: 'atm-locations.html'
