@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>{{title}}</ion-title>
+    <ion-title>{{ title }}</ion-title>
     <ion-buttons end>
       <button ion-button clear *ngIf="!fromSettings" (click)="close()">
         <span translate>Finish</span>
@@ -12,16 +12,26 @@
   <div class="share-image-container" *ngIf="fromSettings">
     <div>
       <div class="share-the-love">
-        <img src="assets/img/ico-positive-feedback.svg" class="share-the-love-illustration" />
+        <img
+          src="assets/img/ico-positive-feedback.svg"
+          class="share-the-love-illustration"
+        />
       </div>
-      <div class="subtitle" translate>Share the love by inviting your friends. From settins</div>
+      <div class="subtitle" translate>
+        Share the love by inviting your friends.
+      </div>
     </div>
   </div>
   <div *ngIf="!fromSettings">
-    <div class="feedback-title" translate>Thank you! </div>
-    <div class="subtitle" *ngIf="!skipped || !fromSettings" translate>A member of the team will review your feedback as soon as possible.</div>
+    <div class="feedback-title" translate>Thank you!</div>
+    <div class="subtitle" *ngIf="!skipped || !fromSettings" translate>
+      A member of the team will review your feedback as soon as possible.
+    </div>
     <div *ngIf="score <= 3 || !isCordova">
-      <div class="subtitle" translate>If you have additional feedback, please let us know by tapping the "Send feedback" option in the Settings tab.</div>
+      <div class="subtitle" translate>
+        If you have additional feedback, please let us know by tapping the "Send
+        feedback" option in the Settings tab.
+      </div>
       <div class="illustration-send">
         <img src="assets/img/illustration-send-feedback.png" />
       </div>
@@ -29,9 +39,14 @@
     <div class="share-image-container" *ngIf="score > 3 && isCordova">
       <div>
         <div class="share-the-love">
-          <img src="assets/img/ico-positive-feedback.svg" class="share-the-love-illustration" />
+          <img
+            src="assets/img/ico-positive-feedback.svg"
+            class="share-the-love-illustration"
+          />
         </div>
-        <div class="subtitle" translate>Share the love by inviting your friends.</div>
+        <div class="subtitle" translate>
+          Share the love by inviting your friends.
+        </div>
       </div>
     </div>
   </div>
