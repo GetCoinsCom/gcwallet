@@ -20,9 +20,9 @@ import { Logger } from '../../providers/logger/logger';
   templateUrl: 'atm-locations.html'
 })
 export class AtmLocationsPage {
-  private id: number;
-  private serverJson: any;
-  private localJson: any;
+  // private id: number;
+  // private serverJson: any;
+  // private localJson: any;
   private data: any;
   private googleMapAPIKey: string = 'AIzaSyB43uqfV0AdFqBJ-MasTqVwtuNLFasOxPg';
   public googleUrl: string;
@@ -47,10 +47,10 @@ export class AtmLocationsPage {
     // private popupProvider: PopupProvider,
     private iab: InAppBrowser // private geo: Geolocation,
   ) {
-    this.id = navParams.get('locationId');
+    // this.id = navParams.get('locationId');
+    // this.serverJson = navParams.get('serverJson');
+    // this.localJson = navParams.get('localJson');
     this.data = navParams.get('dataSet');
-    this.serverJson = navParams.get('serverJson');
-    this.localJson = navParams.get('localJson');
     this.myLocation = navParams.get('geolocation');
     this.encodedAddress = encodeURIComponent(
       this.gcATMName +
