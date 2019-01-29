@@ -27,7 +27,7 @@ export class LocationTrackerProvider {
     public backgroundGeolocation: BackgroundGeolocation,
     public logger: Logger // public atmLocationProvider: AtmLocationProvider
   ) {
-    console.log('Hello LocationTrackerProvider Provider');
+    this.logger.info('Hello LocationTrackerProvider Provider');
   }
 
   public startTracking(callback: (lat: number, lng: number) => any) {
@@ -48,12 +48,12 @@ export class LocationTrackerProvider {
 
     this.backgroundGeolocation.configure(config).subscribe(
       location => {
-        console.log(
-          'BackgroundGeolocation:  ' +
-            location.latitude +
-            ',' +
-            location.longitude
-        );
+        // console.log(
+        //   'BackgroundGeolocation:  ' +
+        //     location.latitude +
+        //     ',' +
+        //     location.longitude
+        // );
         this.logger.info(
           'BackgroundGeolocation:  ' +
             location.latitude +
@@ -70,7 +70,7 @@ export class LocationTrackerProvider {
         });
       },
       err => {
-        console.log(err);
+        // console.log(err);
         this.logger.warn(err);
       }
     );
@@ -89,7 +89,7 @@ export class LocationTrackerProvider {
       .watchPosition(options)
       .filter((p: any) => p.code === undefined)
       .subscribe((position: Geoposition) => {
-        console.log(position);
+        // console.log(position);
 
         // Run update inside of Angular's zone
         this.zone.run(() => {
@@ -102,7 +102,7 @@ export class LocationTrackerProvider {
 
   stopTracking() {
     this.toggleStop = true;
-    console.log('stopTracking');
+    // console.log('stopTracking');
 
     this.backgroundGeolocation.finish();
     this.watch.unsubscribe();
