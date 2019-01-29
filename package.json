@@ -273,7 +273,7 @@
         "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
       },
       "cordova-plugin-mauron85-background-geolocation": {
-        "ALWAYS_USAGE_DESCRIPTION": "This app always requires location tracking"
+        "ALWAYS_USAGE_DESCRIPTION": "This app requires geolocation tracking for our closest ATM locations"
       },
       "cordova-open-native-settings": {}
     },
